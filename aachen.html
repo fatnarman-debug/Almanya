@@ -199,9 +199,9 @@
     .nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center;}
     .nav-link{position:relative;display:inline-flex;align-items:center;gap:5px;padding:8px 14px;border-radius:999px;font-size:14.5px;font-weight:500;color:var(--stone);text-decoration:none;
         transition:color .2s var(--ease),background-color .2s var(--ease);}
-    .nav-link:hover{background:rgba(41,37,36,0.05);}
+    .nav-link:hover{background:rgba(0,0,0,0.07);}
     .nav-link.is-active{font-weight:600;color:var(--ink);}
-    .nav-link.is-active::after{content:"";position:absolute;left:14px;right:14px;bottom:4px;height:2px;border-radius:2px;background:var(--coral-deep);}
+    .nav-link.is-active::after{display:none;}
     .chev{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s var(--ease);}
     .has-menu{position:relative;}
     .has-menu:hover .chev{transform:rotate(180deg);}
@@ -267,7 +267,7 @@
 <div class="nav-wrap">
   <nav class="nav" id="nav" role="navigation" aria-label="Hauptnavigation">
     <a class="brand" href="index.html" aria-label="Aachener Zaun Center – Startseite">
-      <img src="images/logo2.png" alt="Aachener Zaun Center" style="height:44px;width:auto;object-fit:contain;">
+      <img src="images/logo1.png" alt="Aachener Zaun Center" style="height:44px;width:auto;object-fit:contain;">
     </a>
     <div class="nav-links" id="navLinks">
       <a class="nav-link" href="index.html">Home</a>

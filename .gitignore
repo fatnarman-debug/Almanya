@@ -1,0 +1,6 @@
+# Yerel araç/çöp dosyaları (siteye ait değil)
+.DS_Store
+.claude/
+.gstack/
+.venv/
+node_modules/

@@ -961,5 +961,24 @@
     fadeEls.forEach(el => observer.observe(el));
   </script>
 
+<!-- Mobil sticky bottom bar -->
+<div class="mobile-sticky-bar">
+  <a href="https://wa.me/4915754722165" target="_blank" rel="noopener" class="mobile-sticky-btn mobile-sticky-wa">
+    <img src="images/WhatsApp_icon.png" alt="WhatsApp" style="width:22px;height:22px;object-fit:contain;">
+    <span>WhatsApp</span>
+  </a>
+  <a href="kontakt.html" class="mobile-sticky-btn mobile-sticky-contact">
+    <span class="material-symbols-outlined" style="font-size:20px;">mail</span>
+    <span>Kontaktformular</span>
+  </a>
+</div>
+<style>
+.mobile-sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;padding:10px 16px 20px;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid rgba(0,0,0,0.08);box-shadow:0 -4px 20px rgba(0,0,0,0.10);gap:10px;}
+.mobile-sticky-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 10px;border-radius:12px;font-family:"Outfit",sans-serif;font-size:14px;font-weight:600;text-decoration:none;transition:transform .15s,opacity .15s;}
+.mobile-sticky-btn:active{transform:scale(0.97);opacity:0.9;}
+.mobile-sticky-wa{background:#25D366;color:#fff;}
+.mobile-sticky-contact{background:#0056B3;color:#fff;}
+@media(max-width:860px){.mobile-sticky-bar{display:flex;} body{padding-bottom:80px;}}
+</style>
 </body>
 </html>

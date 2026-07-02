@@ -158,6 +158,26 @@
         .mobile-cta .wa-glyph{width:18px;height:18px;}
     }
     @media (min-width:861px){ .mobile-cta{display:none;} }
+    
+    /* ── MOBILE FIXES ────────────────────────────────────────────── */
+    @media (max-width:860px) {
+        html { scroll-padding-top: 80px; }
+        .nav { justify-content: space-between; }
+        .nav-links {
+            left: -8px;
+            right: -8px;
+        }
+        .nav-wa { width:44px; height:44px; }
+        .nav-toggle { width:44px; height:44px; }
+    }
+    /* Footer nav link touch targets */
+    footer ul a {
+        display: inline-block;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    footer ul { list-style: none; }
+    /* ── END MOBILE FIXES ────────────────────────────────────────── */
     @media (prefers-reduced-motion:reduce){ *{transition:none !important;animation:none !important;} html{scroll-behavior:auto;} }
 </style>
 <!-- SEO: Service + Breadcrumb structured data -->
@@ -245,7 +265,7 @@
 
 <main id="main-content">
 <!-- Hero -->
-<section class="relative h-[80vh] min-h-[600px] flex items-center overflow-hidden">
+<section class="relative h-[80vh] min-h-[480px] sm:min-h-[600px] flex items-center overflow-hidden">
 <div class="absolute inset-0 z-0">
 <div class="w-full h-full bg-cover bg-center" style="background-image: url('images/13.png')"></div>
 <div class="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent"></div>
@@ -254,7 +274,7 @@
 <div class="max-w-2xl text-white">
 <span class="font-label-sm text-label-sm uppercase tracking-widest text-tertiary-fixed mb-4 block">Exzellenz im Torbau</span>
 <h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-6 leading-tight">Maßgeschneiderte Torsysteme &amp; Einfahrtstore</h1>
-<p class="font-body-lg text-body-lg opacity-90 mb-10 border-l-4 border-action-blue pl-6">Sicherheit trifft auf modernen Komfort. Entdecken Sie automatisierte Lösungen, die Ästhetik und Funktionalität perfekt vereinen.</p>
+<p class="font-body-lg text-body-lg opacity-90 mb-10 border-l-2 pl-4 sm:border-l-4 sm:pl-6 border-action-blue">Sicherheit trifft auf modernen Komfort. Entdecken Sie automatisierte Lösungen, die Ästhetik und Funktionalität perfekt vereinen.</p>
 <div class="flex flex-col sm:flex-row gap-4">
 <a class="bg-action-blue text-white text-center font-button-text text-button-text px-8 py-4 rounded-lg shadow-lg hover:bg-opacity-90 transition-all uppercase tracking-wider" href="#beratung">Kostenlose Beratung</a>
 <a class="bg-white/10 backdrop-blur-md border border-white/30 text-white text-center font-button-text text-button-text px-8 py-4 rounded-lg hover:bg-white/20 transition-all" href="#leistungen">Unsere Modelle</a>
@@ -281,7 +301,7 @@
 </div>
 </div>
 </div>
-<div class="grid grid-cols-2 gap-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div class="space-y-4">
 <div class="h-64 rounded-xl overflow-hidden shadow-lg"><img loading="lazy" class="w-full h-full object-cover" alt="Detail eines anthrazitfarbenen Schiebetor-Mechanismus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyso2R-3oT-qEzJujOVDhEWl69r0nwf7gsvfLXsAAFOxQW7QrD0pmIDOrDKPLTUamo35uqqzaD18eBBuEZKpEt_L0LLiQhhqH5bp7y1shpPDe9oAdN9TgjHEwlZJ5eohjwT_bqNQi47qwZiAMz2bjPIlSuwsJqqE4ykZ9QN6vQnATdT7Uj5rirumTpYWWpqn_UsRaCGmqrpGUQCYZN5b-RwlgbTFcGOsTuFycjOU7wYqFi0KpcOnJyV2toCFE7tYtJZfPn3X-9-Q70"/></div>
 <div class="h-48 rounded-xl overflow-hidden shadow-lg bg-primary flex flex-col justify-center p-8 text-white"><span class="text-4xl font-extrabold mb-2">10+</span><p class="font-label-sm uppercase tracking-tighter opacity-80">Jahre Erfahrung</p></div>
@@ -335,7 +355,7 @@
 </script><!-- CTA -->
 <section class="py-section-gap relative scroll-mt-24" id="beratung">
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<div class="bg-primary rounded-3xl p-12 md:p-20 overflow-hidden relative shadow-2xl">
+<div class="bg-primary rounded-3xl p-6 sm:p-12 md:p-20 overflow-hidden relative shadow-2xl">
 <div class="absolute -top-24 -right-24 w-96 h-96 bg-action-blue opacity-20 rounded-full blur-3xl"></div>
 <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-tertiary opacity-10 rounded-full blur-3xl"></div>
 <div class="relative z-10 flex flex-col items-center text-center">
@@ -346,7 +366,7 @@
 <a class="bg-action-blue text-white font-button-text px-10 py-5 rounded-lg shadow-xl hover:brightness-110 active:scale-95 transition-all text-lg flex items-center gap-3" href="kontakt.html"><span class="material-symbols-outlined">mail</span>Angebot anfordern</a>
 <a class="flex items-center gap-3 text-white font-button-text px-10 py-5 hover:text-tertiary-fixed transition-colors" href="tel:015754722165"><span class="material-symbols-outlined">call</span>Jetzt anrufen</a>
 </div>
-<div class="mt-16 flex flex-wrap justify-center gap-x-10 gap-y-4">
+<div class="mt-8 sm:mt-16 flex flex-wrap justify-center gap-x-4 sm:gap-x-10 gap-y-4">
 <span class="flex items-center gap-2 text-white/70 font-button-text text-sm uppercase tracking-wider"><span class="material-symbols-outlined text-tertiary-fixed text-lg" style="font-variation-settings:'FILL' 1;">verified</span>Meisterbetrieb</span>
 <span class="flex items-center gap-2 text-white/70 font-button-text text-sm uppercase tracking-wider"><span class="material-symbols-outlined text-tertiary-fixed text-lg" style="font-variation-settings:'FILL' 1;">handshake</span>Kostenlose Beratung</span>
 <span class="flex items-center gap-2 text-white/70 font-button-text text-sm uppercase tracking-wider"><span class="material-symbols-outlined text-tertiary-fixed text-lg" style="font-variation-settings:'FILL' 1;">payments</span>Faire Festpreise</span>
@@ -369,9 +389,9 @@
 <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-action-blue transition-colors" href="mailto:info@aachenerzauncenter.de" aria-label="E-Mail"><span class="material-symbols-outlined">mail</span></a>
 </div>
 </div>
-<div><h4 class="font-bold mb-4">Leistungen</h4><ul class="space-y-2 text-inverse-on-surface/70"><li><a class="hover:text-inverse-primary transition-colors" href="zaeune.html">Zäune</a></li><li><a class="hover:text-inverse-primary transition-colors" href="tore.html">Tore</a></li><li><a class="hover:text-inverse-primary transition-colors" href="sichtschutz.html">Sichtschutz</a></li><li><a class="hover:text-inverse-primary transition-colors" href="index.html#leistungen">Montage</a></li></ul></div>
-<div><h4 class="font-bold mb-4">Unternehmen</h4><ul class="space-y-2 text-inverse-on-surface/70"><li><a class="hover:text-inverse-primary transition-colors" href="ueber.html">Über uns</a></li><li><a class="hover:text-inverse-primary transition-colors" href="kontakt.html">Kontakt</a></li><li><a class="hover:text-inverse-primary transition-colors" href="impressum.html" target="_blank" rel="noopener">Impressum</a></li><li><a class="hover:text-inverse-primary transition-colors" href="datenschutz.html" target="_blank" rel="noopener">Datenschutz</a></li></ul></div>
-<div><h4 class="font-bold mb-4">Kontakt</h4><address class="not-italic text-inverse-on-surface/70 space-y-3"><p class="flex items-start gap-3"><span class="material-symbols-outlined text-tertiary-fixed">location_on</span>Wolfstr. 2<br/>52134 Herzogenrath</p><p class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary-fixed">phone</span><a class="hover:text-inverse-primary transition-colors" href="tel:015754722165">01575 4722165</a></p><p class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary-fixed">mail</span><a class="hover:text-inverse-primary transition-colors" href="mailto:info@aachenerzauncenter.de">info@aachenerzauncenter.de</a></p></address></div>
+<div><h4 class="font-bold mb-4">Leistungen</h4><ul class="space-y-2 text-inverse-on-surface/70"><li><a class="hover:text-inverse-primary transition-colors block py-2" href="zaeune.html">Zäune</a></li><li><a class="hover:text-inverse-primary transition-colors block py-2" href="tore.html">Tore</a></li><li><a class="hover:text-inverse-primary transition-colors block py-2" href="sichtschutz.html">Sichtschutz</a></li><li><a class="hover:text-inverse-primary transition-colors block py-2" href="index.html#leistungen">Montage</a></li></ul></div>
+<div><h4 class="font-bold mb-4">Unternehmen</h4><ul class="space-y-2 text-inverse-on-surface/70"><li><a class="hover:text-inverse-primary transition-colors block py-2" href="ueber.html">Über uns</a></li><li><a class="hover:text-inverse-primary transition-colors block py-2" href="kontakt.html">Kontakt</a></li><li><a class="hover:text-inverse-primary transition-colors block py-2" href="impressum.html" target="_blank" rel="noopener">Impressum</a></li><li><a class="hover:text-inverse-primary transition-colors block py-2" href="datenschutz.html" target="_blank" rel="noopener">Datenschutz</a></li></ul></div>
+<div><h4 class="font-bold mb-4">Kontakt</h4><address class="not-italic text-inverse-on-surface/70 space-y-3"><p class="flex items-start gap-3"><span class="material-symbols-outlined text-tertiary-fixed">location_on</span>Wolfstr. 2<br/>52134 Herzogenrath</p><p class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary-fixed">phone</span><a class="hover:text-inverse-primary transition-colors break-all" href="tel:015754722165">01575 4722165</a></p><p class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary-fixed">mail</span><a class="hover:text-inverse-primary transition-colors break-all" href="mailto:info@aachenerzauncenter.de">info@aachenerzauncenter.de</a></p></address></div>
 </div>
 <div class="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-inverse-on-surface/60"><p>© 2026 Aachener Zaun Center. Alle Rechte vorbehalten.</p><div class="flex items-center gap-6"><span class="text-tertiary-fixed font-bold flex items-center gap-2"><span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1;">shield</span>Meisterbetrieb</span><span class="text-tertiary-fixed font-bold flex items-center gap-2"><span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1;">eco</span>Nachhaltige Qualität</span></div></div>
 </div>

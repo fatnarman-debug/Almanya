@@ -159,6 +159,26 @@
         .mobile-cta .wa-glyph{width:18px;height:18px;}
     }
     @media (min-width:861px){ .mobile-cta{display:none;} }
+    
+    /* ── MOBILE FIXES ────────────────────────────────────────────── */
+    @media (max-width:860px) {
+        html { scroll-padding-top: 80px; }
+        .nav { justify-content: space-between; }
+        .nav-links {
+            left: -8px;
+            right: -8px;
+        }
+        .nav-wa { width:44px; height:44px; }
+        .nav-toggle { width:44px; height:44px; }
+    }
+    /* Footer nav link touch targets */
+    footer ul a {
+        display: inline-block;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    footer ul { list-style: none; }
+    /* ── END MOBILE FIXES ────────────────────────────────────────── */
     @media (prefers-reduced-motion:reduce){ *{transition:none !important;animation:none !important;} html{scroll-behavior:auto;} }
 </style>
 <!-- SEO: Structured data -->
@@ -280,9 +300,9 @@
 <span class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm mb-6 rounded">MEISTERBETRIEB AACHEN</span>
 <h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-6 leading-tight">Ihr Spezialist für Zäune, Tore &amp; Sichtschutz in Aachen</h1>
 <p class="font-body-lg text-body-lg mb-10 text-on-primary/90">Stabil, stilvoll, sicher – Zäune von Profis aus Meisterhand. Wir verbinden Funktionalität mit modernem Design für Ihr Zuhause.</p>
-<div class="flex flex-wrap gap-4">
-<a class="bg-action-blue text-on-primary px-8 py-4 rounded-lg font-button-text text-button-text shadow-lg hover:shadow-action-blue/20 transition-all" href="kontakt.html">Angebot anfordern</a>
-<a class="bg-white/10 backdrop-blur-md border border-white/20 text-on-primary px-8 py-4 rounded-lg font-button-text text-button-text hover:bg-white/20 transition-all" href="#leistungen">Unsere Leistungen</a>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-action-blue text-on-primary px-8 py-4 rounded-lg font-button-text text-button-text shadow-lg hover:shadow-action-blue/20 transition-all w-full sm:w-auto text-center" href="kontakt.html">Angebot anfordern</a>
+<a class="bg-white/10 backdrop-blur-md border border-white/20 text-on-primary px-8 py-4 rounded-lg font-button-text text-button-text hover:bg-white/20 transition-all w-full sm:w-auto text-center" href="#leistungen">Unsere Leistungen</a>
 </div>
 </div>
 </div>
@@ -318,7 +338,7 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <div class="group bg-surface border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500 scroll-mt-24" id="zaunbau">
 <div class="overflow-hidden relative">
-<img loading="lazy" class="w-full h-auto block group-hover:scale-105 transition-transform duration-700" alt="Anthrazit Doppelstabmattenzaun in modernem Wohngarten in Aachen" src="images/dikey1.png"/>
+<img loading="lazy" class="w-full h-56 object-cover block group-hover:scale-105 transition-transform duration-700" alt="Anthrazit Doppelstabmattenzaun in modernem Wohngarten in Aachen" src="images/dikey1.png"/>
 <div class="absolute top-4 left-4 bg-action-blue text-white px-3 py-1 rounded font-label-sm text-label-sm">Beliebteste Wahl</div>
 </div>
 <div class="p-8">
@@ -329,7 +349,7 @@
 </div>
 <div class="group bg-surface border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500 scroll-mt-24" id="torbau">
 <div class="overflow-hidden">
-<img loading="lazy" class="w-full h-auto block group-hover:scale-105 transition-transform duration-700" alt="Automatisches Schiebetor aus dunklem Metall an einer Einfahrt in Aachen" src="images/dikey2.png"/>
+<img loading="lazy" class="w-full h-56 object-cover block group-hover:scale-105 transition-transform duration-700" alt="Automatisches Schiebetor aus dunklem Metall an einer Einfahrt in Aachen" src="images/dikey2.png"/>
 </div>
 <div class="p-8">
 <h3 class="font-headline-md text-headline-md mb-4">Torbau</h3>
@@ -339,7 +359,7 @@
 </div>
 <div class="group bg-surface border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500 scroll-mt-24" id="sichtschutz">
 <div class="overflow-hidden">
-<img loading="lazy" class="w-full h-auto block group-hover:scale-105 transition-transform duration-700" alt="WPC-Sichtschutz mit Aluminiumpfosten auf moderner Terrasse in Herzogenrath" src="images/dikey3.png"/>
+<img loading="lazy" class="w-full h-56 object-cover block group-hover:scale-105 transition-transform duration-700" alt="WPC-Sichtschutz mit Aluminiumpfosten auf moderner Terrasse in Herzogenrath" src="images/dikey3.png"/>
 </div>
 <div class="p-8">
 <h3 class="font-headline-md text-headline-md mb-4">Sichtschutz</h3>
@@ -386,16 +406,16 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="rounded-xl overflow-hidden relative group shadow-md">
-<img loading="lazy" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" alt="Vorher-Nachher: Sichtschutz mit Aluzaun – Projekt Herzogenrath" src="images/11.png"/>
+<img loading="lazy" class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105" alt="Vorher-Nachher: Sichtschutz mit Aluzaun – Projekt Herzogenrath" src="images/11.png"/>
 </div>
 <div class="rounded-xl overflow-hidden relative group shadow-md">
-<img loading="lazy" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" alt="Vorher-Nachher: Gabionen mit Tor – Projekt Aachen Region" src="images/12.png"/>
+<img loading="lazy" class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105" alt="Vorher-Nachher: Gabionen mit Tor – Projekt Aachen Region" src="images/12.png"/>
 </div>
 <div class="rounded-xl overflow-hidden relative group shadow-md">
-<img loading="lazy" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" alt="Vorher-Nachher: WPC Sichtschutz mit Einfahrtstor – Projekt Würselen" src="images/13.png"/>
+<img loading="lazy" class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105" alt="Vorher-Nachher: WPC Sichtschutz mit Einfahrtstor – Projekt Würselen" src="images/13.png"/>
 </div>
 <div class="rounded-xl overflow-hidden relative group shadow-md">
-<img loading="lazy" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" alt="Vorher-Nachher: Metallzaun Komplettanlage – Projekt Alsdorf" src="images/14.png"/>
+<img loading="lazy" class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105" alt="Vorher-Nachher: Metallzaun Komplettanlage – Projekt Alsdorf" src="images/14.png"/>
 </div>
 </div>
 </div>
@@ -545,7 +565,7 @@
 <p class="text-on-primary/80 mb-10 max-w-xl">Erzählen Sie uns von Ihrem Vorhaben – wir melden uns kurzfristig mit einer unverbindlichen Einschätzung. Persönlich, transparent und aus Meisterhand.</p>
 <div class="space-y-5">
 <a class="flex items-center gap-4 group" href="tel:015754722165"><span class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-tertiary-fixed group-hover:text-on-tertiary-fixed transition-colors"><span class="material-symbols-outlined">call</span></span><div><p class="text-sm text-on-primary/60">Telefon</p><p class="font-bold text-lg">01575 4722165</p></div></a>
-<a class="flex items-center gap-4 group" href="mailto:info@aachenerzauncenter.de"><span class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-tertiary-fixed group-hover:text-on-tertiary-fixed transition-colors"><span class="material-symbols-outlined">mail</span></span><div><p class="text-sm text-on-primary/60">E-Mail</p><p class="font-bold text-lg">info@aachenerzauncenter.de</p></div></a>
+<a class="flex items-center gap-4 group" href="mailto:info@aachenerzauncenter.de"><span class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-tertiary-fixed group-hover:text-on-tertiary-fixed transition-colors"><span class="material-symbols-outlined">mail</span></span><div><p class="text-sm text-on-primary/60">E-Mail</p><p class="font-bold text-base lg:text-lg break-all">info@aachenerzauncenter.de</p></div></a>
 <div class="flex items-center gap-4"><span class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center"><span class="material-symbols-outlined">location_on</span></span><div><p class="text-sm text-on-primary/60">Adresse</p><p class="font-bold text-lg">Wolfstr. 2, 52134 Herzogenrath</p></div></div>
 </div>
 </div>
@@ -626,8 +646,8 @@
           </a>
         </li>
         <li>
-          <a href="mailto:info@aachenerzauncenter.de" class="flex items-center gap-2 text-sm transition-colors hover:text-white" style="color:rgba(255,255,255,0.6);">
-            <span class="material-symbols-outlined" style="font-size:16px;color:#7bb8ff;">mail</span>info@aachenerzauncenter.de
+          <a href="mailto:info@aachenerzauncenter.de" class="flex items-center gap-2 text-sm transition-colors hover:text-white break-all" style="color:rgba(255,255,255,0.6);">
+            <span class="material-symbols-outlined" style="font-size:16px;color:#7bb8ff;flex-shrink:0;">mail</span>info@aachenerzauncenter.de
           </a>
         </li>
         <li>
@@ -642,9 +662,9 @@
   <!-- Bottom bar -->
   <div class="mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-3" style="border-top:1px solid rgba(255,255,255,0.07);">
     <p class="text-xs" style="color:rgba(255,255,255,0.3);">© 2026 Aachener Zaun Center. Alle Rechte vorbehalten.</p>
-    <div class="flex gap-6">
-      <a class="text-xs transition-colors hover:text-white" style="color:rgba(255,255,255,0.3);" href="impressum.html">Impressum</a>
-      <a class="text-xs transition-colors hover:text-white" style="color:rgba(255,255,255,0.3);" href="datenschutz.html">Datenschutz</a>
+    <div class="flex gap-2 -my-3">
+      <a class="text-xs transition-colors hover:text-white py-3 px-2" style="color:rgba(255,255,255,0.3);" href="impressum.html">Impressum</a>
+      <a class="text-xs transition-colors hover:text-white py-3 px-2" style="color:rgba(255,255,255,0.3);" href="datenschutz.html">Datenschutz</a>
     </div>
   </div>
 </div>

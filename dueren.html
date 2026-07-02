@@ -388,7 +388,27 @@
       opacity: 1;
       transform: translateY(0);
     }
-  </style>
+  
+    /* ── MOBILE FIXES ────────────────────────────────────────────── */
+    @media (max-width:860px) {
+        html { scroll-padding-top: 80px; }
+        .nav { justify-content: space-between; }
+        .nav-links {
+            left: -8px;
+            right: -8px;
+        }
+        .nav-wa { width:44px; height:44px; }
+        .nav-toggle { width:44px; height:44px; }
+    }
+    /* Footer nav link touch targets */
+    footer ul a {
+        display: inline-block;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    footer ul { list-style: none; }
+    /* ── END MOBILE FIXES ────────────────────────────────────────── */
+</style>
 </head>
 <body class="bg-white text-gray-800">
 

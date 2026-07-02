@@ -350,7 +350,27 @@
 
     /* Section headings */
     .section-label { display: inline-block; background: #f0f7ee; color: #2d5a27; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.35rem 0.85rem; border-radius: 9999px; margin-bottom: 0.75rem; }
-  </style>
+  
+    /* ── MOBILE FIXES ────────────────────────────────────────────── */
+    @media (max-width:860px) {
+        html { scroll-padding-top: 80px; }
+        .nav { justify-content: space-between; }
+        .nav-links {
+            left: -8px;
+            right: -8px;
+        }
+        .nav-wa { width:44px; height:44px; }
+        .nav-toggle { width:44px; height:44px; }
+    }
+    /* Footer nav link touch targets */
+    footer ul a {
+        display: inline-block;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    footer ul { list-style: none; }
+    /* ── END MOBILE FIXES ────────────────────────────────────────── */
+</style>
 </head>
 <body class="font-sans bg-white text-gray-800 antialiased">
 

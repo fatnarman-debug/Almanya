@@ -8,7 +8,7 @@
 <title>Kontakt – Aachener Zaun Center | Zaunbau in Herzogenrath &amp; Aachen</title>
 <meta name="description" content="Kontaktieren Sie das Aachener Zaun Center in Herzogenrath: Telefon 01575 4722165, WhatsApp oder E-Mail. Kostenlose Beratung und Aufmaß für Zäune, Tore und Sichtschutz in Aachen und Umgebung."/>
 <meta name="robots" content="index, follow"/>
-<link rel="canonical" href="https://aachenerzauncenter.de/kontakt/"/>
+<link rel="canonical" href="https://aachenerzauncenter.de/kontakt.html"/>
 <meta name="geo.region" content="DE-NW"/>
 <meta name="geo.placename" content="Herzogenrath"/>
 <!-- Open Graph -->
@@ -16,7 +16,7 @@
 <meta property="og:locale" content="de_DE"/>
 <meta property="og:title" content="Kontakt – Aachener Zaun Center"/>
 <meta property="og:description" content="Kostenlose Beratung für Zäune, Tore und Sichtschutz. Telefon 01575 4722165, WhatsApp oder E-Mail. Wolfstr. 2, 52134 Herzogenrath."/>
-<meta property="og:url" content="https://aachenerzauncenter.de/kontakt/"/>
+<meta property="og:url" content="https://aachenerzauncenter.de/kontakt.html"/>
 <meta property="og:site_name" content="Aachener Zaun Center"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Kontakt – Aachener Zaun Center"/>
@@ -121,7 +121,7 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aachenerzauncenter.de/" },
-    { "@type": "ListItem", "position": 2, "name": "Kontakt", "item": "https://aachenerzauncenter.de/kontakt/" }
+    { "@type": "ListItem", "position": 2, "name": "Kontakt", "item": "https://aachenerzauncenter.de/kontakt.html" }
   ]
 }
 </script>
@@ -318,8 +318,12 @@
 <option>Zäune</option><option>Tore</option><option>Sichtschutz</option><option>Montage</option><option>Sonstiges</option>
 </select></div>
 <div><label class="block text-sm font-medium mb-1.5 text-primary" for="msg">Ihr Anliegen <span class="text-error">*</span></label><textarea class="w-full rounded-lg border border-outline-variant bg-surface px-4 py-3 focus:border-action-blue focus:ring-action-blue" id="msg" name="msg" rows="5" required placeholder="Beschreiben Sie Ihr Projekt (Art, Länge, Ort ...)."></textarea></div>
+<div class="flex items-start gap-3">
+<input class="mt-1 h-4 w-4 rounded border-outline-variant text-action-blue focus:ring-action-blue" id="consent" name="consent" type="checkbox" required/>
+<label class="text-xs text-secondary" for="consent">Ich habe die <a class="text-action-blue underline underline-offset-2" href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und willige ein, dass meine Angaben zur Bearbeitung meiner Anfrage verarbeitet werden. Diese Einwilligung kann ich jederzeit widerrufen. <span class="text-error">*</span></label>
+</div>
 <button class="w-full bg-action-blue text-white font-button-text text-button-text px-6 py-4 rounded-lg hover:brightness-110 active:scale-[0.99] transition-all flex items-center justify-center gap-2" type="submit"><span class="material-symbols-outlined">send</span>Anfrage absenden</button>
-<p class="text-xs text-secondary text-center">Mit dem Absenden stimmen Sie unserer <a class="text-action-blue underline underline-offset-2" href="https://aachenerzauncenter.de/datenschutz/" target="_blank" rel="noopener">Datenschutzerklärung</a> zu.</p>
+<p class="text-sm text-center" id="formStatus" role="status" aria-live="polite"></p>
 </form>
 </div>
 </div>
@@ -328,8 +332,11 @@
 <!-- Map -->
 <section class="pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="mb-6"><h2 class="font-headline-lg text-headline-lg text-primary">So finden Sie uns</h2><p class="text-secondary mt-2">Wolfstr. 2, 52134 Herzogenrath – im Herzen der Städteregion Aachen.</p></div>
-<div class="rounded-2xl overflow-hidden border border-outline-variant/30 shadow-sm">
-<iframe title="Standort Aachener Zaun Center auf Google Maps – Wolfstr. 2, 52134 Herzogenrath" src="https://www.google.com/maps?q=Wolfstr.+2,+52134+Herzogenrath&output=embed" width="100%" height="460" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+<!-- DSGVO: Google Maps wird erst nach aktiver Zustimmung geladen (Zwei-Klick-Lösung) -->
+<div id="map-consent" class="rounded-2xl border border-outline-variant/30 bg-surface-container-low p-8 md:p-12 text-center flex flex-col items-center justify-center min-h-[300px]">
+<span class="material-symbols-outlined text-action-blue text-5xl mb-4" aria-hidden="true">map</span>
+<p class="text-secondary max-w-md mb-6">Zur Anzeige der Karte wird eine Verbindung zu Google Maps hergestellt. Dabei wird Ihre IP-Adresse an Google übertragen. Mehr dazu in unserer <a class="text-action-blue underline underline-offset-2" href="datenschutz.html">Datenschutzerklärung</a>.</p>
+<button type="button" id="loadMap" class="bg-action-blue text-white font-button-text text-button-text px-6 py-3.5 rounded-lg hover:brightness-110 active:scale-[0.99] transition-all inline-flex items-center gap-2"><span class="material-symbols-outlined" aria-hidden="true">map</span>Karte laden</button>
 </div>
 <div class="mt-4 text-right">
 <a class="inline-flex items-center gap-2 text-action-blue font-button-text hover:underline underline-offset-4" href="https://www.google.com/maps/dir/?api=1&destination=Wolfstr.+2,+52134+Herzogenrath" target="_blank" rel="noopener">Route planen <span class="material-symbols-outlined">directions</span></a>
@@ -350,7 +357,7 @@
 </div>
 </div>
 <div><h4 class="font-bold mb-4">Leistungen</h4><ul class="space-y-2 text-inverse-on-surface/70"><li><a class="hover:text-inverse-primary transition-colors" href="zaeune.html">Zäune</a></li><li><a class="hover:text-inverse-primary transition-colors" href="tore.html">Tore</a></li><li><a class="hover:text-inverse-primary transition-colors" href="sichtschutz.html">Sichtschutz</a></li><li><a class="hover:text-inverse-primary transition-colors" href="index.html#leistungen">Montage</a></li></ul></div>
-<div><h4 class="font-bold mb-4">Unternehmen</h4><ul class="space-y-2 text-inverse-on-surface/70"><li><a class="hover:text-inverse-primary transition-colors" href="ueber.html">Über uns</a></li><li><a class="hover:text-inverse-primary transition-colors" href="kontakt.html">Kontakt</a></li><li><a class="hover:text-inverse-primary transition-colors" href="https://aachenerzauncenter.de/impressum/" target="_blank" rel="noopener">Impressum</a></li><li><a class="hover:text-inverse-primary transition-colors" href="https://aachenerzauncenter.de/datenschutz/" target="_blank" rel="noopener">Datenschutz</a></li></ul></div>
+<div><h4 class="font-bold mb-4">Unternehmen</h4><ul class="space-y-2 text-inverse-on-surface/70"><li><a class="hover:text-inverse-primary transition-colors" href="ueber.html">Über uns</a></li><li><a class="hover:text-inverse-primary transition-colors" href="kontakt.html">Kontakt</a></li><li><a class="hover:text-inverse-primary transition-colors" href="impressum.html" target="_blank" rel="noopener">Impressum</a></li><li><a class="hover:text-inverse-primary transition-colors" href="datenschutz.html" target="_blank" rel="noopener">Datenschutz</a></li></ul></div>
 <div><h4 class="font-bold mb-4">Kontakt</h4><address class="not-italic text-inverse-on-surface/70 space-y-3"><p class="flex items-start gap-3"><span class="material-symbols-outlined text-tertiary-fixed">location_on</span>Wolfstr. 2<br/>52134 Herzogenrath</p><p class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary-fixed">phone</span><a class="hover:text-inverse-primary transition-colors" href="tel:015754722165">01575 4722165</a></p><p class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary-fixed">mail</span><a class="hover:text-inverse-primary transition-colors" href="mailto:info@aachenerzauncenter.de">info@aachenerzauncenter.de</a></p></address></div>
 </div>
 <div class="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-inverse-on-surface/60"><p>© 2026 Aachener Zaun Center. Alle Rechte vorbehalten.</p><div class="flex items-center gap-6"><span class="text-tertiary-fixed font-bold flex items-center gap-2"><span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1;">shield</span>Meisterbetrieb</span><span class="text-tertiary-fixed font-bold flex items-center gap-2"><span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1;">eco</span>Nachhaltige Qualität</span></div></div>
@@ -381,6 +388,18 @@
       toggle.setAttribute('aria-expanded', 'false');
       toggle.focus();
     }
+  });
+
+  // DSGVO: Google Maps erst nach aktiver Zustimmung laden (Zwei-Klick-Lösung)
+  document.getElementById('loadMap')?.addEventListener('click', function () {
+    const wrap = document.getElementById('map-consent');
+    if (!wrap) return;
+    wrap.outerHTML =
+      '<div class="rounded-2xl overflow-hidden border border-outline-variant/30 shadow-sm">' +
+      '<iframe title="Standort Aachener Zaun Center auf Google Maps – Wolfstr. 2, 52134 Herzogenrath" ' +
+      'src="https://www.google.com/maps?q=Wolfstr.+2,+52134+Herzogenrath&output=embed" ' +
+      'width="100%" height="460" style="border:0;" loading="lazy" ' +
+      'referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>';
   });
 </script>
 </body>

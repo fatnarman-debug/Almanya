@@ -7,27 +7,45 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://aachenerzauncenter.de/zaeune/</loc>
+    <loc>https://aachenerzauncenter.de/zaeune.html</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://aachenerzauncenter.de/tore/</loc>
+    <loc>https://aachenerzauncenter.de/tore.html</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://aachenerzauncenter.de/sichtschutz/</loc>
+    <loc>https://aachenerzauncenter.de/sichtschutz.html</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://aachenerzauncenter.de/kontakt/</loc>
+    <loc>https://aachenerzauncenter.de/ueber.html</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aachenerzauncenter.de/kontakt.html</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aachenerzauncenter.de/impressum.html</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aachenerzauncenter.de/datenschutz.html</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

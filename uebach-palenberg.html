@@ -1,499 +1,834 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="de">
+<html lang="de">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
-<link rel="apple-touch-icon" href="favicon.svg"/>
-<title>Zaunbau Übach-Palenberg | Zäune, Tore &amp; Sichtschutz – Aachener Zaun Center</title>
-<meta name="description" content="Zaunbau Übach-Palenberg vom Meisterbetrieb: Zäune, Tore &amp; Sichtschutz für Übach-Palenberg und Umgebung. Kostenlose Beratung, faire Preise, pünktliche Montage. ☎ 01575 4722165"/>
-<meta name="robots" content="index, follow"/>
-<link rel="canonical" href="https://aachenerzauncenter.de/uebach-palenberg/"/>
-<meta name="geo.region" content="DE-NW"/>
-<meta name="geo.placename" content="Übach-Palenberg"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="de_DE"/>
-<meta property="og:title" content="Zaunbau Übach-Palenberg | Zäune, Tore &amp; Sichtschutz – Aachener Zaun Center"/>
-<meta property="og:description" content="Ihr Meisterbetrieb für Zaunbau Übach-Palenberg: Zäune, Tore und Sichtschutz. Individuelle Planung &amp; fachgerechte Montage."/>
-<meta property="og:url" content="https://aachenerzauncenter.de/uebach-palenberg/"/>
-<meta property="og:site_name" content="Aachener Zaun Center"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Zaunbau Übach-Palenberg | Aachener Zaun Center"/>
-<meta name="twitter:description" content="Zäune, Tore und Sichtschutz aus Meisterhand für Übach-Palenberg. Kostenlose Beratung, faire Preise."/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zaunbau Uebach-Palenberg | Zäune, Tore & Sichtschutz - Aachener Zaun Center</title>
+  <meta name="description" content="Zaunbau Uebach-Palenberg ✓ Zäune, Tore & Sichtschutz vom Meisterbetrieb ✓ Schnell vor Ort ✓ Jetzt anrufen: 01575 4722165" />
+  <link rel="canonical" href="https://aachenerzauncenter.de/uebach-palenberg/" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1a4731',
+            'primary-dark': '#0f2d1e',
+            'primary-light': '#2d6a4f',
+            accent: '#c8a951',
+            'accent-light': '#e8c97a',
+            neutral: '#f8f6f1',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* ===== BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a1a; background: #fff; margin: 0; }
+
+    /* ===== NAV ===== */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      transition: background 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease;
+      padding: 1.25rem 0;
+    }
+    #navbar.scrolled {
+      background: rgba(15,45,30,0.97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+      padding: 0.6rem 0;
+    }
+    .nav-link {
+      position: relative; color: rgba(255,255,255,0.88); text-decoration: none;
+      font-size: 0.875rem; font-weight: 500; letter-spacing: 0.01em;
+      transition: color 0.2s;
+    }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -3px; left: 0; right: 0;
+      height: 2px; background: #c8a951; transform: scaleX(0);
+      transition: transform 0.25s ease; transform-origin: left;
+    }
+    .nav-link:hover { color: #fff; }
+    .nav-link:hover::after { transform: scaleX(1); }
+    .nav-logo-text { font-family: 'Playfair Display', serif; font-weight: 700; }
+
+    /* mobile menu */
+    #mobile-menu {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      background: rgba(15,45,30,0.98); backdrop-filter: blur(12px);
+      padding: 1.5rem; gap: 1rem; flex-direction: column;
+    }
+    #mobile-menu.open { display: flex; }
+
+    /* ===== FLOATING PILLS ===== */
+    .floating-pills {
+      position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 999;
+      display: flex; flex-direction: column; gap: 0.65rem; align-items: flex-end;
+    }
+    .pill-btn {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.65rem 1.2rem; border-radius: 9999px;
+      font-size: 0.825rem; font-weight: 600; letter-spacing: 0.02em;
+      text-decoration: none; box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+      transition: transform 0.2s, box-shadow 0.2s;
+      white-space: nowrap;
+    }
+    .pill-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.28); }
+    .pill-wa { background: #25D366; color: #fff; }
+    .pill-cta { background: #c8a951; color: #0f2d1e; }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 92vh; position: relative; display: flex; align-items: center;
+      background-image: url(../images/hero-bg.jpg);
+      background-size: cover; background-position: center;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(10,28,18,0.82) 0%, rgba(26,71,49,0.65) 60%, rgba(10,28,18,0.55) 100%);
+    }
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb { display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; }
+    .breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: #c8a951; }
+    .breadcrumb span { color: rgba(255,255,255,0.45); }
+    .breadcrumb .current { color: #c8a951; }
+
+    /* ===== STARS ===== */
+    .stars { color: #f5c842; letter-spacing: 0.05em; }
+
+    /* ===== CARDS ===== */
+    .service-card {
+      background: #fff; border-radius: 1rem; overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(0,0,0,0.14); }
+    .service-card img { width: 100%; height: 220px; object-fit: cover; }
+
+    /* ===== FAQ ===== */
+    .faq-item { border-bottom: 1px solid #e5e7eb; }
+    .faq-btn {
+      width: 100%; display: flex; justify-content: space-between; align-items: center;
+      padding: 1.2rem 0; background: none; border: none; cursor: pointer;
+      font-size: 1rem; font-weight: 600; color: #1a4731; text-align: left;
+      gap: 1rem;
+    }
+    .faq-btn .icon {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+      background: #1a4731; color: #fff; display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; transition: transform 0.3s, background 0.2s;
+    }
+    .faq-btn.open .icon { transform: rotate(45deg); background: #c8a951; }
+    .faq-body {
+      max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s;
+      color: #4b5563; font-size: 0.95rem; line-height: 1.7;
+    }
+    .faq-body.open { max-height: 400px; padding-bottom: 1.2rem; }
+
+    /* ===== DISTRICT GRID ===== */
+    .district-check { display: flex; align-items: center; gap: 0.5rem; font-weight: 500; color: #1a4731; }
+    .district-check .material-symbols-outlined { color: #c8a951; font-size: 1.2rem; }
+
+    /* ===== UTIL ===== */
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: #c8a951; color: #0f2d1e; font-weight: 700;
+      padding: 0.85rem 2rem; border-radius: 9999px;
+      text-decoration: none; transition: background 0.2s, transform 0.2s;
+      font-size: 0.95rem;
+    }
+    .btn-primary:hover { background: #e8c97a; transform: translateY(-2px); }
+    .btn-outline-white {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      border: 2px solid rgba(255,255,255,0.7); color: #fff; font-weight: 600;
+      padding: 0.8rem 1.8rem; border-radius: 9999px;
+      text-decoration: none; transition: border-color 0.2s, background 0.2s;
+      font-size: 0.95rem;
+    }
+    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+
+    .section-tag {
+      display: inline-block; background: rgba(26,71,49,0.1); color: #1a4731;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 0.35rem 1rem; border-radius: 9999px;
+      margin-bottom: 0.75rem;
+    }
+
+    @media (max-width: 768px) {
+      .floating-pills { bottom: 1rem; right: 1rem; }
+      .pill-btn span.label { display: none; }
+      .pill-btn { padding: 0.75rem; }
+    }
+  </style>
+
+  <!-- Schema JSON-LD -->
+  <script type="application/ld+json">
+  [
     {
+      "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "@id": "https://aachenerzauncenter.de/#business",
       "name": "Aachener Zaun Center",
-      "url": "https://aachenerzauncenter.de/",
+      "description": "Professioneller Zaunbau, Torbau und Sichtschutz in Uebach-Palenberg und Umgebung. Meisterbetrieb mit über 10 Jahren Erfahrung.",
+      "url": "https://aachenerzauncenter.de/uebach-palenberg/",
       "telephone": "+4915754722165",
       "email": "info@aachenerzauncenter.de",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Wolfstr. 2",
-        "addressLocality": "Herzogenrath",
-        "postalCode": "52134",
+        "addressLocality": "Aachen",
         "addressCountry": "DE"
       },
-      "areaServed": {"@type": "City", "name": "Übach-Palenberg"},
-      "priceRange": "EUR EUR",
-      "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "252"}
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 50.9167,
+        "longitude": 6.1167
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Uebach-Palenberg"
+      },
+      "openingHours": ["Mo-Fr 08:00-18:00", "Sa 09:00-14:00"],
+      "priceRange": "€€",
+      "image": "https://aachenerzauncenter.de/images/hero-bg.jpg",
+      "sameAs": []
     },
     {
+      "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Ist Aachener Zaun Center in Übach-Palenberg tätig?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Ja, Übach-Palenberg grenzt direkt an Herzogenrath, wo unser Betrieb sitzt. Wir sind in allen Ortsteilen tätig und können besonders schnell reagieren. Kurze Wege bedeuten kurze Wartezeiten für Sie."}
+          "name": "Führen Sie Zaunmontagen in Uebach-Palenberg durch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, wir montieren Zäune, Tore und Sichtschutzanlagen in der gesamten Gemeinde Uebach-Palenberg – inklusive der Ortsteile Übach, Palenberg, Frelenberg und Scherpenseel. Unser Standort ist nur ca. 5 km entfernt, sodass wir schnell vor Ort sind."
+          }
         },
         {
           "@type": "Question",
-          "name": "Welche Leistungen bieten Sie in Übach-Palenberg an?",
-          "acceptedAnswer": {"@type": "Answer", "text": "In Übach-Palenberg bieten wir das volle Programm: Doppelstabmattenzäune, Metallzäune, Holzzäune, WPC-Sichtschutz, Einfahrtstore und automatische Torantriebe. Alles aus einer Hand, inkl. Planung und Montage."}
+          "name": "Wie lange dauert eine Zaunmontage in Uebach-Palenberg?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Montagezeit hängt vom Umfang des Projekts ab. Ein einfacher Gartenzaun ist oft an einem Tag fertig. Größere Anlagen mit automatischem Tor können 2–3 Tage in Anspruch nehmen. Nach der Besichtigung erhalten Sie von uns einen konkreten Zeitplan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Zaunarten sind in Uebach-Palenberg besonders gefragt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In der ruhigen Wohngemeinde Uebach-Palenberg sind klassische Gartenzäune aus Metall und Holz sowie Sichtschutzelemente für Terrassen und Gärten besonders beliebt. Auch Doppelstabmattenzäune für Grundstücksbegrenzungen werden häufig nachgefragt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bauen Sie auch automatische Tore in Uebach-Palenberg?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, wir planen und montieren elektrische Einfahrtstore und Schiebetore in Uebach-Palenberg. Wir übernehmen die komplette Installation inklusive Steuerungstechnik, Sicherheitssensoren und optionaler Fernbedienung oder Smartphone-Anbindung."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie erhalte ich ein Angebot für Zaunarbeiten in Uebach-Palenberg?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kontaktieren Sie uns einfach telefonisch unter 01575 4722165, per WhatsApp oder über unser Kontaktformular. Wir vereinbaren dann einen kostenlosen Vororttermin in Uebach-Palenberg und erstellen Ihnen ein transparentes Festpreisangebot."
+          }
         }
       ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://aachenerzauncenter.de/"},
-        {"@type": "ListItem", "position": 2, "name": "Zaunbau Übach-Palenberg", "item": "https://aachenerzauncenter.de/uebach-palenberg/"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://aachenerzauncenter.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Zaunbau Uebach-Palenberg",
+          "item": "https://aachenerzauncenter.de/uebach-palenberg/"
+        }
       ]
     }
   ]
-}
-</script>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-    tailwind.config = {
-        darkMode: "class",
-        theme: {
-            extend: {
-                "colors": {
-                    "inverse-primary": "#aacec0", "background": "#f8f9fa", "deep-forest": "#10551F",
-                    "surface-container-high": "#e7e8e9", "tertiary-fixed-dim": "#e9c400", "on-primary": "#ffffff",
-                    "secondary": "#525f76", "inverse-on-surface": "#f0f1f2", "on-primary-container": "#75988a",
-                    "secondary-fixed-dim": "#bac7e2", "surface-container-lowest": "#ffffff", "secondary-fixed": "#d6e3ff",
-                    "slate-steel": "#4A5568", "on-surface": "#191c1d", "error": "#ba1a1a", "surface-container": "#edeeef",
-                    "on-tertiary-container": "#4c3f00", "on-secondary-fixed-variant": "#3a475d", "on-secondary-fixed": "#0e1c30",
-                    "on-primary-fixed": "#002118", "on-tertiary-fixed": "#221b00", "tertiary-container": "#c9a900",
-                    "on-surface-variant": "#414845", "on-secondary-container": "#58657c", "surface-bright": "#f8f9fa",
-                    "inverse-surface": "#2e3132", "surface-container-low": "#f3f4f5", "on-error": "#ffffff",
-                    "on-error-container": "#93000a", "surface-tint": "#446559", "outline-variant": "#c1c8c3",
-                    "surface": "#f8f9fa", "secondary-container": "#d6e3ff", "tertiary": "#705d00",
-                    "primary-fixed": "#c6ebdb", "outline": "#717975", "on-secondary": "#ffffff",
-                    "primary-fixed-dim": "#aacec0", "primary": "#001912", "primary-container": "#0c2f25",
-                    "surface-container-highest": "#e1e3e4", "on-primary-fixed-variant": "#2c4d42",
-                    "on-tertiary-fixed-variant": "#544600", "error-container": "#ffdad6", "tertiary-fixed": "#ffe16d",
-                    "on-tertiary": "#ffffff", "surface-dim": "#d9dadb", "surface-variant": "#e1e3e4",
-                    "action-blue": "#0056B3", "on-background": "#191c1d"
-                },
-                "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
-                "spacing": {
-                    "container-max": "1280px", "gutter": "24px", "margin-desktop": "48px",
-                    "margin-mobile": "16px", "section-gap": "80px", "base": "8px"
-                },
-                "fontFamily": {
-                    "body-lg": ["Inter"], "headline-xl": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"],
-                    "headline-md": ["Hanken Grotesk"], "body-md": ["Inter"], "label-sm": ["JetBrains Mono"],
-                    "button-text": ["Hanken Grotesk"], "headline-xl-mobile": ["Hanken Grotesk"]
-                },
-                "fontSize": {
-                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
-                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
-                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
-                    "button-text": ["16px", {"lineHeight": "20px", "fontWeight": "600"}],
-                    "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "800"}]
-                }
-            },
-        },
-    }
-</script>
-<style>
-    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
-    :root{
-        --coral:#0056B3; --coral-deep:#0056B3; --stone:#292524; --stone-soft:#44403C; --ink:#1C1917;
-        --nav-glass:rgba(255,255,255,0.70); --nav-blur:20px; --ease:cubic-bezier(0.22,0.61,0.36,1);
-    }
-    html{scroll-padding-top:104px;}
-    .nav-wrap{position:fixed;top:18px;left:0;right:0;z-index:100;display:flex;justify-content:center;padding:0 16px;pointer-events:none;}
-    .nav{pointer-events:auto;width:100%;max-width:1180px;display:flex;align-items:center;gap:20px;padding:9px 9px 9px 20px;border-radius:999px;
-        font-family:"Outfit",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-        background:var(--nav-glass);-webkit-backdrop-filter:blur(var(--nav-blur)) saturate(160%);backdrop-filter:blur(var(--nav-blur)) saturate(160%);
-        border:1px solid rgba(255,255,255,0.55);
-        box-shadow:0 1px 0 rgba(255,255,255,0.65) inset,0 12px 28px -14px rgba(41,37,36,0.30),0 4px 10px -6px rgba(41,37,36,0.18);
-        transition:box-shadow .3s var(--ease);}
-    .nav.is-scrolled{box-shadow:0 1px 0 rgba(255,255,255,0.65) inset,0 16px 34px -14px rgba(41,37,36,0.38),0 6px 14px -8px rgba(41,37,36,0.22);}
-    .nav a, .nav button{font-family:inherit;}
-    .brand{display:flex;align-items:center;gap:11px;padding-right:4px;flex-shrink:0;text-decoration:none;}
-    .logo-dot{position:relative;width:34px;height:34px;border-radius:50%;
-        background:radial-gradient(120% 120% at 32% 28%,#0c2f25 0%,#001912 100%);
-        box-shadow:0 2px 6px -1px rgba(0,25,18,0.45),0 0 0 1px rgba(255,255,255,0.35) inset;flex-shrink:0;}
-    .logo-dot::after{content:"";position:absolute;top:9px;left:10px;width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(41,37,36,0.25);}
-    .brand-name{display:flex;flex-direction:column;line-height:1.02;}
-    .brand-name b{font-size:15px;font-weight:700;color:var(--ink);letter-spacing:-0.01em;}
-    .brand-name span{font-size:11px;font-weight:500;color:var(--stone-soft);letter-spacing:0.06em;text-transform:uppercase;}
-    .nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center;}
-    .nav-link{position:relative;display:inline-flex;align-items:center;gap:5px;padding:8px 14px;border-radius:999px;font-size:14.5px;font-weight:500;color:var(--stone);text-decoration:none;
-        transition:color .2s var(--ease),background-color .2s var(--ease);}
-    .nav-link:hover{background:rgba(41,37,36,0.05);}
-    .nav-link.is-active{font-weight:600;color:var(--ink);}
-    .nav-link.is-active::after{content:"";position:absolute;left:14px;right:14px;bottom:4px;height:2px;border-radius:2px;background:var(--coral-deep);}
-    .chev{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s var(--ease);}
-    .has-menu{position:relative;}
-    .has-menu:hover .chev{transform:rotate(180deg);}
-    .submenu{display:none;position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);min-width:200px;padding:8px;border-radius:16px;
-        background:rgba(255,255,255,0.86);-webkit-backdrop-filter:blur(22px) saturate(160%);backdrop-filter:blur(22px) saturate(160%);
-        border:1px solid rgba(255,255,255,0.6);box-shadow:0 8px 24px -8px rgba(41,37,36,0.22);z-index:10;}
-    .has-menu:hover .submenu{display:block;}
-    .submenu a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;font-size:13.5px;font-weight:500;color:var(--stone);text-decoration:none;transition:background-color .18s var(--ease);}
-    .submenu a:hover{background:rgba(0,86,179,0.10);}
-    .submenu a i{width:6px;height:6px;border-radius:50%;background:var(--coral-deep);flex-shrink:0;}
-    .nav-cta{display:inline-flex;align-items:center;gap:8px;flex-shrink:0;font-size:14px;font-weight:600;color:#fff;background:#0056B3;padding:11px 20px;border-radius:999px;letter-spacing:-0.005em;white-space:nowrap;text-decoration:none;
-        box-shadow:0 8px 18px -8px rgba(41,37,36,0.6);transition:transform .2s var(--ease),background-color .2s var(--ease),box-shadow .2s var(--ease);}
-    .nav-cta:hover{background:#00468f;transform:translateY(-1px);box-shadow:0 12px 22px -9px rgba(41,37,36,0.65);}
-    .nav-cta svg{width:18px;height:18px;flex-shrink:0;}
-    .nav-wa{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;flex-shrink:0;text-decoration:none;
-        background:radial-gradient(120% 120% at 32% 28%,#4ce37a 0%,#25D366 55%,#1aa851 100%);
-        box-shadow:0 8px 18px -8px rgba(37,211,102,0.6);transition:transform .2s var(--ease),box-shadow .2s var(--ease);}
-    .nav-wa:hover{transform:translateY(-1px);box-shadow:0 12px 22px -9px rgba(37,211,102,0.7);}
-    .wa-glyph{width:20px;height:20px;fill:#fff;}
-    .nav-toggle{display:none;width:42px;height:42px;border:none;background:var(--stone);border-radius:50%;cursor:pointer;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 8px 18px -8px rgba(41,37,36,0.6);}
-    .nav-toggle span{position:relative;display:block;width:17px;height:1.8px;background:#fff;border-radius:2px;transition:transform .3s var(--ease),opacity .2s var(--ease);}
-    .nav-toggle span::before,.nav-toggle span::after{content:"";position:absolute;left:0;width:17px;height:1.8px;background:#fff;border-radius:2px;transition:transform .3s var(--ease);}
-    .nav-toggle span::before{top:-5px;}
-    .nav-toggle span::after{top:5px;}
-    body.menu-open .nav-toggle span{background:transparent;}
-    body.menu-open .nav-toggle span::before{transform:translateY(5px) rotate(45deg);}
-    body.menu-open .nav-toggle span::after{transform:translateY(-5px) rotate(-45deg);}
-    @media(max-width:860px){
-        .nav-links{display:none;position:absolute;top:calc(100% + 10px);left:0;right:0;border-radius:24px;padding:12px;
-            background:rgba(255,255,255,0.9);-webkit-backdrop-filter:blur(22px) saturate(160%);backdrop-filter:blur(22px) saturate(160%);
-            border:1px solid rgba(255,255,255,0.7);box-shadow:0 16px 32px -12px rgba(41,37,36,0.28);flex-direction:column;align-items:stretch;gap:4px;}
-        .nav{position:relative;flex-wrap:wrap;}
-        body.menu-open .nav-links{display:flex;}
-        .nav-link{padding:12px 16px;border-radius:14px;}
-        .submenu{position:static;transform:none;display:none;box-shadow:none;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;border:none;border-left:2px solid rgba(0,86,179,0.35);border-radius:0;box-shadow:none;transition:none;}
-        .has-menu:hover .submenu{display:none;}
-        .desktop-wa,.desktop-cta{display:none!important;}
-        .mobile-cta{display:inline-flex!important;}
-        .nav-toggle{display:flex;}
-    }
-    @media(min-width:861px){.mobile-cta{display:none!important;}}
-    .breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:#525f76;}
-    .breadcrumb a{color:#525f76;text-decoration:none;}
-    .breadcrumb a:hover{color:#0056B3;}
-    .breadcrumb span{color:#c1c8c3;}
-    .faq-item{border-bottom:1px solid #c1c8c3;}
-    .faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:17px;font-weight:600;font-family:"Hanken Grotesk",sans-serif;color:#191c1d;}
-    .faq-a{display:none;padding-bottom:20px;color:#525f76;line-height:1.7;}
-    .faq-item.open .faq-a{display:block;}
-    .faq-item.open .faq-icon{transform:rotate(45deg);}
-    .faq-icon{transition:transform .25s ease;flex-shrink:0;font-size:22px;color:#0056B3;}
-</style>
+  </script>
 </head>
-<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
-<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-[200] focus:top-3 focus:left-3 focus:bg-action-blue focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Zum Inhalt springen</a>
-<div class="nav-wrap">
-  <nav class="nav" id="nav" role="navigation" aria-label="Hauptnavigation">
-    <a class="brand" href="index.html" aria-label="Aachener Zaun Center – Startseite">
-      <span class="logo-dot" aria-hidden="true"></span>
-      <span class="brand-name"><b>Aachener</b><span>Zaun Center</span></span>
-    </a>
-    <div class="nav-links" id="navLinks">
-      <a class="nav-link" href="index.html">Home</a>
-      <a class="nav-link" href="ueber.html">Über uns</a>
-      <div class="has-menu">
-        <a class="nav-link" href="index.html#leistungen" aria-haspopup="true">Leistungen
-          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-        </a>
-        <div class="submenu" role="menu">
-          <a href="zaeune.html" role="menuitem"><i aria-hidden="true"></i>Zäune</a>
-          <a href="tore.html" role="menuitem"><i aria-hidden="true"></i>Tore</a>
-          <a href="sichtschutz.html" role="menuitem"><i aria-hidden="true"></i>Sichtschutz</a>
-        </div>
+<body>
+
+<!-- ===== FLOATING PILLS ===== -->
+<div class="floating-pills">
+  <a href="https://wa.me/4915754722165?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Zaunbau%20in%20Uebach-Palenberg" class="pill-btn pill-wa" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.854L.057 23.882l6.19-1.624A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.372l-.36-.214-3.726.977.995-3.636-.235-.374A9.818 9.818 0 112 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+    <span class="label">WhatsApp</span>
+  </a>
+  <a href="../kontakt.html" class="pill-btn pill-cta">
+    <span class="material-symbols-outlined" style="font-size:1.1rem;">send</span>
+    <span class="label">Direkt anfragen</span>
+  </a>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="../index.html" class="flex items-center gap-2 text-white no-underline">
+      <div style="width:36px;height:36px;background:#c8a951;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+        <span class="material-symbols-outlined" style="color:#0f2d1e;font-size:1.2rem;">fence</span>
       </div>
-      <a class="nav-link" href="kontakt.html">Kontakt</a>
-      <a class="nav-cta mobile-cta" href="https://wa.me/4915754722165" style="background:#25D366;" target="_blank" rel="noopener">
-        <svg class="wa-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.9c0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 1.8c2.16 0 4.19.84 5.72 2.37a8.03 8.03 0 0 1 2.37 5.72c0 4.47-3.64 8.1-8.1 8.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.06.8.82-2.98-.2-.31a8.03 8.03 0 0 1-1.24-4.3c0-4.47 3.63-8.1 8.1-8.1Zm-4.6 4.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.37c.16.22 2.29 3.5 5.56 4.78 2.72 1.07 3.28.86 3.87.8.59-.05 1.9-.77 2.17-1.52.27-.75.27-1.39.19-1.52-.08-.13-.3-.21-.62-.37-.32-.16-1.9-.94-2.19-1.05-.29-.11-.5-.16-.72.16-.21.32-.82 1.05-1.01 1.26-.19.22-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.89-1.78-2.21-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.22.05-.4-.03-.56-.08-.16-.72-1.76-1-2.4-.26-.63-.53-.55-.72-.55l-.62-.01Z"/></svg>
-        WhatsApp
+      <div>
+        <div class="nav-logo-text text-white text-base leading-tight">Aachener Zaun Center</div>
+        <div style="font-size:0.65rem;color:rgba(255,255,255,0.6);letter-spacing:0.08em;text-transform:uppercase;">Meisterbetrieb</div>
+      </div>
+    </a>
+
+    <!-- Desktop Links -->
+    <div class="hidden md:flex items-center gap-7">
+      <a href="../index.html" class="nav-link">Startseite</a>
+      <a href="../zaeune.html" class="nav-link">Zäune</a>
+      <a href="../tore.html" class="nav-link">Tore</a>
+      <a href="../sichtschutz.html" class="nav-link">Sichtschutz</a>
+      <a href="../ueber.html" class="nav-link">Über uns</a>
+      <a href="../kontakt.html" class="btn-primary" style="padding:0.55rem 1.4rem;font-size:0.85rem;">Kontakt</a>
+    </div>
+
+    <!-- Hamburger -->
+    <button id="menu-toggle" class="md:hidden text-white" aria-label="Menü öffnen">
+      <span class="material-symbols-outlined" style="font-size:1.8rem;">menu</span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu">
+    <a href="../index.html" class="nav-link" style="font-size:1rem;">Startseite</a>
+    <a href="../zaeune.html" class="nav-link" style="font-size:1rem;">Zäune</a>
+    <a href="../tore.html" class="nav-link" style="font-size:1rem;">Tore</a>
+    <a href="../sichtschutz.html" class="nav-link" style="font-size:1rem;">Sichtschutz</a>
+    <a href="../ueber.html" class="nav-link" style="font-size:1rem;">Über uns</a>
+    <a href="../kontakt.html" class="btn-primary" style="margin-top:0.5rem;justify-content:center;">Kontakt</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="max-w-6xl mx-auto px-6 relative z-10 w-full" style="padding-top:6rem;">
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb mb-6">
+      <a href="../index.html">Startseite</a>
+      <span class="material-symbols-outlined" style="font-size:0.9rem;color:rgba(255,255,255,0.4);">chevron_right</span>
+      <span class="current">Zaunbau Uebach-Palenberg</span>
+    </div>
+
+    <!-- Badge -->
+    <div style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(200,169,81,0.18);border:1px solid rgba(200,169,81,0.45);border-radius:9999px;padding:0.4rem 1rem;margin-bottom:1.4rem;">
+      <span class="material-symbols-outlined" style="color:#c8a951;font-size:1rem;">location_on</span>
+      <span style="color:#c8a951;font-size:0.78rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;">Uebach-Palenberg &amp; Umgebung</span>
+    </div>
+
+    <!-- H1 -->
+    <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.6rem);font-weight:800;color:#fff;line-height:1.15;max-width:780px;margin-bottom:1.4rem;">
+      Zaunbau Uebach-Palenberg –<br>
+      <span style="color:#c8a951;">Zäune, Tore &amp; Sichtschutz</span> vom Profi
+    </h1>
+
+    <p style="color:rgba(255,255,255,0.82);font-size:1.1rem;max-width:600px;line-height:1.7;margin-bottom:2rem;">
+      Ihr regionaler Meisterbetrieb für Zaunlösungen in Uebach-Palenberg. Schnell vor Ort, fair im Preis, verlässlich in der Ausführung.
+    </p>
+
+    <!-- CTAs -->
+    <div style="display:flex;flex-wrap:wrap;gap:1rem;">
+      <a href="tel:+4915754722165" class="btn-primary">
+        <span class="material-symbols-outlined" style="font-size:1.1rem;">call</span>
+        01575 4722165
       </a>
-      <a class="nav-cta mobile-cta" href="tel:015754722165">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z" fill="currentColor"/></svg>
-        Direkt anfragen
+      <a href="../kontakt.html" class="btn-outline-white">
+        <span class="material-symbols-outlined" style="font-size:1.1rem;">send</span>
+        Kostenloses Angebot
       </a>
     </div>
-    <a class="nav-wa desktop-wa" href="https://wa.me/4915754722165" target="_blank" rel="noopener" aria-label="WhatsApp">
-      <svg class="wa-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.9c0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 1.8c2.16 0 4.19.84 5.72 2.37a8.03 8.03 0 0 1 2.37 5.72c0 4.47-3.64 8.1-8.1 8.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.06.8.82-2.98-.2-.31a8.03 8.03 0 0 1-1.24-4.3c0-4.47 3.63-8.1 8.1-8.1Zm-4.6 4.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.37c.16.22 2.29 3.5 5.56 4.78 2.72 1.07 3.28.86 3.87.8.59-.05 1.9-.77 2.17-1.52.27-.75.27-1.39.19-1.52-.08-.13-.3-.21-.62-.37-.32-.16-1.9-.94-2.19-1.05-.29-.11-.5-.16-.72.16-.21.32-.82 1.05-1.01 1.26-.19.22-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.89-1.78-2.21-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.22.05-.4-.03-.56-.08-.16-.72-1.76-1-2.4-.26-.63-.53-.55-.72-.55l-.62-.01Z"/></svg>
-    </a>
-    <a class="nav-cta desktop-cta" href="tel:015754722165">
-      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z" fill="currentColor"/></svg>
-      Direkt anfragen
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks"><span aria-hidden="true"></span></button>
-  </nav>
-</div>
-<main id="main-content">
-<section class="relative h-[85vh] min-h-[560px] flex items-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center" style="background-image: url('images/hero-bg.jpg')"></div>
-<div class="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent"></div>
-</div>
-<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-on-primary">
-<div class="max-w-2xl">
-<nav class="breadcrumb mb-5" aria-label="Breadcrumb">
-  <a href="index.html" style="color:rgba(255,255,255,0.7);">Startseite</a>
-  <span style="color:rgba(255,255,255,0.4);" aria-hidden="true">&#8250;</span>
-  <span style="color:rgba(255,255,255,0.9);">Zaunbau Übach-Palenberg</span>
-</nav>
-<span class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm mb-6 rounded">MEISTERBETRIEB &middot; ÜBACH-PALENBERG &amp; REGION</span>
-<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-6 leading-tight">Zaunbau Übach-Palenberg – Zäune, Tore &amp; Sichtschutz vom Profi</h1>
-<p class="font-body-lg text-body-lg mb-10 text-on-primary/90">Ihr regionaler Meisterbetrieb für professionellen Zaunbau in Übach-Palenberg. Von der kostenlosen Aufmaßnahme bis zur sauberen Montage – alles aus einer Hand.</p>
-<div class="flex flex-wrap gap-4">
-<a class="bg-action-blue text-on-primary px-8 py-4 rounded-lg font-button-text text-button-text shadow-lg hover:shadow-action-blue/20 transition-all" href="kontakt.html">Kostenloses Angebot</a>
-<a class="bg-white/10 backdrop-blur-md border border-white/20 text-on-primary px-8 py-4 rounded-lg font-button-text text-button-text hover:bg-white/20 transition-all" href="#leistungen">Unsere Leistungen</a>
-</div>
-</div>
-</div>
+  </div>
 </section>
-<section class="bg-surface-container py-8 border-b border-outline-variant/30">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-6">
-<div class="flex items-center gap-3">
-<span class="text-tertiary-container text-4xl material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<div><p class="font-bold text-lg">5.0 Sterne Google Bewertung</p><p class="text-sm text-secondary">252+ echte Kundenbewertungen</p></div>
-</div>
-<div class="h-12 w-px bg-outline-variant/50 hidden md:block"></div>
-<div class="flex items-center gap-3">
-<span class="text-action-blue text-4xl material-symbols-outlined">location_on</span>
-<div><p class="font-bold text-lg">Direkt angrenzend an Herzogenrath</p><p class="text-sm text-secondary">Schnelle Anfahrt, kurze Wartezeiten</p></div>
-</div>
-<div class="h-12 w-px bg-outline-variant/50 hidden md:block"></div>
-<div class="flex items-center gap-3">
-<span class="text-action-blue text-4xl material-symbols-outlined">workspace_premium</span>
-<div><p class="font-bold text-lg">Meisterbetrieb seit 10+ Jahren</p><p class="text-sm text-secondary">Langlebige Qualität &amp; präzise Montage</p></div>
-</div>
-</div>
+
+<!-- ===== TRUST BAR ===== -->
+<section style="background:#1a4731;padding:1.4rem 0;">
+  <div class="max-w-6xl mx-auto px-6">
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem 3rem;align-items:center;">
+      <div style="display:flex;align-items:center;gap:0.6rem;">
+        <span class="stars" style="font-size:1.1rem;">★★★★★</span>
+        <span style="color:#fff;font-weight:700;font-size:1rem;">5,0</span>
+        <span style="color:rgba(255,255,255,0.65);font-size:0.85rem;">Google Bewertung</span>
+      </div>
+      <div style="width:1px;height:28px;background:rgba(255,255,255,0.2);"></div>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <span class="material-symbols-outlined" style="color:#c8a951;font-size:1.2rem;">location_on</span>
+        <span style="color:#fff;font-size:0.9rem;font-weight:500;">Nur ~5 km von Uebach-Palenberg</span>
+      </div>
+      <div style="width:1px;height:28px;background:rgba(255,255,255,0.2);"></div>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <span class="material-symbols-outlined" style="color:#c8a951;font-size:1.2rem;">verified</span>
+        <span style="color:#fff;font-size:0.9rem;font-weight:500;">Meisterbetrieb seit 10+ Jahren</span>
+      </div>
+      <div style="width:1px;height:28px;background:rgba(255,255,255,0.2);"></div>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <span class="material-symbols-outlined" style="color:#c8a951;font-size:1.2rem;">handshake</span>
+        <span style="color:#fff;font-size:0.9rem;font-weight:500;">Kostenlose Beratung vor Ort</span>
+      </div>
+    </div>
+  </div>
 </section>
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop scroll-mt-24" id="leistungen">
-<div class="max-w-container-max mx-auto">
-<div class="text-center mb-16">
-<span class="font-label-sm text-label-sm text-action-blue">UNSERE LEISTUNGEN IN ÜBACH-PALENBERG</span>
-<h2 class="font-headline-lg text-headline-lg mt-2">Zäune, Tore &amp; Sichtschutz für Übach-Palenberg</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="group bg-surface border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500">
-<div class="h-80 overflow-hidden relative">
-<img loading="lazy" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" alt="Doppelstabmattenzaun Übach-Palenberg anthrazit modern" src="https://lh3.googleusercontent.com/aida/AP1WRLsGdDSqKW1ru1ERu8S2djD9Q9IxQ3Yf8LnQCmX3zxBOIGEuy11cyJ2wgPr51ke9IVEYpNbevGBEaKhzd7xjIxJ4WupwhgPk3OVqut-A0Ilqqxtkw3aHaR5e_ERhtx_AUeR2s6HYhSt97HQR0x1jgoJnPA_oyhnpvw9MYR8qmnzQ9MReJ_8gE2J0FClu1Rer-9Sbt1jlFyHEinqomszrawI1MWCOmFxH1Ss5U0UEvMBKeAISaJ7QUJ4IEezO"/>
-<div class="absolute top-4 left-4 bg-action-blue text-white px-3 py-1 rounded font-label-sm text-label-sm">Beliebteste Wahl</div>
-</div>
-<div class="p-8">
-<h3 class="font-headline-md text-headline-md mb-4">Zaunbau Übach-Palenberg</h3>
-<p class="text-secondary mb-6">Vom Doppelstabmattenzaun bis zum edlen Metallzaun – wir planen und montieren Zäune für Übach-Palenberg und Umgebung. Stabil, langlebig und nach Ihren Wünschen.</p>
-<a class="inline-flex items-center gap-2 font-button-text text-button-text text-action-blue hover:gap-4 transition-all" href="zaeune.html">Mehr erfahren <span class="material-symbols-outlined">arrow_forward</span></a>
-</div>
-</div>
-<div class="group bg-surface border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500">
-<div class="h-80 overflow-hidden">
-<img loading="lazy" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" alt="Automatisches Schiebetor Übach-Palenberg Einfahrt" src="https://lh3.googleusercontent.com/aida/AP1WRLsEpHQj_zELNogZ_c_UL1hfrQxN7Fpa4O0DT8sku4L3hC1HQmJ-i1mXRvKwpbqUVRaZ851f_UKg3Y0v4tdn9oA5WQMdMwWOorEsyFS9fMSDIhAAWl9nXXCsjMhgGrywmlXitnjEnKueY8x1fNLqF_1nnz7q83whYHQ6HFIDgAtpQoD1TnjtrJFj3raEiNqdEV7gCKFw2QrZVWmFHtf-Oz13PFtTgAAvJqEn2fAGhkC6o5RxLUBitrqdD713"/>
-</div>
-<div class="p-8">
-<h3 class="font-headline-md text-headline-md mb-4">Torbau Übach-Palenberg</h3>
-<p class="text-secondary mb-6">Einfahrtstore, Schiebetore mit Automatik und Drehtore für Übach-Palenberg. Sicherheit und Komfort in einem – professionell installiert.</p>
-<a class="inline-flex items-center gap-2 font-button-text text-button-text text-action-blue hover:gap-4 transition-all" href="tore.html">Mehr erfahren <span class="material-symbols-outlined">arrow_forward</span></a>
-</div>
-</div>
-<div class="group bg-surface border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500">
-<div class="h-80 overflow-hidden">
-<img loading="lazy" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" alt="WPC Sichtschutz Übach-Palenberg Terrasse Garten" src="https://lh3.googleusercontent.com/aida/AP1WRLsARtd0NhDRiMi51asI7aQ7VyC1pEu0tp3mkgMIP4106UNv9BY282Rl6mj5bDazQrgqvJwta69_AoIXt8sUUzH8vZKZxi5gUU55ar82sKC2h5CAYoA71tQiKPgdF3A_YP0yZSS91tllOV0T0zxnN_s47LTU_mg9fgIqMjgtDRFUQsgX6o2cVHt5MmZkJzbxw_ptNhC55UhAAnCzvivAMrF5qkBpWI9g1lx_-aYMMwR6gAyY1EwaNfqshlOr"/>
-</div>
-<div class="p-8">
-<h3 class="font-headline-md text-headline-md mb-4">Sichtschutz Übach-Palenberg</h3>
-<p class="text-secondary mb-6">WPC, Aluminium oder Holz-Optik – wir gestalten Sichtschutzlösungen für Übach-Palenberg. Diskret, schön und dauerhaft.</p>
-<a class="inline-flex items-center gap-2 font-button-text text-button-text text-action-blue hover:gap-4 transition-all" href="sichtschutz.html">Mehr erfahren <span class="material-symbols-outlined">arrow_forward</span></a>
-</div>
-</div>
-</div>
-</div>
+
+<!-- ===== LEISTUNGEN ===== -->
+<section style="padding:5rem 0;background:#f8f6f1;">
+  <div class="max-w-6xl mx-auto px-6">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <span class="section-tag">Unsere Leistungen</span>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800;color:#1a4731;margin-bottom:0.75rem;">
+        Zaunbau in Uebach-Palenberg
+      </h2>
+      <p style="color:#4b5563;max-width:560px;margin:0 auto;line-height:1.7;">
+        Vom einfachen Gartenzaun bis zum vollautomatischen Einfahrtstor – wir realisieren Ihr Projekt in Uebach-Palenberg fachgerecht und termingerecht.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.8rem;">
+
+      <!-- Card 1 -->
+      <div class="service-card">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipMcDXFm6rVPxAkVD5bxiL5bVXkqJuGV4yE-3VMB=s1360-w1360-h1020" alt="Zaunbau Uebach-Palenberg" loading="lazy" />
+        <div style="padding:1.5rem;">
+          <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem;">
+            <span class="material-symbols-outlined" style="color:#c8a951;font-size:1.3rem;">fence</span>
+            <h3 style="font-size:1.15rem;font-weight:700;color:#1a4731;margin:0;">Zaunbau Uebach-Palenberg</h3>
+          </div>
+          <p style="color:#4b5563;font-size:0.9rem;line-height:1.7;margin-bottom:1rem;">
+            Für die ruhigen Wohngebiete in Uebach-Palenberg bieten wir klassische Gartenzäune, Doppelstabmatten und Metallzäune in höchster Qualität. Langlebig, witterungsbeständig und optisch ansprechend.
+          </p>
+          <a href="../zaeune.html" style="color:#1a4731;font-weight:600;font-size:0.85rem;text-decoration:none;display:inline-flex;align-items:center;gap:0.25rem;">
+            Mehr erfahren <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipPKFd2GBnFrY8JvM0bXlvA1zFxDwVNn0GAnHy0X=s1360-w1360-h1020" alt="Torbau Uebach-Palenberg" loading="lazy" />
+        <div style="padding:1.5rem;">
+          <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem;">
+            <span class="material-symbols-outlined" style="color:#c8a951;font-size:1.3rem;">door_sliding</span>
+            <h3 style="font-size:1.15rem;font-weight:700;color:#1a4731;margin:0;">Torbau Uebach-Palenberg</h3>
+          </div>
+          <p style="color:#4b5563;font-size:0.9rem;line-height:1.7;margin-bottom:1rem;">
+            Elektrische Einfahrtstore, Schiebetore und Drehtore für Wohn- und Gewerbeobjekte in Uebach-Palenberg. Komfort, Sicherheit und modernes Design – alles aus einer Hand.
+          </p>
+          <a href="../tore.html" style="color:#1a4731;font-weight:600;font-size:0.85rem;text-decoration:none;display:inline-flex;align-items:center;gap:0.25rem;">
+            Mehr erfahren <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipOKpFnMkT7GzIb5Kf4Rh8m1oO_HkVJ9VKlh1Uo=s1360-w1360-h1020" alt="Sichtschutz Uebach-Palenberg" loading="lazy" />
+        <div style="padding:1.5rem;">
+          <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem;">
+            <span class="material-symbols-outlined" style="color:#c8a951;font-size:1.3rem;">visibility_off</span>
+            <h3 style="font-size:1.15rem;font-weight:700;color:#1a4731;margin:0;">Sichtschutz Uebach-Palenberg</h3>
+          </div>
+          <p style="color:#4b5563;font-size:0.9rem;line-height:1.7;margin-bottom:1rem;">
+            Privatsphäre für Terrassen und Gärten in Uebach-Palenberg – mit Sichtschutzmatten, WPC-Elementen und individuellen Lösungen. Ideal für die dicht besiedelten Wohngebiete der Gemeinde.
+          </p>
+          <a href="../sichtschutz.html" style="color:#1a4731;font-weight:600;font-size:0.85rem;text-decoration:none;display:inline-flex;align-items:center;gap:0.25rem;">
+            Mehr erfahren <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
-<section class="bg-surface-container-low py-section-gap">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-<div>
-<span class="font-label-sm text-label-sm text-action-blue">IHR ZAUNBAUER VOR ORT</span>
-<h2 class="font-headline-lg text-headline-lg mt-2 mb-6">Zaunbau in Übach-Palenberg – lokal, schnell, professionell</h2>
-<p class="text-secondary mb-5 text-body-lg leading-relaxed">Übach-Palenberg liegt direkt neben Herzogenrath – kürzeste Wege, schnellste Termine. Ihr Zaunbauer vor der Haustür. Als Meisterbetrieb aus Herzogenrath sind wir regelmäßig in Übach-Palenberg tätig und kennen die lokalen Gegebenheiten genau.</p>
-<p class="text-secondary mb-5 leading-relaxed">Ob für Einfamilienhäuser, Reihenhäuser oder gewerbliche Grundstücke – wir beraten Sie kompetent bei der Auswahl des richtigen Zauns für Ihre Situation in Übach-Palenberg.</p>
-<p class="text-secondary leading-relaxed">Wir führen in Übach-Palenberg durch: <strong>Aufmaßnahmen</strong>, <strong>Fundament- und Pfostenarbeiten</strong>, <strong>Zaunanlagen und Einfriedungen</strong>, <strong>Tor- und Antriebsmontage</strong> sowie <strong>Reparaturen bestehender Zaunanlagen</strong>.</p>
-</div>
-<div class="bg-surface border border-outline-variant/30 rounded-2xl p-8">
-<h3 class="font-headline-md text-headline-md mb-6">Bereiche in Übach-Palenberg, die wir bedienen</h3>
-<div class="grid grid-cols-2 gap-3">
-<div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-action-blue text-base">check_circle</span>Übach</div>
-<div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-action-blue text-base">check_circle</span>Palenberg</div>
-<div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-action-blue text-base">check_circle</span>Scherpenseel</div>
-<div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-action-blue text-base">check_circle</span>Frelenberg</div>
-<div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-action-blue text-base">check_circle</span>Boscheln</div>
-<div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-action-blue text-base">check_circle</span>Rischden</div>
-</div>
-<div class="mt-6 pt-6 border-t border-outline-variant/30">
-<a href="kontakt.html" class="w-full bg-action-blue text-white font-button-text px-6 py-4 rounded-lg hover:brightness-110 transition-all flex items-center justify-center gap-2">
-<span class="material-symbols-outlined">mail</span>Kostenlose Beratung in Übach-Palenberg anfragen
-</a>
-</div>
-</div>
-</div>
-</div>
+
+<!-- ===== LOCAL SECTION ===== -->
+<section style="padding:5rem 0;background:#fff;">
+  <div class="max-w-6xl mx-auto px-6">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="local-grid">
+      <div>
+        <span class="section-tag">Lokal &amp; Persönlich</span>
+        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;color:#1a4731;margin-bottom:1.2rem;line-height:1.25;">
+          Zaunbau in Uebach-Palenberg –<br>lokal, schnell, professionell
+        </h2>
+        <p style="color:#4b5563;line-height:1.8;font-size:0.97rem;margin-bottom:1.5rem;">
+          Übach-Palenberg liegt direkt an der Grenze zu den Niederlanden und nur wenige Kilometer von unserem Standort entfernt. Die überschaubare Gemeinde mit ihren ruhigen Wohngebieten ist ideal für Sichtschutzlösungen und klassische Gartenzäune. Wir kennen die Gemeinde gut und sind schnell vor Ort.
+        </p>
+
+        <!-- Districts -->
+        <div style="margin-bottom:1.8rem;">
+          <p style="font-weight:700;color:#1a4731;margin-bottom:0.8rem;font-size:0.95rem;">Wir sind tätig in allen Ortsteilen:</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;">
+            <div class="district-check">
+              <span class="material-symbols-outlined">check_circle</span>
+              <span>Übach</span>
+            </div>
+            <div class="district-check">
+              <span class="material-symbols-outlined">check_circle</span>
+              <span>Palenberg</span>
+            </div>
+            <div class="district-check">
+              <span class="material-symbols-outlined">check_circle</span>
+              <span>Frelenberg</span>
+            </div>
+            <div class="district-check">
+              <span class="material-symbols-outlined">check_circle</span>
+              <span>Scherpenseel</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="../kontakt.html" class="btn-primary">
+          <span class="material-symbols-outlined" style="font-size:1rem;">send</span>
+          Angebot für Uebach-Palenberg anfordern
+        </a>
+      </div>
+
+      <div style="position:relative;">
+        <div style="background:linear-gradient(135deg,#1a4731 0%,#2d6a4f 100%);border-radius:1.5rem;padding:2.5rem;color:#fff;">
+          <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:1.4rem;">
+            <span class="material-symbols-outlined" style="color:#c8a951;font-size:1.5rem;">location_on</span>
+            <span style="font-weight:700;font-size:1.1rem;">Uebach-Palenberg</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:1rem;">
+            <div style="display:flex;align-items:flex-start;gap:0.8rem;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,0.15);">
+              <span class="material-symbols-outlined" style="color:#c8a951;font-size:1.1rem;margin-top:0.1rem;">straighten</span>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;">Entfernung</div>
+                <div style="color:rgba(255,255,255,0.75);font-size:0.85rem;">Nur ca. 5 km von unserem Standort</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:0.8rem;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,0.15);">
+              <span class="material-symbols-outlined" style="color:#c8a951;font-size:1.1rem;margin-top:0.1rem;">schedule</span>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;">Reaktionszeit</div>
+                <div style="color:rgba(255,255,255,0.75);font-size:0.85rem;">Schnell vor Ort – meist innerhalb weniger Tage</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:0.8rem;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,0.15);">
+              <span class="material-symbols-outlined" style="color:#c8a951;font-size:1.1rem;margin-top:0.1rem;">public</span>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;">Lage</div>
+                <div style="color:rgba(255,255,255,0.75);font-size:0.85rem;">Direkt an der niederländischen Grenze</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:0.8rem;">
+              <span class="material-symbols-outlined" style="color:#c8a951;font-size:1.1rem;margin-top:0.1rem;">euro</span>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;">Angebot</div>
+                <div style="color:rgba(255,255,255,0.75);font-size:0.85rem;">Kostenlose Beratung &amp; Festpreisangebot</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Accent dot -->
+        <div style="position:absolute;top:-1rem;right:-1rem;width:3rem;height:3rem;background:#c8a951;border-radius:50%;opacity:0.35;"></div>
+      </div>
+    </div>
+  </div>
 </section>
-<section class="bg-primary py-section-gap text-on-primary scroll-mt-24" id="ueber">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div>
-<span class="font-label-sm text-label-sm text-tertiary-fixed">UNSERE VORTEILE FÜR ÜBACH-PALENBERG</span>
-<h2 class="font-headline-lg text-headline-lg mt-2 mb-8">Warum Aachener Zaun Center für Ihren Zaun in Übach-Palenberg?</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-<div class="flex flex-col gap-4"><div class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center"><span class="material-symbols-outlined text-tertiary-fixed">forum</span></div><h4 class="font-bold">Ortskundige Beratung</h4><p class="text-sm text-on-primary/70">Wir kennen Übach-Palenberg und die lokalen Gegebenheiten – das spart Zeit und Ärger bei Ihrer Zaunplanung.</p></div>
-<div class="flex flex-col gap-4"><div class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center"><span class="material-symbols-outlined text-tertiary-fixed">handyman</span></div><h4 class="font-bold">Fachgerechte Montage</h4><p class="text-sm text-on-primary/70">Eigene Montageteams ohne Subunternehmer. Pünktlich, sauber, mit Meister-Qualität von der ersten bis zur letzten Schraube.</p></div>
-<div class="flex flex-col gap-4"><div class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center"><span class="material-symbols-outlined text-tertiary-fixed">payments</span></div><h4 class="font-bold">Transparente Preise</h4><p class="text-sm text-on-primary/70">Faire Angebote, detaillierte Aufschlüsselung, keine versteckten Kosten – auch in Übach-Palenberg.</p></div>
-<div class="flex flex-col gap-4"><div class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center"><span class="material-symbols-outlined text-tertiary-fixed">history_edu</span></div><h4 class="font-bold">10+ Jahre Erfahrung</h4><p class="text-sm text-on-primary/70">Hunderte erfolgreiche Zaunprojekte in Übach-Palenberg und der gesamten Region. Ihr Zaun ist bei uns in bewährten Händen.</p></div>
-</div>
-</div>
-<div class="relative">
-<div class="aspect-square rounded-2xl overflow-hidden">
-<img loading="lazy" class="w-full h-full object-cover" alt="Zaunmontage Übach-Palenberg – Aachener Zaun Center Team bei der Arbeit" src="https://lh3.googleusercontent.com/aida/AP1WRLtMU4oJTxWswn1LAvxZ8OzRxTiXfHuvHjDmF0OlwHTceCDvNPe7IbAzwZOyU5KWupz3iZ-Ep6jrvfN1bVnBGpyJmLt4kwcFXH5iGAirQmH410MJt4s6OsHAGqabN1AaqbwjMYCpusJmVqFuI14KQaZZVtj5KENB9rDOvmQ2JOb_Z5GOEVNfrvtCVwcV__8XmE6HcDomqgBzQpkUY_mAF-RLQN-85YMytmdXzFkxN29XWN9W-qhVKotcxzB-"/>
-</div>
-<div class="absolute -bottom-6 -left-6 bg-tertiary-fixed text-on-tertiary-fixed p-6 rounded-lg shadow-xl hidden md:block">
-<p class="text-3xl font-bold">10+</p><p class="text-sm uppercase tracking-wider font-label-sm">Jahre Erfahrung</p>
-</div>
-</div>
-</div>
-</div>
+
+<!-- ===== VORTEILE ===== -->
+<section style="padding:5rem 0;background:#1a4731;">
+  <div class="max-w-6xl mx-auto px-6">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <span style="display:inline-block;background:rgba(200,169,81,0.2);color:#c8a951;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.35rem 1rem;border-radius:9999px;margin-bottom:0.75rem;">Warum wir</span>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.7rem,4vw,2.5rem);font-weight:800;color:#fff;margin-bottom:0.75rem;">
+        Ihre Vorteile in Uebach-Palenberg
+      </h2>
+      <p style="color:rgba(255,255,255,0.7);max-width:520px;margin:0 auto;line-height:1.7;">
+        Als regionaler Betrieb kennen wir die besonderen Anforderungen in der Gemeinde Uebach-Palenberg.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5rem;">
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:1rem;padding:1.8rem;transition:background 0.2s;" onmouseenter="this.style.background='rgba(255,255,255,0.12)'" onmouseleave="this.style.background='rgba(255,255,255,0.07)'">
+        <span class="material-symbols-outlined" style="color:#c8a951;font-size:2rem;margin-bottom:0.8rem;display:block;">speed</span>
+        <h3 style="color:#fff;font-weight:700;font-size:1rem;margin-bottom:0.5rem;">Schnell vor Ort</h3>
+        <p style="color:rgba(255,255,255,0.65);font-size:0.88rem;line-height:1.65;">
+          Unser Standort ist nur rund 5 km von Uebach-Palenberg entfernt – kurze Wege bedeuten schnelle Termine und zuverlässige Montage.
+        </p>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:1rem;padding:1.8rem;transition:background 0.2s;" onmouseenter="this.style.background='rgba(255,255,255,0.12)'" onmouseleave="this.style.background='rgba(255,255,255,0.07)'">
+        <span class="material-symbols-outlined" style="color:#c8a951;font-size:2rem;margin-bottom:0.8rem;display:block;">verified</span>
+        <h3 style="color:#fff;font-weight:700;font-size:1rem;margin-bottom:0.5rem;">Meisterbetrieb</h3>
+        <p style="color:rgba(255,255,255,0.65);font-size:0.88rem;line-height:1.65;">
+          Über 10 Jahre Erfahrung im Zaunbau – auch in Uebach-Palenberg vertrauen Kunden auf unsere handwerkliche Qualität und Fachkompetenz.
+        </p>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:1rem;padding:1.8rem;transition:background 0.2s;" onmouseenter="this.style.background='rgba(255,255,255,0.12)'" onmouseleave="this.style.background='rgba(255,255,255,0.07)'">
+        <span class="material-symbols-outlined" style="color:#c8a951;font-size:2rem;margin-bottom:0.8rem;display:block;">payments</span>
+        <h3 style="color:#fff;font-weight:700;font-size:1rem;margin-bottom:0.5rem;">Faire Festpreise</h3>
+        <p style="color:rgba(255,255,255,0.65);font-size:0.88rem;line-height:1.65;">
+          Transparente Angebote ohne versteckte Kosten – für Projekte in Uebach-Palenberg erhalten Sie immer ein ehrliches Festpreisangebot.
+        </p>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:1rem;padding:1.8rem;transition:background 0.2s;" onmouseenter="this.style.background='rgba(255,255,255,0.12)'" onmouseleave="this.style.background='rgba(255,255,255,0.07)'">
+        <span class="material-symbols-outlined" style="color:#c8a951;font-size:2rem;margin-bottom:0.8rem;display:block;">support_agent</span>
+        <h3 style="color:#fff;font-weight:700;font-size:1rem;margin-bottom:0.5rem;">Persönliche Beratung</h3>
+        <p style="color:rgba(255,255,255,0.65);font-size:0.88rem;line-height:1.65;">
+          Wir kommen zu Ihnen nach Uebach-Palenberg, schauen uns die Situation an und beraten Sie kostenlos und unverbindlich.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
-<section class="py-section-gap">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="max-w-3xl mx-auto">
-<div class="text-center mb-12">
-<span class="font-label-sm text-label-sm text-action-blue">HÄUFIGE FRAGEN</span>
-<h2 class="font-headline-lg text-headline-lg mt-2">Fragen zum Zaunbau in Übach-Palenberg</h2>
-</div>
-<div class="faq-item open">
-<button class="faq-q" aria-expanded="true">Ist Aachener Zaun Center in Übach-Palenberg tätig?<span class="faq-icon material-symbols-outlined">add</span></button>
-<div class="faq-a">Ja, Übach-Palenberg grenzt direkt an Herzogenrath, wo unser Betrieb sitzt. Wir sind in allen Ortsteilen tätig und können besonders schnell reagieren. Kurze Wege bedeuten kurze Wartezeiten für Sie.</div>
-</div>
-<div class="faq-item">
-<button class="faq-q" aria-expanded="false">Welche Leistungen bieten Sie in Übach-Palenberg an?<span class="faq-icon material-symbols-outlined">add</span></button>
-<div class="faq-a">In Übach-Palenberg bieten wir das volle Programm: Doppelstabmattenzäune, Metallzäune, Holzzäune, WPC-Sichtschutz, Einfahrtstore und automatische Torantriebe. Alles aus einer Hand, inkl. Planung und Montage.</div>
-</div>
-<div class="faq-item">
-<button class="faq-q" aria-expanded="false">Wie bekomme ich ein kostenloses Angebot für Zaunbau in Übach-Palenberg?<span class="faq-icon material-symbols-outlined">add</span></button>
-<div class="faq-a">Rufen Sie uns einfach an: <a href="tel:015754722165" class="text-action-blue font-medium">01575 4722165</a>. Alternativ schreiben Sie uns per WhatsApp oder nutzen Sie das Kontaktformular auf unserer Website. Wir vereinbaren kurzfristig einen Ortstermin in Übach-Palenberg zur kostenlosen Aufmaßnahme – ohne Wartezeit und ohne Verpflichtung.</div>
-</div>
-</div>
-</div>
+
+<!-- ===== FAQ ===== -->
+<section style="padding:5rem 0;background:#f8f6f1;">
+  <div class="max-w-3xl mx-auto px-6">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <span class="section-tag">Häufige Fragen</span>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.7rem,4vw,2.5rem);font-weight:800;color:#1a4731;margin-bottom:0.75rem;">
+        FAQ: Zaunbau in Uebach-Palenberg
+      </h2>
+      <p style="color:#4b5563;max-width:500px;margin:0 auto;line-height:1.7;">
+        Die häufigsten Fragen unserer Kunden aus Uebach-Palenberg – direkt beantwortet.
+      </p>
+    </div>
+
+    <div style="background:#fff;border-radius:1rem;padding:0.5rem 2rem;box-shadow:0 2px 16px rgba(0,0,0,0.07);">
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">
+          <span>Führen Sie Zaunmontagen in Uebach-Palenberg durch?</span>
+          <div class="icon">+</div>
+        </button>
+        <div class="faq-body">
+          Ja, wir montieren Zäune, Tore und Sichtschutzanlagen in der gesamten Gemeinde Uebach-Palenberg – inklusive der Ortsteile Übach, Palenberg, Frelenberg und Scherpenseel. Unser Standort ist nur ca. 5 km entfernt, sodass wir schnell vor Ort sind.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">
+          <span>Wie lange dauert eine Zaunmontage in Uebach-Palenberg?</span>
+          <div class="icon">+</div>
+        </button>
+        <div class="faq-body">
+          Die Montagezeit hängt vom Umfang des Projekts ab. Ein einfacher Gartenzaun ist oft an einem Tag fertig. Größere Anlagen mit automatischem Tor können 2–3 Tage in Anspruch nehmen. Nach der Besichtigung in Uebach-Palenberg erhalten Sie von uns einen konkreten Zeitplan.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">
+          <span>Welche Zaunarten sind in Uebach-Palenberg besonders gefragt?</span>
+          <div class="icon">+</div>
+        </button>
+        <div class="faq-body">
+          In der ruhigen Wohngemeinde Uebach-Palenberg sind klassische Gartenzäune aus Metall und Holz sowie Sichtschutzelemente für Terrassen und Gärten besonders beliebt. Auch Doppelstabmattenzäune für Grundstücksbegrenzungen werden häufig nachgefragt.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">
+          <span>Bauen Sie auch automatische Tore in Uebach-Palenberg?</span>
+          <div class="icon">+</div>
+        </button>
+        <div class="faq-body">
+          Ja, wir planen und montieren elektrische Einfahrtstore und Schiebetore in Uebach-Palenberg. Wir übernehmen die komplette Installation inklusive Steuerungstechnik, Sicherheitssensoren und optionaler Fernbedienung oder Smartphone-Anbindung.
+        </div>
+      </div>
+
+      <div class="faq-item" style="border-bottom:none;">
+        <button class="faq-btn" onclick="toggleFaq(this)">
+          <span>Wie erhalte ich ein Angebot für Zaunarbeiten in Uebach-Palenberg?</span>
+          <div class="icon">+</div>
+        </button>
+        <div class="faq-body">
+          Kontaktieren Sie uns einfach telefonisch unter <strong>01575 4722165</strong>, per WhatsApp oder über unser Kontaktformular. Wir vereinbaren dann einen kostenlosen Vororttermin in Uebach-Palenberg und erstellen Ihnen ein transparentes Festpreisangebot.
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
-<section class="bg-primary text-on-primary py-section-gap">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div>
-<span class="font-label-sm text-label-sm text-tertiary-fixed">KONTAKT</span>
-<h2 class="font-headline-lg text-headline-lg mt-2 mb-6">Zaunbau Übach-Palenberg – Jetzt kostenloses Angebot anfordern</h2>
-<p class="text-on-primary/80 mb-10 max-w-xl">Erzählen Sie uns von Ihrem Vorhaben in Übach-Palenberg. Wir melden uns kurzfristig mit einer unverbindlichen Einschätzung und vereinbaren einen Ortstermin zur kostenlosen Aufmaßnahme.</p>
-<div class="space-y-5">
-<a class="flex items-center gap-4 group" href="tel:015754722165"><span class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-tertiary-fixed group-hover:text-on-tertiary-fixed transition-colors"><span class="material-symbols-outlined">call</span></span><div><p class="text-sm text-on-primary/60">Telefon</p><p class="font-bold text-lg">01575 4722165</p></div></a>
-<a class="flex items-center gap-4 group" href="mailto:info@aachenerzauncenter.de"><span class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-tertiary-fixed group-hover:text-on-tertiary-fixed transition-colors"><span class="material-symbols-outlined">mail</span></span><div><p class="text-sm text-on-primary/60">E-Mail</p><p class="font-bold text-lg">info@aachenerzauncenter.de</p></div></a>
-<div class="flex items-center gap-4"><span class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center"><span class="material-symbols-outlined">location_on</span></span><div><p class="text-sm text-on-primary/60">Standort</p><p class="font-bold text-lg">Wolfstr. 2, 52134 Herzogenrath</p></div></div>
-</div>
-</div>
-<div class="bg-surface-container-lowest text-on-surface rounded-2xl p-8 shadow-2xl">
-<h3 class="font-headline-md text-headline-md mb-3">Angebot für Zaunbau Übach-Palenberg</h3>
-<p class="text-secondary mb-8">Direkt anfragen – wir melden uns innerhalb von 24 Stunden:</p>
-<div class="space-y-3">
-<a href="kontakt.html" class="w-full bg-action-blue text-white font-button-text text-button-text px-6 py-4 rounded-lg hover:brightness-110 active:scale-[0.99] transition-all flex items-center justify-center gap-2"><span class="material-symbols-outlined">mail</span>Zum Kontaktformular</a>
-<div class="grid grid-cols-2 gap-3">
-<a href="https://wa.me/4915754722165" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-4 py-3.5 rounded-lg text-white font-button-text hover:brightness-105 transition-all" style="background:#25D366;"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.9c0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 1.8c2.16 0 4.19.84 5.72 2.37a8.03 8.03 0 0 1 2.37 5.72c0 4.47-3.64 8.1-8.1 8.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.06.8.82-2.98-.2-.31a8.03 8.03 0 0 1-1.24-4.3c0-4.47 3.63-8.1 8.1-8.1Zm-4.6 4.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.37c.16.22 2.29 3.5 5.56 4.78 2.72 1.07 3.28.86 3.87.8.59-.05 1.9-.77 2.17-1.52.27-.75.27-1.39.19-1.52-.08-.13-.3-.21-.62-.37-.32-.16-1.9-.94-2.19-1.05-.29-.11-.5-.16-.72.16-.21.32-.82 1.05-1.01 1.26-.19.22-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.89-1.78-2.21-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.22.05-.4-.03-.56-.08-.16-.72-1.76-1-2.4-.26-.63-.53-.55-.72-.55l-.62-.01Z"/></svg>WhatsApp</a>
-<a href="tel:015754722165" class="flex items-center justify-center gap-2 px-4 py-3.5 rounded-lg border border-outline-variant text-primary font-button-text hover:bg-surface-container transition-colors"><span class="material-symbols-outlined">call</span>Anrufen</a>
-</div>
-</div>
-</div>
-</div>
-</div>
+
+<!-- ===== CTA SECTION ===== -->
+<section style="padding:5rem 0;background:linear-gradient(135deg,#0f2d1e 0%,#1a4731 50%,#2d6a4f 100%);">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <span style="display:inline-block;background:rgba(200,169,81,0.2);color:#c8a951;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.35rem 1rem;border-radius:9999px;margin-bottom:1rem;">Jetzt starten</span>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4.5vw,3rem);font-weight:800;color:#fff;margin-bottom:1rem;line-height:1.2;">
+      Ihr Zaunprojekt in<br><span style="color:#c8a951;">Uebach-Palenberg</span> – wir sind dabei
+    </h2>
+    <p style="color:rgba(255,255,255,0.75);font-size:1.05rem;max-width:560px;margin:0 auto 2.2rem;line-height:1.75;">
+      Fordern Sie jetzt Ihr kostenloses und unverbindliches Angebot an. Unser Team kommt zu Ihnen nach Uebach-Palenberg und berät Sie persönlich.
+    </p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
+      <a href="tel:+4915754722165" class="btn-primary" style="font-size:1rem;padding:1rem 2.2rem;">
+        <span class="material-symbols-outlined">call</span>
+        01575 4722165
+      </a>
+      <a href="https://wa.me/4915754722165?text=Hallo%2C%20ich%20m%C3%B6chte%20ein%20Angebot%20f%C3%BCr%20Zaunbau%20in%20Uebach-Palenberg" class="btn-outline-white" style="font-size:1rem;padding:1rem 2rem;" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.854L.057 23.882l6.19-1.624A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.372l-.36-.214-3.726.977.995-3.636-.235-.374A9.818 9.818 0 112 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+        WhatsApp schreiben
+      </a>
+      <a href="../kontakt.html" class="btn-outline-white" style="font-size:1rem;padding:1rem 2rem;">
+        <span class="material-symbols-outlined">send</span>
+        Kontaktformular
+      </a>
+    </div>
+  </div>
 </section>
-</main>
-<footer class="bg-inverse-surface text-inverse-on-surface">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
-<div class="md:col-span-2">
-<div class="flex items-center gap-3 mb-4">
-<span class="w-9 h-9 rounded-full" style="background:radial-gradient(120% 120% at 32% 28%,#0c2f25 0%,#001912 100%);position:relative;display:inline-block;"></span>
-<span class="font-headline-md text-headline-md font-extrabold">Aachener Zaun Center</span>
-</div>
-<p class="text-inverse-on-surface/70 max-w-md">Ihr Meisterbetrieb für Zaunbau in Übach-Palenberg, Herzogenrath und der gesamten Städteregion Aachen.</p>
-</div>
-<div>
-<h4 class="font-bold mb-4">Leistungen</h4>
-<ul class="space-y-2 text-inverse-on-surface/70">
-<li><a class="hover:text-inverse-primary transition-colors" href="zaeune.html">Zäune</a></li>
-<li><a class="hover:text-inverse-primary transition-colors" href="tore.html">Tore</a></li>
-<li><a class="hover:text-inverse-primary transition-colors" href="sichtschutz.html">Sichtschutz</a></li>
-<li><a class="hover:text-inverse-primary transition-colors" href="index.html#leistungen">Montage</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold mb-4">Kontakt</h4>
-<ul class="space-y-2 text-inverse-on-surface/70">
-<li><a class="hover:text-inverse-primary transition-colors" href="tel:015754722165">01575 4722165</a></li>
-<li><a class="hover:text-inverse-primary transition-colors" href="mailto:info@aachenerzauncenter.de">info@aachenerzauncenter.de</a></li>
-<li>Wolfstr. 2, 52134 Herzogenrath</li>
-</ul>
-</div>
-</div>
-<div class="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-inverse-on-surface/60">
-<p>&copy; 2026 Aachener Zaun Center. Alle Rechte vorbehalten.</p>
-<div class="flex gap-6"><a class="hover:text-inverse-primary transition-colors" href="impressum.html">Impressum</a><a class="hover:text-inverse-primary transition-colors" href="datenschutz.html">Datenschutz</a></div>
-</div>
-</div>
+
+<!-- ===== FOOTER ===== -->
+<footer style="background:#0f2d1e;color:rgba(255,255,255,0.75);padding:3.5rem 0 1.5rem;">
+  <div class="max-w-6xl mx-auto px-6">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2.5rem;margin-bottom:2.5rem;">
+
+      <!-- Brand -->
+      <div>
+        <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:1rem;">
+          <div style="width:34px;height:34px;background:#c8a951;border-radius:7px;display:flex;align-items:center;justify-content:center;">
+            <span class="material-symbols-outlined" style="color:#0f2d1e;font-size:1.1rem;">fence</span>
+          </div>
+          <span style="font-family:'Playfair Display',serif;font-weight:700;color:#fff;font-size:1rem;">Aachener Zaun Center</span>
+        </div>
+        <p style="font-size:0.85rem;line-height:1.7;margin-bottom:1rem;">
+          Ihr Meisterbetrieb für Zaunbau, Torbau und Sichtschutz in Uebach-Palenberg und der gesamten Region Aachen.
+        </p>
+        <div style="display:flex;align-items:center;gap:0.5rem;">
+          <span class="stars" style="font-size:0.9rem;">★★★★★</span>
+          <span style="color:#fff;font-size:0.85rem;font-weight:600;">5,0 Google</span>
+        </div>
+      </div>
+
+      <!-- Leistungen -->
+      <div>
+        <h4 style="color:#fff;font-weight:700;font-size:0.9rem;margin-bottom:1rem;letter-spacing:0.05em;text-transform:uppercase;">Leistungen</h4>
+        <div style="display:flex;flex-direction:column;gap:0.5rem;">
+          <a href="../zaeune.html" style="color:rgba(255,255,255,0.65);text-decoration:none;font-size:0.875rem;transition:color 0.2s;" onmouseenter="this.style.color='#c8a951'" onmouseleave="this.style.color='rgba(255,255,255,0.65)'">Zaunbau</a>
+          <a href="../tore.html" style="color:rgba(255,255,255,0.65);text-decoration:none;font-size:0.875rem;transition:color 0.2s;" onmouseenter="this.style.color='#c8a951'" onmouseleave="this.style.color='rgba(255,255,255,0.65)'">Torbau &amp; Elektrotore</a>
+          <a href="../sichtschutz.html" style="color:rgba(255,255,255,0.65);text-decoration:none;font-size:0.875rem;transition:color 0.2s;" onmouseenter="this.style.color='#c8a951'" onmouseleave="this.style.color='rgba(255,255,255,0.65)'">Sichtschutz</a>
+          <a href="../kontakt.html" style="color:rgba(255,255,255,0.65);text-decoration:none;font-size:0.875rem;transition:color 0.2s;" onmouseenter="this.style.color='#c8a951'" onmouseleave="this.style.color='rgba(255,255,255,0.65)'">Kontakt &amp; Angebot</a>
+        </div>
+      </div>
+
+      <!-- Regionen -->
+      <div>
+        <h4 style="color:#fff;font-weight:700;font-size:0.9rem;margin-bottom:1rem;letter-spacing:0.05em;text-transform:uppercase;">Regionen</h4>
+        <div style="display:flex;flex-direction:column;gap:0.5rem;">
+          <span style="color:rgba(255,255,255,0.65);font-size:0.875rem;">Uebach-Palenberg</span>
+          <span style="color:rgba(255,255,255,0.65);font-size:0.875rem;">Aachen</span>
+          <span style="color:rgba(255,255,255,0.65);font-size:0.875rem;">Herzogenrath</span>
+          <span style="color:rgba(255,255,255,0.65);font-size:0.875rem;">Würselen</span>
+          <span style="color:rgba(255,255,255,0.65);font-size:0.875rem;">Alsdorf</span>
+        </div>
+      </div>
+
+      <!-- Kontakt -->
+      <div>
+        <h4 style="color:#fff;font-weight:700;font-size:0.9rem;margin-bottom:1rem;letter-spacing:0.05em;text-transform:uppercase;">Kontakt</h4>
+        <div style="display:flex;flex-direction:column;gap:0.7rem;">
+          <a href="tel:+4915754722165" style="display:flex;align-items:center;gap:0.5rem;color:rgba(255,255,255,0.65);text-decoration:none;font-size:0.875rem;transition:color 0.2s;" onmouseenter="this.style.color='#c8a951'" onmouseleave="this.style.color='rgba(255,255,255,0.65)'">
+            <span class="material-symbols-outlined" style="font-size:1rem;">call</span>
+            01575 4722165
+          </a>
+          <a href="https://wa.me/4915754722165" style="display:flex;align-items:center;gap:0.5rem;color:rgba(255,255,255,0.65);text-decoration:none;font-size:0.875rem;transition:color 0.2s;" onmouseenter="this.style.color='#25D366'" onmouseleave="this.style.color='rgba(255,255,255,0.65)'" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.854L.057 23.882l6.19-1.624A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.372l-.36-.214-3.726.977.995-3.636-.235-.374A9.818 9.818 0 112 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+            WhatsApp
+          </a>
+          <a href="mailto:info@aachenerzauncenter.de" style="display:flex;align-items:center;gap:0.5rem;color:rgba(255,255,255,0.65);text-decoration:none;font-size:0.875rem;transition:color 0.2s;" onmouseenter="this.style.color='#c8a951'" onmouseleave="this.style.color='rgba(255,255,255,0.65)'">
+            <span class="material-symbols-outlined" style="font-size:1rem;">mail</span>
+            info@aachenerzauncenter.de
+          </a>
+          <div style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.8rem;">
+            <span class="material-symbols-outlined" style="font-size:1rem;margin-top:0.05rem;">schedule</span>
+            <span>Mo–Fr 08–18 Uhr<br>Sa 09–14 Uhr</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div style="border-top:1px solid rgba(255,255,255,0.12);padding-top:1.5rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.75rem;">
+      <p style="font-size:0.8rem;margin:0;">© 2025 Aachener Zaun Center. Alle Rechte vorbehalten.</p>
+      <div style="display:flex;gap:1.5rem;">
+        <a href="../index.html#impressum" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.8rem;transition:color 0.2s;" onmouseenter="this.style.color='#c8a951'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">Impressum</a>
+        <a href="../index.html#datenschutz" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.8rem;transition:color 0.2s;" onmouseenter="this.style.color='#c8a951'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">Datenschutz</a>
+      </div>
+    </div>
+  </div>
 </footer>
+
 <script>
-  const nav = document.getElementById('nav');
-  const toggle = document.getElementById('navToggle');
-  const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 8);
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-  toggle.addEventListener('click', () => {
-    const open = document.body.classList.toggle('menu-open');
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
-  });
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    a.addEventListener('click', () => {
-      document.body.classList.remove('menu-open');
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.setAttribute('aria-label', 'Menü öffnen');
-    });
-  });
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      document.body.classList.remove('menu-open');
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.setAttribute('aria-label', 'Menü öffnen');
+  // ===== NAV SCROLL =====
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
     }
   });
-  document.querySelectorAll('.faq-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item');
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-q').setAttribute('aria-expanded','false'); });
-      if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
-    });
+
+  // ===== MENU TOGGLE =====
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
   });
+
+  // ===== FAQ ACCORDION =====
+  function toggleFaq(btn) {
+    const body = btn.nextElementSibling;
+    const isOpen = body.classList.contains('open');
+
+    // Close all
+    document.querySelectorAll('.faq-body').forEach(b => b.classList.remove('open'));
+    document.querySelectorAll('.faq-btn').forEach(b => b.classList.remove('open'));
+
+    // Open clicked (if was closed)
+    if (!isOpen) {
+      body.classList.add('open');
+      btn.classList.add('open');
+    }
+  }
 </script>
+
+<style>
+  @media (max-width: 768px) {
+    .local-grid {
+      grid-template-columns: 1fr !important;
+      gap: 2rem !important;
+    }
+  }
+</style>
+
 </body>
 </html>

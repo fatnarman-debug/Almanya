@@ -1,498 +1,909 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="de">
+<html lang="de">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
-<link rel="apple-touch-icon" href="favicon.svg"/>
-<title>Zaunbau Geilenkirchen | Zäune, Tore &amp; Sichtschutz – Aachener Zaun Center</title>
-<meta name="description" content="Zaunbau Geilenkirchen vom Meisterbetrieb: Zäune, Tore &amp; Sichtschutz für Geilenkirchen und Umgebung. Kostenlose Beratung, faire Preise, pünktliche Montage. ☎ 01575 4722165"/>
-<meta name="robots" content="index, follow"/>
-<link rel="canonical" href="https://aachenerzauncenter.de/geilenkirchen/"/>
-<meta name="geo.region" content="DE-NW"/>
-<meta name="geo.placename" content="Geilenkirchen"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="de_DE"/>
-<meta property="og:title" content="Zaunbau Geilenkirchen | Zäune, Tore &amp; Sichtschutz – Aachener Zaun Center"/>
-<meta property="og:description" content="Ihr Meisterbetrieb für Zaunbau Geilenkirchen: Zäune, Tore und Sichtschutz. Individuelle Planung &amp; fachgerechte Montage."/>
-<meta property="og:url" content="https://aachenerzauncenter.de/geilenkirchen/"/>
-<meta property="og:site_name" content="Aachener Zaun Center"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Zaunbau Geilenkirchen | Aachener Zaun Center"/>
-<meta name="twitter:description" content="Zäune, Tore und Sichtschutz aus Meisterhand für Geilenkirchen. Kostenlose Beratung, faire Preise."/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zaunbau Geilenkirchen | Zäune, Tore & Sichtschutz - Aachener Zaun Center</title>
+  <meta name="description" content="Zaunbau Geilenkirchen ✓ Meisterbetrieb ✓ Zäune, Tore & Sichtschutz ✓ Kostenlose Beratung ✓ Jetzt anrufen: 01575 4722165" />
+  <link rel="canonical" href="https://aachenerzauncenter.de/geilenkirchen/" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1a4731',
+            'primary-dark': '#0f2d1e',
+            'primary-light': '#2d6a4f',
+            accent: '#c8a951',
+            'accent-dark': '#a08535',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Playfair Display', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    /* Floating pill nav */
+    .floating-nav {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(15, 45, 30, 0.92);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(200, 169, 81, 0.3);
+      border-radius: 999px;
+      padding: 8px 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+      transition: all 0.3s ease;
+    }
+    .floating-nav.scrolled {
+      background: rgba(15, 45, 30, 0.97);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    }
+    .floating-nav a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .floating-nav .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .floating-nav .nav-links a {
+      color: rgba(255,255,255,0.85);
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .floating-nav .nav-links a:hover {
+      color: #c8a951;
+      background: rgba(200,169,81,0.1);
+    }
+    .floating-nav .cta-whatsapp {
+      background: #25D366;
+      color: #fff;
+    }
+    .floating-nav .cta-whatsapp:hover {
+      background: #1ebe5d;
+      transform: scale(1.04);
+    }
+    .floating-nav .cta-contact {
+      background: #c8a951;
+      color: #0f2d1e;
+    }
+    .floating-nav .cta-contact:hover {
+      background: #a08535;
+      transform: scale(1.04);
+    }
+    .floating-nav .divider {
+      width: 1px;
+      height: 24px;
+      background: rgba(255,255,255,0.2);
+      margin: 0 4px;
+    }
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      padding: 4px;
+    }
+    @media (max-width: 768px) {
+      .floating-nav {
+        bottom: 16px;
+        padding: 8px 12px;
+        gap: 6px;
+      }
+      .floating-nav .nav-links {
+        display: none;
+      }
+      .floating-nav .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(15,45,30,0.97);
+        border: 1px solid rgba(200,169,81,0.3);
+        border-radius: 16px;
+        padding: 8px;
+        min-width: 180px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      }
+      .floating-nav .divider { display: none; }
+      .mobile-menu-toggle { display: flex; align-items: center; }
+      .floating-nav .cta-whatsapp span.btn-text,
+      .floating-nav .cta-contact span.btn-text {
+        display: none;
+      }
+    }
+
+    /* Hero */
+    .hero-section {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      background-image: url('../images/hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,30,18,0.88) 0%, rgba(26,71,49,0.72) 60%, rgba(15,45,30,0.60) 100%);
+    }
+    .hero-content { position: relative; z-index: 1; }
+
+    /* Breadcrumb */
+    .breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 0.82rem; }
+    .breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: #c8a951; }
+    .breadcrumb span.sep { color: rgba(255,255,255,0.4); }
+    .breadcrumb span.current { color: #c8a951; }
+
+    /* Stars */
+    .stars { color: #f59e0b; letter-spacing: 1px; }
+
+    /* FAQ accordion */
+    .faq-item { border-bottom: 1px solid rgba(26,71,49,0.15); }
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      padding: 18px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1a4731;
+      gap: 12px;
+      transition: color 0.2s;
+    }
+    .faq-question:hover { color: #c8a951; }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.3s ease;
+      font-size: 0.95rem;
+      color: #374151;
+      line-height: 1.7;
+    }
+    .faq-answer.open {
+      max-height: 400px;
+      padding-bottom: 18px;
+    }
+    .faq-icon { transition: transform 0.3s ease; flex-shrink: 0; }
+    .faq-item.active .faq-icon { transform: rotate(45deg); }
+
+    /* Card hover */
+    .service-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 48px rgba(26,71,49,0.18);
+    }
+
+    /* District checkmarks */
+    .district-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0;
+      font-weight: 500;
+      color: #1a4731;
+    }
+    .district-item .check {
+      width: 24px;
+      height: 24px;
+      background: #1a4731;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .district-item .check span { color: #fff; font-size: 14px; }
+
+    /* Scroll top btn */
+    #scrollTop {
+      position: fixed;
+      right: 20px;
+      bottom: 90px;
+      width: 40px;
+      height: 40px;
+      background: #1a4731;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s;
+      z-index: 999;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+    #scrollTop.visible { opacity: 1; }
+    #scrollTop:hover { transform: translateY(-3px); background: #0f2d1e; }
+  </style>
+
+  <!-- Schema JSON-LD -->
+  <script type="application/ld+json">
+  [
     {
+      "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "@id": "https://aachenerzauncenter.de/#business",
       "name": "Aachener Zaun Center",
-      "url": "https://aachenerzauncenter.de/",
+      "description": "Professioneller Zaunbau, Torbau und Sichtschutz in Geilenkirchen und Umgebung. Meisterbetrieb mit über 10 Jahren Erfahrung.",
+      "url": "https://aachenerzauncenter.de/geilenkirchen/",
       "telephone": "+4915754722165",
       "email": "info@aachenerzauncenter.de",
+      "image": "https://aachenerzauncenter.de/images/hero-bg.jpg",
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Cash, Bank Transfer",
+      "openingHours": ["Mo-Fr 08:00-18:00", "Sa 09:00-14:00"],
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Wolfstr. 2",
-        "addressLocality": "Herzogenrath",
-        "postalCode": "52134",
+        "addressLocality": "Aachen",
+        "addressRegion": "NRW",
         "addressCountry": "DE"
       },
-      "areaServed": {"@type": "City", "name": "Geilenkirchen"},
-      "priceRange": "EUR EUR",
-      "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "252"}
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 50.9667,
+        "longitude": 6.1167
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Geilenkirchen"
+      },
+      "hasMap": "https://maps.google.com/?q=Geilenkirchen",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "sameAs": [
+        "https://wa.me/4915754722165"
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Ist Aachener Zaun Center auch in Geilenkirchen tätig?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Ja, wir führen regelmäßig Zaunmontagen in Geilenkirchen und Umgebung durch – Teveren, Tripsrath, Gillrath und mehr. Als Meisterbetrieb bieten wir Beratung, Planung und professionelle Montage."}
+          "name": "Führt das Aachener Zaun Center Montagen in Geilenkirchen durch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, wir sind regelmäßig in Geilenkirchen und den umliegenden Ortschaften wie Geilenkirchen-Mitte, Gillrath, Bauchem und Hünshoven im Einsatz. Die Anfahrt beträgt ca. 18 km und ist für uns selbstverständlich."
+          }
         },
         {
           "@type": "Question",
-          "name": "Welche Zaun-Stile bieten Sie in Geilenkirchen an?",
-          "acceptedAnswer": {"@type": "Answer", "text": "In Geilenkirchen bieten wir alle gängigen Zaun-Stile: Doppelstabmatten, Metallzäune, Holzzäune, Gabionen und Aluminium-Sichtschutz. Wir beraten Sie zu Stil, Material und Preis direkt vor Ort."}
+          "name": "Wie lange dauert eine Zaunmontage in Geilenkirchen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Je nach Umfang des Projekts dauert eine typische Zaunmontage in Geilenkirchen zwischen einem halben und zwei Arbeitstagen. Bei größeren Grundstücken planen wir gemeinsam mit Ihnen den genauen Zeitrahmen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Zaunsysteme sind in Geilenkirchen besonders beliebt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In den Wohngebieten rund um Geilenkirchen-Mitte und Hünshoven sind vor allem Doppelstabmattenzäune und Holzsichtschutz sehr gefragt. Aber auch Metallzäune und Gabionen werden häufig nachgefragt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bauen Sie auch automatische Einfahrtstore in Geilenkirchen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolut. Wir planen und montieren elektrische Schiebe- und Drehtore für Privat- und Gewerbeobjekte in ganz Geilenkirchen. Dazu gehört auch die komplette Elektrik und Steuerung inkl. Fernbedienung oder Smartphone-App."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie erhalte ich ein Angebot für Zaunbau in Geilenkirchen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ganz einfach: Rufen Sie uns unter 01575 4722165 an oder schreiben Sie uns über WhatsApp. Alternativ nutzen Sie unser Kontaktformular. Wir melden uns innerhalb von 24 Stunden und vereinbaren einen Vor-Ort-Termin in Geilenkirchen."
+          }
         }
       ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://aachenerzauncenter.de/"},
-        {"@type": "ListItem", "position": 2, "name": "Zaunbau Geilenkirchen", "item": "https://aachenerzauncenter.de/geilenkirchen/"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://aachenerzauncenter.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Zaunbau Geilenkirchen",
+          "item": "https://aachenerzauncenter.de/geilenkirchen/"
+        }
       ]
     }
   ]
-}
-</script>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-    tailwind.config = {
-        darkMode: "class",
-        theme: {
-            extend: {
-                "colors": {
-                    "inverse-primary": "#aacec0", "background": "#f8f9fa", "deep-forest": "#10551F",
-                    "surface-container-high": "#e7e8e9", "tertiary-fixed-dim": "#e9c400", "on-primary": "#ffffff",
-                    "secondary": "#525f76", "inverse-on-surface": "#f0f1f2", "on-primary-container": "#75988a",
-                    "secondary-fixed-dim": "#bac7e2", "surface-container-lowest": "#ffffff", "secondary-fixed": "#d6e3ff",
-                    "slate-steel": "#4A5568", "on-surface": "#191c1d", "error": "#ba1a1a", "surface-container": "#edeeef",
-                    "on-tertiary-container": "#4c3f00", "on-secondary-fixed-variant": "#3a475d", "on-secondary-fixed": "#0e1c30",
-                    "on-primary-fixed": "#002118", "on-tertiary-fixed": "#221b00", "tertiary-container": "#c9a900",
-                    "on-surface-variant": "#414845", "on-secondary-container": "#58657c", "surface-bright": "#f8f9fa",
-                    "inverse-surface": "#2e3132", "surface-container-low": "#f3f4f5", "on-error": "#ffffff",
-                    "on-error-container": "#93000a", "surface-tint": "#446559", "outline-variant": "#c1c8c3",
-                    "surface": "#f8f9fa", "secondary-container": "#d6e3ff", "tertiary": "#705d00",
-                    "primary-fixed": "#c6ebdb", "outline": "#717975", "on-secondary": "#ffffff",
-                    "primary-fixed-dim": "#aacec0", "primary": "#001912", "primary-container": "#0c2f25",
-                    "surface-container-highest": "#e1e3e4", "on-primary-fixed-variant": "#2c4d42",
-                    "on-tertiary-fixed-variant": "#544600", "error-container": "#ffdad6", "tertiary-fixed": "#ffe16d",
-                    "on-tertiary": "#ffffff", "surface-dim": "#d9dadb", "surface-variant": "#e1e3e4",
-                    "action-blue": "#0056B3", "on-background": "#191c1d"
-                },
-                "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
-                "spacing": {
-                    "container-max": "1280px", "gutter": "24px", "margin-desktop": "48px",
-                    "margin-mobile": "16px", "section-gap": "80px", "base": "8px"
-                },
-                "fontFamily": {
-                    "body-lg": ["Inter"], "headline-xl": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"],
-                    "headline-md": ["Hanken Grotesk"], "body-md": ["Inter"], "label-sm": ["JetBrains Mono"],
-                    "button-text": ["Hanken Grotesk"], "headline-xl-mobile": ["Hanken Grotesk"]
-                },
-                "fontSize": {
-                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
-                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
-                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
-                    "button-text": ["16px", {"lineHeight": "20px", "fontWeight": "600"}],
-                    "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "800"}]
-                }
-            },
-        },
-    }
-</script>
-<style>
-    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
-    :root{
-        --coral:#0056B3; --coral-deep:#0056B3; --stone:#292524; --stone-soft:#44403C; --ink:#1C1917;
-        --nav-glass:rgba(255,255,255,0.70); --nav-blur:20px; --ease:cubic-bezier(0.22,0.61,0.36,1);
-    }
-    html{scroll-padding-top:104px;}
-    .nav-wrap{position:fixed;top:18px;left:0;right:0;z-index:100;display:flex;justify-content:center;padding:0 16px;pointer-events:none;}
-    .nav{pointer-events:auto;width:100%;max-width:1180px;display:flex;align-items:center;gap:20px;padding:9px 9px 9px 20px;border-radius:999px;
-        font-family:"Outfit",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-        background:var(--nav-glass);-webkit-backdrop-filter:blur(var(--nav-blur)) saturate(160%);backdrop-filter:blur(var(--nav-blur)) saturate(160%);
-        border:1px solid rgba(255,255,255,0.55);
-        box-shadow:0 1px 0 rgba(255,255,255,0.65) inset,0 12px 28px -14px rgba(41,37,36,0.30),0 4px 10px -6px rgba(41,37,36,0.18);
-        transition:box-shadow .3s var(--ease);}
-    .nav.is-scrolled{box-shadow:0 1px 0 rgba(255,255,255,0.65) inset,0 16px 34px -14px rgba(41,37,36,0.38),0 6px 14px -8px rgba(41,37,36,0.22);}
-    .nav a, .nav button{font-family:inherit;}
-    .brand{display:flex;align-items:center;gap:11px;padding-right:4px;flex-shrink:0;text-decoration:none;}
-    .logo-dot{position:relative;width:34px;height:34px;border-radius:50%;
-        background:radial-gradient(120% 120% at 32% 28%,#0c2f25 0%,#001912 100%);
-        box-shadow:0 2px 6px -1px rgba(0,25,18,0.45),0 0 0 1px rgba(255,255,255,0.35) inset;flex-shrink:0;}
-    .logo-dot::after{content:"";position:absolute;top:9px;left:10px;width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(41,37,36,0.25);}
-    .brand-name{display:flex;flex-direction:column;line-height:1.02;}
-    .brand-name b{font-size:15px;font-weight:700;color:var(--ink);letter-spacing:-0.01em;}
-    .brand-name span{font-size:11px;font-weight:500;color:var(--stone-soft);letter-spacing:0.06em;text-transform:uppercase;}
-    .nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center;}
-    .nav-link{position:relative;display:inline-flex;align-items:center;gap:5px;padding:8px 14px;border-radius:999px;font-size:14.5px;font-weight:500;color:var(--stone);text-decoration:none;
-        transition:color .2s var(--ease),background-color .2s var(--ease);}
-    .nav-link:hover{background:rgba(41,37,36,0.05);}
-    .nav-link.is-active{font-weight:600;color:var(--ink);}
-    .nav-link.is-active::after{content:"";position:absolute;left:14px;right:14px;bottom:4px;height:2px;border-radius:2px;background:var(--coral-deep);}
-    .chev{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s var(--ease);}
-    .has-menu{position:relative;}
-    .has-menu:hover .chev{transform:rotate(180deg);}
-    .submenu{display:none;position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);min-width:200px;padding:8px;border-radius:16px;
-        background:rgba(255,255,255,0.86);-webkit-backdrop-filter:blur(22px) saturate(160%);backdrop-filter:blur(22px) saturate(160%);
-        border:1px solid rgba(255,255,255,0.6);box-shadow:0 8px 24px -8px rgba(41,37,36,0.22);z-index:10;}
-    .has-menu:hover .submenu{display:block;}
-    .submenu a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;font-size:13.5px;font-weight:500;color:var(--stone);text-decoration:none;transition:background-color .18s var(--ease);}
-    .submenu a:hover{background:rgba(0,86,179,0.10);}
-    .submenu a i{width:6px;height:6px;border-radius:50%;background:var(--coral-deep);flex-shrink:0;}
-    .nav-cta{display:inline-flex;align-items:center;gap:8px;flex-shrink:0;font-size:14px;font-weight:600;color:#fff;background:#0056B3;padding:11px 20px;border-radius:999px;letter-spacing:-0.005em;white-space:nowrap;text-decoration:none;
-        box-shadow:0 8px 18px -8px rgba(41,37,36,0.6);transition:transform .2s var(--ease),background-color .2s var(--ease),box-shadow .2s var(--ease);}
-    .nav-cta:hover{background:#00468f;transform:translateY(-1px);box-shadow:0 12px 22px -9px rgba(41,37,36,0.65);}
-    .nav-cta svg{width:18px;height:18px;flex-shrink:0;}
-    .nav-wa{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;flex-shrink:0;text-decoration:none;
-        background:radial-gradient(120% 120% at 32% 28%,#4ce37a 0%,#25D366 55%,#1aa851 100%);
-        box-shadow:0 8px 18px -8px rgba(37,211,102,0.6);transition:transform .2s var(--ease),box-shadow .2s var(--ease);}
-    .nav-wa:hover{transform:translateY(-1px);box-shadow:0 12px 22px -9px rgba(37,211,102,0.7);}
-    .wa-glyph{width:20px;height:20px;fill:#fff;}
-    .nav-toggle{display:none;width:42px;height:42px;border:none;background:var(--stone);border-radius:50%;cursor:pointer;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 8px 18px -8px rgba(41,37,36,0.6);}
-    .nav-toggle span{position:relative;display:block;width:17px;height:1.8px;background:#fff;border-radius:2px;transition:transform .3s var(--ease),opacity .2s var(--ease);}
-    .nav-toggle span::before,.nav-toggle span::after{content:"";position:absolute;left:0;width:17px;height:1.8px;background:#fff;border-radius:2px;transition:transform .3s var(--ease);}
-    .nav-toggle span::before{top:-5px;}
-    .nav-toggle span::after{top:5px;}
-    body.menu-open .nav-toggle span{background:transparent;}
-    body.menu-open .nav-toggle span::before{transform:translateY(5px) rotate(45deg);}
-    body.menu-open .nav-toggle span::after{transform:translateY(-5px) rotate(-45deg);}
-    @media(max-width:860px){
-        .nav-links{display:none;position:absolute;top:calc(100% + 10px);left:0;right:0;border-radius:24px;padding:12px;
-            background:rgba(255,255,255,0.9);-webkit-backdrop-filter:blur(22px) saturate(160%);backdrop-filter:blur(22px) saturate(160%);
-            border:1px solid rgba(255,255,255,0.7);box-shadow:0 16px 32px -12px rgba(41,37,36,0.28);flex-direction:column;align-items:stretch;gap:4px;}
-        .nav{position:relative;flex-wrap:wrap;}
-        body.menu-open .nav-links{display:flex;}
-        .nav-link{padding:12px 16px;border-radius:14px;}
-        .submenu{position:static;transform:none;display:none;box-shadow:none;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;border:none;border-left:2px solid rgba(0,86,179,0.35);border-radius:0;box-shadow:none;transition:none;}
-        .has-menu:hover .submenu{display:none;}
-        .desktop-wa,.desktop-cta{display:none!important;}
-        .mobile-cta{display:inline-flex!important;}
-        .nav-toggle{display:flex;}
-    }
-    @media(min-width:861px){.mobile-cta{display:none!important;}}
-    .breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:#525f76;}
-    .breadcrumb a{color:#525f76;text-decoration:none;}
-    .breadcrumb a:hover{color:#0056B3;}
-    .breadcrumb span{color:#c1c8c3;}
-    .faq-item{border-bottom:1px solid #c1c8c3;}
-    .faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:17px;font-weight:600;font-family:"Hanken Grotesk",sans-serif;color:#191c1d;}
-    .faq-a{display:none;padding-bottom:20px;color:#525f76;line-height:1.7;}
-    .faq-item.open .faq-a{display:block;}
-    .faq-item.open .faq-icon{transform:rotate(45deg);}
-    .faq-icon{transition:transform .25s ease;flex-shrink:0;font-size:22px;color:#0056B3;}
-</style>
+  </script>
 </head>
-<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
-<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-[200] focus:top-3 focus:left-3 focus:bg-action-blue focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Zum Inhalt springen</a>
-<div class="nav-wrap">
-  <nav class="nav" id="nav" role="navigation" aria-label="Hauptnavigation">
-    <a class="brand" href="index.html" aria-label="Aachener Zaun Center – Startseite">
-      <span class="logo-dot" aria-hidden="true"></span>
-      <span class="brand-name"><b>Aachener</b><span>Zaun Center</span></span>
-    </a>
+<body class="font-sans text-gray-800 bg-white">
+
+  <!-- Floating Pill Nav -->
+  <nav class="floating-nav" id="floatingNav" aria-label="Schnellnavigation">
+    <button class="mobile-menu-toggle" id="menuToggle" aria-label="Menü öffnen" aria-expanded="false">
+      <span class="material-symbols-outlined" style="font-size:22px;">menu</span>
+    </button>
     <div class="nav-links" id="navLinks">
-      <a class="nav-link" href="index.html">Home</a>
-      <a class="nav-link" href="ueber.html">Über uns</a>
-      <div class="has-menu">
-        <a class="nav-link" href="index.html#leistungen" aria-haspopup="true">Leistungen
-          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-        </a>
-        <div class="submenu" role="menu">
-          <a href="zaeune.html" role="menuitem"><i aria-hidden="true"></i>Zäune</a>
-          <a href="tore.html" role="menuitem"><i aria-hidden="true"></i>Tore</a>
-          <a href="sichtschutz.html" role="menuitem"><i aria-hidden="true"></i>Sichtschutz</a>
+      <a href="../index.html">Start</a>
+      <a href="../zaeune.html">Zäune</a>
+      <a href="../tore.html">Tore</a>
+      <a href="../sichtschutz.html">Sichtschutz</a>
+      <a href="../ueber.html">Über uns</a>
+      <a href="../kontakt.html">Kontakt</a>
+    </div>
+    <div class="divider"></div>
+    <a href="https://wa.me/4915754722165?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Zaunbau%20in%20Geilenkirchen." class="cta-whatsapp" target="_blank" rel="noopener">
+      <span class="material-symbols-outlined" style="font-size:18px;">chat</span>
+      <span class="btn-text">WhatsApp</span>
+    </a>
+    <a href="../kontakt.html" class="cta-contact">
+      <span class="material-symbols-outlined" style="font-size:18px;">edit_note</span>
+      <span class="btn-text">Direkt anfragen</span>
+    </a>
+  </nav>
+
+  <!-- Scroll to top -->
+  <button id="scrollTop" aria-label="Nach oben scrollen">
+    <span class="material-symbols-outlined" style="font-size:20px;">arrow_upward</span>
+  </button>
+
+  <!-- HERO -->
+  <section class="hero-section" aria-label="Hero Geilenkirchen">
+    <div class="hero-content w-full px-6 md:px-12 lg:px-24 py-24">
+      <div class="max-w-3xl">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb mb-6" aria-label="Breadcrumb">
+          <a href="../index.html">Startseite</a>
+          <span class="sep" aria-hidden="true">›</span>
+          <span class="current">Zaunbau Geilenkirchen</span>
+        </nav>
+
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 rounded-full px-4 py-1.5 text-accent text-sm font-semibold mb-6">
+          <span class="material-symbols-outlined" style="font-size:16px;">location_on</span>
+          Ihr Zaunprofi in Geilenkirchen &amp; Umgebung
+        </div>
+
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          Zaunbau Geilenkirchen –<br />
+          <span class="text-accent">Zäune, Tore &amp; Sichtschutz</span><br />
+          vom Profi
+        </h1>
+
+        <p class="text-white/80 text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
+          Meisterbetrieb aus der Region — professionell, zuverlässig und pünktlich in Geilenkirchen im Einsatz. Kostenlose Beratung und schnelle Umsetzung.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="tel:015754722165" class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-primary-dark font-bold px-7 py-4 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-base">
+            <span class="material-symbols-outlined" style="font-size:20px;">call</span>
+            01575 4722165
+          </a>
+          <a href="../kontakt.html" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-7 py-4 rounded-full transition-all duration-200 backdrop-blur-sm text-base">
+            <span class="material-symbols-outlined" style="font-size:20px;">edit_note</span>
+            Angebot anfordern
+          </a>
         </div>
       </div>
-      <a class="nav-link" href="kontakt.html">Kontakt</a>
-      <a class="nav-cta mobile-cta" href="https://wa.me/4915754722165" style="background:#25D366;" target="_blank" rel="noopener">
-        <svg class="wa-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.9c0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 1.8c2.16 0 4.19.84 5.72 2.37a8.03 8.03 0 0 1 2.37 5.72c0 4.47-3.64 8.1-8.1 8.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.06.8.82-2.98-.2-.31a8.03 8.03 0 0 1-1.24-4.3c0-4.47 3.63-8.1 8.1-8.1Zm-4.6 4.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.37c.16.22 2.29 3.5 5.56 4.78 2.72 1.07 3.28.86 3.87.8.59-.05 1.9-.77 2.17-1.52.27-.75.27-1.39.19-1.52-.08-.13-.3-.21-.62-.37-.32-.16-1.9-.94-2.19-1.05-.29-.11-.5-.16-.72.16-.21.32-.82 1.05-1.01 1.26-.19.22-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.89-1.78-2.21-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.22.05-.4-.03-.56-.08-.16-.72-1.76-1-2.4-.26-.63-.53-.55-.72-.55l-.62-.01Z"/></svg>
-        WhatsApp
-      </a>
-      <a class="nav-cta mobile-cta" href="tel:015754722165">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z" fill="currentColor"/></svg>
-        Direkt anfragen
-      </a>
     </div>
-    <a class="nav-wa desktop-wa" href="https://wa.me/4915754722165" target="_blank" rel="noopener" aria-label="WhatsApp">
-      <svg class="wa-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.9c0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 1.8c2.16 0 4.19.84 5.72 2.37a8.03 8.03 0 0 1 2.37 5.72c0 4.47-3.64 8.1-8.1 8.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.06.8.82-2.98-.2-.31a8.03 8.03 0 0 1-1.24-4.3c0-4.47 3.63-8.1 8.1-8.1Zm-4.6 4.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.37c.16.22 2.29 3.5 5.56 4.78 2.72 1.07 3.28.86 3.87.8.59-.05 1.9-.77 2.17-1.52.27-.75.27-1.39.19-1.52-.08-.13-.3-.21-.62-.37-.32-.16-1.9-.94-2.19-1.05-.29-.11-.5-.16-.72.16-.21.32-.82 1.05-1.01 1.26-.19.22-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.89-1.78-2.21-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.22.05-.4-.03-.56-.08-.16-.72-1.76-1-2.4-.26-.63-.53-.55-.72-.55l-.62-.01Z"/></svg>
-    </a>
-    <a class="nav-cta desktop-cta" href="tel:015754722165">
-      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z" fill="currentColor"/></svg>
-      Direkt anfragen
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks"><span aria-hidden="true"></span></button>
-  </nav>
-</div>
-<main id="main-content">
-<section class="relative h-[85vh] min-h-[560px] flex items-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center" style="background-image: url('images/hero-bg.jpg')"></div>
-<div class="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent"></div>
-</div>
-<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-on-primary">
-<div class="max-w-2xl">
-<nav class="breadcrumb mb-5" aria-label="Breadcrumb">
-  <a href="index.html" style="color:rgba(255,255,255,0.7);">Startseite</a>
-  <span style="color:rgba(255,255,255,0.4);" aria-hidden="true">&#8250;</span>
-  <span style="color:rgba(255,255,255,0.9);">Zaunbau Geilenkirchen</span>
-</nav>
-<span class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm mb-6 rounded">MEISTERBETRIEB &middot; GEILENKIRCHEN &amp; REGION</span>
-<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-6 leading-tight">Zaunbau Geilenkirchen – Zäune, Tore &amp; Sichtschutz vom Profi</h1>
-<p class="font-body-lg text-body-lg mb-10 text-on-primary/90">Ihr regionaler Meisterbetrieb für professionellen Zaunbau in Geilenkirchen. Von der kostenlosen Aufmaßnahme bis zur sauberen Montage – alles aus einer Hand.</p>
-<div class="flex flex-wrap gap-4">
-<a class="bg-action-blue text-on-primary px-8 py-4 rounded-lg font-button-text text-button-text shadow-lg hover:shadow-action-blue/20 transition-all" href="kontakt.html">Kostenloses Angebot</a>
-<a class="bg-white/10 backdrop-blur-md border border-white/20 text-on-primary px-8 py-4 rounded-lg font-button-text text-button-text hover:bg-white/20 transition-all" href="#leistungen">Unsere Leistungen</a>
-</div>
-</div>
-</div>
-</section>
-<section class="bg-surface-container py-8 border-b border-outline-variant/30">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-6">
-<div class="flex items-center gap-3">
-<span class="text-tertiary-container text-4xl material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<div><p class="font-bold text-lg">5.0 Sterne Google Bewertung</p><p class="text-sm text-secondary">252+ echte Kundenbewertungen</p></div>
-</div>
-<div class="h-12 w-px bg-outline-variant/50 hidden md:block"></div>
-<div class="flex items-center gap-3">
-<span class="text-action-blue text-4xl material-symbols-outlined">location_on</span>
-<div><p class="font-bold text-lg">Nur ~20 km von Geilenkirchen</p><p class="text-sm text-secondary">Schnelle Anfahrt, kurze Wartezeiten</p></div>
-</div>
-<div class="h-12 w-px bg-outline-variant/50 hidden md:block"></div>
-<div class="flex items-center gap-3">
-<span class="text-action-blue text-4xl material-symbols-outlined">workspace_premium</span>
-<div><p class="font-bold text-lg">Meisterbetrieb seit 10+ Jahren</p><p class="text-sm text-secondary">Langlebige Qualität &amp; präzise Montage</p></div>
-</div>
-</div>
-</section>
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop scroll-mt-24" id="leistungen">
-<div class="max-w-container-max mx-auto">
-<div class="text-center mb-16">
-<span class="font-label-sm text-label-sm text-action-blue">UNSERE LEISTUNGEN IN GEILENKIRCHEN</span>
-<h2 class="font-headline-lg text-headline-lg mt-2">Zäune, Tore &amp; Sichtschutz für Geilenkirchen</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="group bg-surface border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500">
-<div class="h-80 overflow-hidden relative">
-<img loading="lazy" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" alt="Doppelstabmattenzaun Geilenkirchen anthrazit modern" src="https://lh3.googleusercontent.com/aida/AP1WRLsGdDSqKW1ru1ERu8S2djD9Q9IxQ3Yf8LnQCmX3zxBOIGEuy11cyJ2wgPr51ke9IVEYpNbevGBEaKhzd7xjIxJ4WupwhgPk3OVqut-A0Ilqqxtkw3aHaR5e_ERhtx_AUeR2s6HYhSt97HQR0x1jgoJnPA_oyhnpvw9MYR8qmnzQ9MReJ_8gE2J0FClu1Rer-9Sbt1jlFyHEinqomszrawI1MWCOmFxH1Ss5U0UEvMBKeAISaJ7QUJ4IEezO"/>
-<div class="absolute top-4 left-4 bg-action-blue text-white px-3 py-1 rounded font-label-sm text-label-sm">Beliebteste Wahl</div>
-</div>
-<div class="p-8">
-<h3 class="font-headline-md text-headline-md mb-4">Zaunbau Geilenkirchen</h3>
-<p class="text-secondary mb-6">Vom Doppelstabmattenzaun bis zum edlen Metallzaun – wir planen und montieren Zäune für Geilenkirchen und Umgebung. Stabil, langlebig und nach Ihren Wünschen.</p>
-<a class="inline-flex items-center gap-2 font-button-text text-button-text text-action-blue hover:gap-4 transition-all" href="zaeune.html">Mehr erfahren <span class="material-symbols-outlined">arrow_forward</span></a>
-</div>
-</div>
-<div class="group bg-surface border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500">
-<div class="h-80 overflow-hidden">
-<img loading="lazy" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" alt="Automatisches Schiebetor Geilenkirchen Einfahrt" src="https://lh3.googleusercontent.com/aida/AP1WRLsEpHQj_zELNogZ_c_UL1hfrQxN7Fpa4O0DT8sku4L3hC1HQmJ-i1mXRvKwpbqUVRaZ851f_UKg3Y0v4tdn9oA5WQMdMwWOorEsyFS9fMSDIhAAWl9nXXCsjMhgGrywmlXitnjEnKueY8x1fNLqF_1nnz7q83whYHQ6HFIDgAtpQoD1TnjtrJFj3raEiNqdEV7gCKFw2QrZVWmFHtf-Oz13PFtTgAAvJqEn2fAGhkC6o5RxLUBitrqdD713"/>
-</div>
-<div class="p-8">
-<h3 class="font-headline-md text-headline-md mb-4">Torbau Geilenkirchen</h3>
-<p class="text-secondary mb-6">Einfahrtstore, Schiebetore mit Automatik und Drehtore für Geilenkirchen. Sicherheit und Komfort in einem – professionell installiert.</p>
-<a class="inline-flex items-center gap-2 font-button-text text-button-text text-action-blue hover:gap-4 transition-all" href="tore.html">Mehr erfahren <span class="material-symbols-outlined">arrow_forward</span></a>
-</div>
-</div>
-<div class="group bg-surface border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500">
-<div class="h-80 overflow-hidden">
-<img loading="lazy" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" alt="WPC Sichtschutz Geilenkirchen Terrasse Garten" src="https://lh3.googleusercontent.com/aida/AP1WRLsARtd0NhDRiMi51asI7aQ7VyC1pEu0tp3mkgMIP4106UNv9BY282Rl6mj5bDazQrgqvJwta69_AoIXt8sUUzH8vZKZxi5gUU55ar82sKC2h5CAYoA71tQiKPgdF3A_YP0yZSS91tllOV0T0zxnN_s47LTU_mg9fgIqMjgtDRFUQsgX6o2cVHt5MmZkJzbxw_ptNhC55UhAAnCzvivAMrF5qkBpWI9g1lx_-aYMMwR6gAyY1EwaNfqshlOr"/>
-</div>
-<div class="p-8">
-<h3 class="font-headline-md text-headline-md mb-4">Sichtschutz Geilenkirchen</h3>
-<p class="text-secondary mb-6">WPC, Aluminium oder Holz-Optik – wir gestalten Sichtschutzlösungen für Geilenkirchen. Diskret, schön und dauerhaft.</p>
-<a class="inline-flex items-center gap-2 font-button-text text-button-text text-action-blue hover:gap-4 transition-all" href="sichtschutz.html">Mehr erfahren <span class="material-symbols-outlined">arrow_forward</span></a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="bg-surface-container-low py-section-gap">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-<div>
-<span class="font-label-sm text-label-sm text-action-blue">IHR ZAUNBAUER VOR ORT</span>
-<h2 class="font-headline-lg text-headline-lg mt-2 mb-6">Zaunbau in Geilenkirchen – lokal, schnell, professionell</h2>
-<p class="text-secondary mb-5 text-body-lg leading-relaxed">Geilenkirchen im Kreis Heinsberg gehört zu unserem festen Einsatzgebiet. Professioneller Zaunbau aus einer Hand. Als Meisterbetrieb aus Herzogenrath sind wir regelmäßig in Geilenkirchen tätig und kennen die lokalen Gegebenheiten genau.</p>
-<p class="text-secondary mb-5 leading-relaxed">Ob für Einfamilienhäuser, Reihenhäuser oder gewerbliche Grundstücke – wir beraten Sie kompetent bei der Auswahl des richtigen Zauns für Ihre Situation in Geilenkirchen.</p>
-<p class="text-secondary leading-relaxed">Wir führen in Geilenkirchen durch: <strong>Aufmaßnahmen</strong>, <strong>Fundament- und Pfostenarbeiten</strong>, <strong>Zaunanlagen und Einfriedungen</strong>, <strong>Tor- und Antriebsmontage</strong> sowie <strong>Reparaturen bestehender Zaunanlagen</strong>.</p>
-</div>
-<div class="bg-surface border border-outline-variant/30 rounded-2xl p-8">
-<h3 class="font-headline-md text-headline-md mb-6">Bereiche in Geilenkirchen, die wir bedienen</h3>
-<div class="grid grid-cols-2 gap-3">
-<div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-action-blue text-base">check_circle</span>Geilenkirchen-Mitte</div>
-<div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-action-blue text-base">check_circle</span>Teveren</div>
-<div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-action-blue text-base">check_circle</span>Tripsrath</div>
-<div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-action-blue text-base">check_circle</span>Gillrath</div>
-<div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-action-blue text-base">check_circle</span>Bauchem</div>
-</div>
-<div class="mt-6 pt-6 border-t border-outline-variant/30">
-<a href="kontakt.html" class="w-full bg-action-blue text-white font-button-text px-6 py-4 rounded-lg hover:brightness-110 transition-all flex items-center justify-center gap-2">
-<span class="material-symbols-outlined">mail</span>Kostenlose Beratung in Geilenkirchen anfragen
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="bg-primary py-section-gap text-on-primary scroll-mt-24" id="ueber">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div>
-<span class="font-label-sm text-label-sm text-tertiary-fixed">UNSERE VORTEILE FÜR GEILENKIRCHEN</span>
-<h2 class="font-headline-lg text-headline-lg mt-2 mb-8">Warum Aachener Zaun Center für Ihren Zaun in Geilenkirchen?</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-<div class="flex flex-col gap-4"><div class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center"><span class="material-symbols-outlined text-tertiary-fixed">forum</span></div><h4 class="font-bold">Ortskundige Beratung</h4><p class="text-sm text-on-primary/70">Wir kennen Geilenkirchen und die lokalen Gegebenheiten – das spart Zeit und Ärger bei Ihrer Zaunplanung.</p></div>
-<div class="flex flex-col gap-4"><div class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center"><span class="material-symbols-outlined text-tertiary-fixed">handyman</span></div><h4 class="font-bold">Fachgerechte Montage</h4><p class="text-sm text-on-primary/70">Eigene Montageteams ohne Subunternehmer. Pünktlich, sauber, mit Meister-Qualität von der ersten bis zur letzten Schraube.</p></div>
-<div class="flex flex-col gap-4"><div class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center"><span class="material-symbols-outlined text-tertiary-fixed">payments</span></div><h4 class="font-bold">Transparente Preise</h4><p class="text-sm text-on-primary/70">Faire Angebote, detaillierte Aufschlüsselung, keine versteckten Kosten – auch in Geilenkirchen.</p></div>
-<div class="flex flex-col gap-4"><div class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center"><span class="material-symbols-outlined text-tertiary-fixed">history_edu</span></div><h4 class="font-bold">10+ Jahre Erfahrung</h4><p class="text-sm text-on-primary/70">Hunderte erfolgreiche Zaunprojekte in Geilenkirchen und der gesamten Region. Ihr Zaun ist bei uns in bewährten Händen.</p></div>
-</div>
-</div>
-<div class="relative">
-<div class="aspect-square rounded-2xl overflow-hidden">
-<img loading="lazy" class="w-full h-full object-cover" alt="Zaunmontage Geilenkirchen – Aachener Zaun Center Team bei der Arbeit" src="https://lh3.googleusercontent.com/aida/AP1WRLtMU4oJTxWswn1LAvxZ8OzRxTiXfHuvHjDmF0OlwHTceCDvNPe7IbAzwZOyU5KWupz3iZ-Ep6jrvfN1bVnBGpyJmLt4kwcFXH5iGAirQmH410MJt4s6OsHAGqabN1AaqbwjMYCpusJmVqFuI14KQaZZVtj5KENB9rDOvmQ2JOb_Z5GOEVNfrvtCVwcV__8XmE6HcDomqgBzQpkUY_mAF-RLQN-85YMytmdXzFkxN29XWN9W-qhVKotcxzB-"/>
-</div>
-<div class="absolute -bottom-6 -left-6 bg-tertiary-fixed text-on-tertiary-fixed p-6 rounded-lg shadow-xl hidden md:block">
-<p class="text-3xl font-bold">10+</p><p class="text-sm uppercase tracking-wider font-label-sm">Jahre Erfahrung</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-section-gap">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="max-w-3xl mx-auto">
-<div class="text-center mb-12">
-<span class="font-label-sm text-label-sm text-action-blue">HÄUFIGE FRAGEN</span>
-<h2 class="font-headline-lg text-headline-lg mt-2">Fragen zum Zaunbau in Geilenkirchen</h2>
-</div>
-<div class="faq-item open">
-<button class="faq-q" aria-expanded="true">Ist Aachener Zaun Center auch in Geilenkirchen tätig?<span class="faq-icon material-symbols-outlined">add</span></button>
-<div class="faq-a">Ja, wir führen regelmäßig Zaunmontagen in Geilenkirchen und Umgebung durch – Teveren, Tripsrath, Gillrath und mehr. Als Meisterbetrieb bieten wir Beratung, Planung und professionelle Montage.</div>
-</div>
-<div class="faq-item">
-<button class="faq-q" aria-expanded="false">Welche Zaun-Stile bieten Sie in Geilenkirchen an?<span class="faq-icon material-symbols-outlined">add</span></button>
-<div class="faq-a">In Geilenkirchen bieten wir alle gängigen Zaun-Stile: Doppelstabmatten, Metallzäune, Holzzäune, Gabionen und Aluminium-Sichtschutz. Wir beraten Sie zu Stil, Material und Preis direkt vor Ort.</div>
-</div>
-<div class="faq-item">
-<button class="faq-q" aria-expanded="false">Wie bekomme ich ein kostenloses Angebot für Zaunbau in Geilenkirchen?<span class="faq-icon material-symbols-outlined">add</span></button>
-<div class="faq-a">Rufen Sie uns einfach an: <a href="tel:015754722165" class="text-action-blue font-medium">01575 4722165</a>. Alternativ schreiben Sie uns per WhatsApp oder nutzen Sie das Kontaktformular auf unserer Website. Wir vereinbaren kurzfristig einen Ortstermin in Geilenkirchen zur kostenlosen Aufmaßnahme – ohne Wartezeit und ohne Verpflichtung.</div>
-</div>
-</div>
-</div>
-</section>
-<section class="bg-primary text-on-primary py-section-gap">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div>
-<span class="font-label-sm text-label-sm text-tertiary-fixed">KONTAKT</span>
-<h2 class="font-headline-lg text-headline-lg mt-2 mb-6">Zaunbau Geilenkirchen – Jetzt kostenloses Angebot anfordern</h2>
-<p class="text-on-primary/80 mb-10 max-w-xl">Erzählen Sie uns von Ihrem Vorhaben in Geilenkirchen. Wir melden uns kurzfristig mit einer unverbindlichen Einschätzung und vereinbaren einen Ortstermin zur kostenlosen Aufmaßnahme.</p>
-<div class="space-y-5">
-<a class="flex items-center gap-4 group" href="tel:015754722165"><span class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-tertiary-fixed group-hover:text-on-tertiary-fixed transition-colors"><span class="material-symbols-outlined">call</span></span><div><p class="text-sm text-on-primary/60">Telefon</p><p class="font-bold text-lg">01575 4722165</p></div></a>
-<a class="flex items-center gap-4 group" href="mailto:info@aachenerzauncenter.de"><span class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-tertiary-fixed group-hover:text-on-tertiary-fixed transition-colors"><span class="material-symbols-outlined">mail</span></span><div><p class="text-sm text-on-primary/60">E-Mail</p><p class="font-bold text-lg">info@aachenerzauncenter.de</p></div></a>
-<div class="flex items-center gap-4"><span class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center"><span class="material-symbols-outlined">location_on</span></span><div><p class="text-sm text-on-primary/60">Standort</p><p class="font-bold text-lg">Wolfstr. 2, 52134 Herzogenrath</p></div></div>
-</div>
-</div>
-<div class="bg-surface-container-lowest text-on-surface rounded-2xl p-8 shadow-2xl">
-<h3 class="font-headline-md text-headline-md mb-3">Angebot für Zaunbau Geilenkirchen</h3>
-<p class="text-secondary mb-8">Direkt anfragen – wir melden uns innerhalb von 24 Stunden:</p>
-<div class="space-y-3">
-<a href="kontakt.html" class="w-full bg-action-blue text-white font-button-text text-button-text px-6 py-4 rounded-lg hover:brightness-110 active:scale-[0.99] transition-all flex items-center justify-center gap-2"><span class="material-symbols-outlined">mail</span>Zum Kontaktformular</a>
-<div class="grid grid-cols-2 gap-3">
-<a href="https://wa.me/4915754722165" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-4 py-3.5 rounded-lg text-white font-button-text hover:brightness-105 transition-all" style="background:#25D366;"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.9c0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 1.8c2.16 0 4.19.84 5.72 2.37a8.03 8.03 0 0 1 2.37 5.72c0 4.47-3.64 8.1-8.1 8.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.06.8.82-2.98-.2-.31a8.03 8.03 0 0 1-1.24-4.3c0-4.47 3.63-8.1 8.1-8.1Zm-4.6 4.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.37c.16.22 2.29 3.5 5.56 4.78 2.72 1.07 3.28.86 3.87.8.59-.05 1.9-.77 2.17-1.52.27-.75.27-1.39.19-1.52-.08-.13-.3-.21-.62-.37-.32-.16-1.9-.94-2.19-1.05-.29-.11-.5-.16-.72.16-.21.32-.82 1.05-1.01 1.26-.19.22-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.89-1.78-2.21-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.22.05-.4-.03-.56-.08-.16-.72-1.76-1-2.4-.26-.63-.53-.55-.72-.55l-.62-.01Z"/></svg>WhatsApp</a>
-<a href="tel:015754722165" class="flex items-center justify-center gap-2 px-4 py-3.5 rounded-lg border border-outline-variant text-primary font-button-text hover:bg-surface-container transition-colors"><span class="material-symbols-outlined">call</span>Anrufen</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<footer class="bg-inverse-surface text-inverse-on-surface">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
-<div class="md:col-span-2">
-<div class="flex items-center gap-3 mb-4">
-<span class="w-9 h-9 rounded-full" style="background:radial-gradient(120% 120% at 32% 28%,#0c2f25 0%,#001912 100%);position:relative;display:inline-block;"></span>
-<span class="font-headline-md text-headline-md font-extrabold">Aachener Zaun Center</span>
-</div>
-<p class="text-inverse-on-surface/70 max-w-md">Ihr Meisterbetrieb für Zaunbau in Geilenkirchen, Herzogenrath und der gesamten Städteregion Aachen.</p>
-</div>
-<div>
-<h4 class="font-bold mb-4">Leistungen</h4>
-<ul class="space-y-2 text-inverse-on-surface/70">
-<li><a class="hover:text-inverse-primary transition-colors" href="zaeune.html">Zäune</a></li>
-<li><a class="hover:text-inverse-primary transition-colors" href="tore.html">Tore</a></li>
-<li><a class="hover:text-inverse-primary transition-colors" href="sichtschutz.html">Sichtschutz</a></li>
-<li><a class="hover:text-inverse-primary transition-colors" href="index.html#leistungen">Montage</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold mb-4">Kontakt</h4>
-<ul class="space-y-2 text-inverse-on-surface/70">
-<li><a class="hover:text-inverse-primary transition-colors" href="tel:015754722165">01575 4722165</a></li>
-<li><a class="hover:text-inverse-primary transition-colors" href="mailto:info@aachenerzauncenter.de">info@aachenerzauncenter.de</a></li>
-<li>Wolfstr. 2, 52134 Herzogenrath</li>
-</ul>
-</div>
-</div>
-<div class="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-inverse-on-surface/60">
-<p>&copy; 2026 Aachener Zaun Center. Alle Rechte vorbehalten.</p>
-<div class="flex gap-6"><a class="hover:text-inverse-primary transition-colors" href="impressum.html">Impressum</a><a class="hover:text-inverse-primary transition-colors" href="datenschutz.html">Datenschutz</a></div>
-</div>
-</div>
-</footer>
-<script>
-  const nav = document.getElementById('nav');
-  const toggle = document.getElementById('navToggle');
-  const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 8);
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-  toggle.addEventListener('click', () => {
-    const open = document.body.classList.toggle('menu-open');
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
-  });
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    a.addEventListener('click', () => {
-      document.body.classList.remove('menu-open');
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.setAttribute('aria-label', 'Menü öffnen');
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="bg-primary-dark text-white py-5 px-6">
+    <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-center gap-6 md:gap-10 text-sm font-medium">
+      <div class="flex items-center gap-2">
+        <span class="stars text-base">★★★★★</span>
+        <span>5.0 Sterne Bewertung</span>
+      </div>
+      <div class="flex items-center gap-2 text-accent">
+        <span class="material-symbols-outlined" style="font-size:18px;">location_on</span>
+        <span>Nur ~18 km von Geilenkirchen</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined" style="font-size:18px; color:#c8a951;">verified</span>
+        <span>Meisterbetrieb seit 10+ Jahren</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined" style="font-size:18px; color:#c8a951;">schedule</span>
+        <span>Schnelle Terminvergabe</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEISTUNGEN -->
+  <section class="py-20 px-6 bg-gray-50" aria-labelledby="leistungen-heading">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14">
+        <span class="text-accent font-semibold text-sm uppercase tracking-widest">Unsere Leistungen</span>
+        <h2 id="leistungen-heading" class="font-heading text-3xl md:text-4xl font-bold text-primary mt-2 mb-4">Was wir in Geilenkirchen anbieten</h2>
+        <p class="text-gray-600 max-w-xl mx-auto">Von der Beratung bis zur fertigen Montage — alles aus einer Hand, direkt vor Ort in Geilenkirchen.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Card 1: Zaunbau -->
+        <article class="service-card bg-white rounded-2xl overflow-hidden shadow-md" aria-label="Zaunbau Geilenkirchen">
+          <div class="h-52 overflow-hidden">
+            <img
+              src="https://lh3.googleusercontent.com/p/AF1QipNfDZEaGHMbvCMDQjmpHLYq2T2t8kVHzY7bBJeZ=s1360-w1360-h1020"
+              alt="Zaunbau Geilenkirchen – Doppelstabmatten und Holzzäune"
+              class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="material-symbols-outlined text-primary" style="font-size:22px;">fence</span>
+              <h3 class="font-heading text-xl font-bold text-primary">Zaunbau Geilenkirchen</h3>
+            </div>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+              Professioneller Zaunbau in Geilenkirchen — von Doppelstabmatten über Holzzäune bis hin zu exklusiven Metallzäunen. Wir beraten Sie persönlich vor Ort und setzen Ihr Projekt zügig um.
+            </p>
+            <a href="../zaeune.html" class="inline-flex items-center gap-1 text-primary font-semibold text-sm hover:text-accent transition-colors">
+              Mehr erfahren <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2: Torbau -->
+        <article class="service-card bg-white rounded-2xl overflow-hidden shadow-md" aria-label="Torbau Geilenkirchen">
+          <div class="h-52 overflow-hidden">
+            <img
+              src="https://lh3.googleusercontent.com/p/AF1QipMrFyYW0Fmk_ZJX0uTGGiD9nJe6tTOZ_zPJHxNy=s1360-w1360-h1020"
+              alt="Torbau Geilenkirchen – Einfahrtstore und Drehtore"
+              class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="material-symbols-outlined text-primary" style="font-size:22px;">garage_door</span>
+              <h3 class="font-heading text-xl font-bold text-primary">Torbau Geilenkirchen</h3>
+            </div>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+              Einfahrtstore, Drehtore und automatische Schiebetore für Wohn- und Gewerbeobjekte in Geilenkirchen. Inkl. Elektrik, Steuerung und Smarthome-Integration auf Wunsch.
+            </p>
+            <a href="../tore.html" class="inline-flex items-center gap-1 text-primary font-semibold text-sm hover:text-accent transition-colors">
+              Mehr erfahren <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 3: Sichtschutz -->
+        <article class="service-card bg-white rounded-2xl overflow-hidden shadow-md" aria-label="Sichtschutz Geilenkirchen">
+          <div class="h-52 overflow-hidden">
+            <img
+              src="https://lh3.googleusercontent.com/p/AF1QipOb7eKXx2pKl2VkT8RyJEDJkQpJP5dOHzQKOFOR=s1360-w1360-h1020"
+              alt="Sichtschutz Geilenkirchen – Holz und WPC Sichtschutzzäune"
+              class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="material-symbols-outlined text-primary" style="font-size:22px;">visibility_off</span>
+              <h3 class="font-heading text-xl font-bold text-primary">Sichtschutz Geilenkirchen</h3>
+            </div>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+              Sichtschutzlösungen für Gärten und Terrassen in Geilenkirchen: Holz, WPC oder Metall. Diskreter Schutz vor neugierigen Blicken — langlebig, pflegeleicht und optisch ansprechend.
+            </p>
+            <a href="../sichtschutz.html" class="inline-flex items-center gap-1 text-primary font-semibold text-sm hover:text-accent transition-colors">
+              Mehr erfahren <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCAL SECTION -->
+  <section class="py-20 px-6 bg-white" aria-labelledby="lokal-heading">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <div>
+          <span class="text-accent font-semibold text-sm uppercase tracking-widest">Lokal &amp; Zuverlässig</span>
+          <h2 id="lokal-heading" class="font-heading text-3xl md:text-4xl font-bold text-primary mt-2 mb-6">
+            Zaunbau in Geilenkirchen – lokal, schnell, professionell
+          </h2>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Geilenkirchen liegt zwischen Heinsberg und Aachen. Die Wohngebiete rund um Geilenkirchen-Mitte und Hünshoven haben einen hohen Bedarf an Zäunen und Sichtschutz. Wir sind in Geilenkirchen zuverlässig und pünktlich im Einsatz.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-8">
+            Als erfahrener Meisterbetrieb kennen wir die regionalen Anforderungen und Gegebenheiten genau. Kurze Wege, schnelle Reaktionszeiten und persönliche Beratung — das ist unser Versprechen an jeden Kunden in Geilenkirchen.
+          </p>
+
+          <a href="../kontakt.html" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-semibold px-7 py-4 rounded-full transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5">
+            <span class="material-symbols-outlined" style="font-size:20px;">edit_note</span>
+            Angebot für Geilenkirchen anfordern
+          </a>
+        </div>
+
+        <div>
+          <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+            <h3 class="font-heading text-xl font-bold text-primary mb-6 flex items-center gap-2">
+              <span class="material-symbols-outlined text-accent" style="font-size:22px;">map</span>
+              Stadtteile in Geilenkirchen
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <div class="district-item">
+                <div class="check"><span class="material-symbols-outlined" style="font-size:14px;">check</span></div>
+                <span>Geilenkirchen-Mitte</span>
+              </div>
+              <div class="district-item">
+                <div class="check"><span class="material-symbols-outlined" style="font-size:14px;">check</span></div>
+                <span>Gillrath</span>
+              </div>
+              <div class="district-item">
+                <div class="check"><span class="material-symbols-outlined" style="font-size:14px;">check</span></div>
+                <span>Bauchem</span>
+              </div>
+              <div class="district-item">
+                <div class="check"><span class="material-symbols-outlined" style="font-size:14px;">check</span></div>
+                <span>Hünshoven</span>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-gray-200">
+              <div class="flex items-start gap-3 text-sm text-gray-600">
+                <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5" style="font-size:18px;">info</span>
+                <p>Wir fahren zu Ihnen — egal in welchem Stadtteil von Geilenkirchen. Kostenlose Vor-Ort-Besichtigung auf Anfrage.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- VORTEILE -->
+  <section class="py-20 px-6 bg-primary" aria-labelledby="vorteile-heading">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14">
+        <span class="text-accent font-semibold text-sm uppercase tracking-widest">Ihre Vorteile</span>
+        <h2 id="vorteile-heading" class="font-heading text-3xl md:text-4xl font-bold text-white mt-2">
+          Warum das Aachener Zaun Center in Geilenkirchen?
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div class="bg-white/10 hover:bg-white/15 transition-all duration-300 rounded-2xl p-7 text-center group">
+          <div class="w-14 h-14 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-5 group-hover:bg-accent/30 transition-colors">
+            <span class="material-symbols-outlined text-accent" style="font-size:28px;">workspace_premium</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white mb-3">Meisterqualität</h3>
+          <p class="text-white/70 text-sm leading-relaxed">
+            Zertifizierter Meisterbetrieb mit über 10 Jahren Erfahrung — auch in Geilenkirchen setzen wir höchste Standards.
+          </p>
+        </div>
+
+        <div class="bg-white/10 hover:bg-white/15 transition-all duration-300 rounded-2xl p-7 text-center group">
+          <div class="w-14 h-14 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-5 group-hover:bg-accent/30 transition-colors">
+            <span class="material-symbols-outlined text-accent" style="font-size:28px;">schedule</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white mb-3">Pünktlich in Geilenkirchen</h3>
+          <p class="text-white/70 text-sm leading-relaxed">
+            Wir erscheinen zum vereinbarten Termin und halten unsere Zusagen — Zuverlässigkeit steht bei uns an erster Stelle.
+          </p>
+        </div>
+
+        <div class="bg-white/10 hover:bg-white/15 transition-all duration-300 rounded-2xl p-7 text-center group">
+          <div class="w-14 h-14 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-5 group-hover:bg-accent/30 transition-colors">
+            <span class="material-symbols-outlined text-accent" style="font-size:28px;">handshake</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white mb-3">Persönliche Beratung</h3>
+          <p class="text-white/70 text-sm leading-relaxed">
+            Wir kommen zu Ihnen nach Geilenkirchen — kostenlose Vor-Ort-Beratung inklusive, ohne versteckte Kosten.
+          </p>
+        </div>
+
+        <div class="bg-white/10 hover:bg-white/15 transition-all duration-300 rounded-2xl p-7 text-center group">
+          <div class="w-14 h-14 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-5 group-hover:bg-accent/30 transition-colors">
+            <span class="material-symbols-outlined text-accent" style="font-size:28px;">euro</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white mb-3">Faire Preise</h3>
+          <p class="text-white/70 text-sm leading-relaxed">
+            Transparente Angebote ohne Überraschungen — faire Preise für Geilenkirchener Kunden, die auf Qualität setzen.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 px-6 bg-gray-50" aria-labelledby="faq-heading">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-12">
+        <span class="text-accent font-semibold text-sm uppercase tracking-widest">FAQ</span>
+        <h2 id="faq-heading" class="font-heading text-3xl md:text-4xl font-bold text-primary mt-2">
+          Häufige Fragen zum Zaunbau in Geilenkirchen
+        </h2>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 px-6 md:px-10 py-2" role="list">
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            <span>Führt das Aachener Zaun Center Montagen in Geilenkirchen durch?</span>
+            <span class="material-symbols-outlined faq-icon text-primary" style="font-size:22px;">add</span>
+          </button>
+          <div class="faq-answer" aria-hidden="true">
+            Ja, wir sind regelmäßig in Geilenkirchen und den umliegenden Ortschaften wie Geilenkirchen-Mitte, Gillrath, Bauchem und Hünshoven im Einsatz. Die Anfahrt beträgt ca. 18 km und ist für uns selbstverständlich — ohne Aufpreis für die Region.
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            <span>Wie lange dauert eine Zaunmontage in Geilenkirchen?</span>
+            <span class="material-symbols-outlined faq-icon text-primary" style="font-size:22px;">add</span>
+          </button>
+          <div class="faq-answer" aria-hidden="true">
+            Je nach Umfang des Projekts dauert eine typische Zaunmontage in Geilenkirchen zwischen einem halben und zwei Arbeitstagen. Bei größeren Grundstücken planen wir gemeinsam mit Ihnen den genauen Zeitrahmen — transparent und ohne böse Überraschungen.
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            <span>Welche Zaunsysteme sind in Geilenkirchen besonders beliebt?</span>
+            <span class="material-symbols-outlined faq-icon text-primary" style="font-size:22px;">add</span>
+          </button>
+          <div class="faq-answer" aria-hidden="true">
+            In den Wohngebieten rund um Geilenkirchen-Mitte und Hünshoven sind vor allem Doppelstabmattenzäune und Holzsichtschutz sehr gefragt. Aber auch Metallzäune, Gabionen und WPC-Sichtschutzlösungen werden von unseren Kunden in Geilenkirchen häufig gewählt.
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            <span>Bauen Sie auch automatische Einfahrtstore in Geilenkirchen?</span>
+            <span class="material-symbols-outlined faq-icon text-primary" style="font-size:22px;">add</span>
+          </button>
+          <div class="faq-answer" aria-hidden="true">
+            Absolut. Wir planen und montieren elektrische Schiebe- und Drehtore für Privat- und Gewerbeobjekte in ganz Geilenkirchen. Dazu gehört auch die komplette Elektrik und Steuerung inklusive Fernbedienung oder Smartphone-App. Gerne beraten wir Sie dazu vor Ort.
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            <span>Wie erhalte ich ein Angebot für Zaunbau in Geilenkirchen?</span>
+            <span class="material-symbols-outlined faq-icon text-primary" style="font-size:22px;">add</span>
+          </button>
+          <div class="faq-answer" aria-hidden="true">
+            Ganz einfach: Rufen Sie uns unter <a href="tel:015754722165" class="text-primary font-semibold hover:text-accent">01575 4722165</a> an oder schreiben Sie uns über WhatsApp. Alternativ nutzen Sie unser Kontaktformular. Wir melden uns innerhalb von 24 Stunden und vereinbaren einen kostenlosen Vor-Ort-Termin in Geilenkirchen.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="py-20 px-6 bg-white" aria-labelledby="cta-heading">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-accent font-semibold text-sm uppercase tracking-widest">Jetzt starten</span>
+      <h2 id="cta-heading" class="font-heading text-3xl md:text-4xl font-bold text-primary mt-2 mb-6">
+        Ihr Zaunprojekt in Geilenkirchen beginnt hier
+      </h2>
+      <p class="text-gray-600 text-lg max-w-xl mx-auto mb-10">
+        Kontaktieren Sie uns jetzt für ein kostenloses Angebot — wir kommen zu Ihnen nach Geilenkirchen und beraten Sie persönlich.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="tel:015754722165" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold px-8 py-4 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-base">
+          <span class="material-symbols-outlined" style="font-size:20px;">call</span>
+          01575 4722165
+        </a>
+        <a href="https://wa.me/4915754722165?text=Hallo%2C%20ich%20m%C3%B6chte%20ein%20Angebot%20f%C3%BCr%20Zaunbau%20in%20Geilenkirchen." target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold px-8 py-4 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-base">
+          <span class="material-symbols-outlined" style="font-size:20px;">chat</span>
+          WhatsApp
+        </a>
+        <a href="../kontakt.html" class="inline-flex items-center gap-2 border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold px-8 py-4 rounded-full transition-all duration-200 text-base">
+          <span class="material-symbols-outlined" style="font-size:20px;">edit_note</span>
+          Formular
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-primary-dark text-white pt-14 pb-8 px-6" role="contentinfo">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+
+        <!-- Brand -->
+        <div class="md:col-span-1">
+          <div class="flex items-center gap-2 mb-4">
+            <img src="../favicon.svg" alt="Aachener Zaun Center Logo" class="w-8 h-8" />
+            <span class="font-heading font-bold text-lg">Aachener Zaun Center</span>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed mb-4">
+            Ihr Meisterbetrieb für Zäune, Tore und Sichtschutz — professionell und zuverlässig in Geilenkirchen.
+          </p>
+          <div class="flex items-center gap-1">
+            <span class="stars text-sm">★★★★★</span>
+            <span class="text-white/60 text-xs ml-1">5.0 / 47 Bewertungen</span>
+          </div>
+        </div>
+
+        <!-- Leistungen -->
+        <div>
+          <h3 class="font-semibold text-accent mb-4 text-sm uppercase tracking-wider">Leistungen</h3>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li><a href="../zaeune.html" class="hover:text-accent transition-colors">Zaunbau</a></li>
+            <li><a href="../tore.html" class="hover:text-accent transition-colors">Torbau &amp; Einfahrtstore</a></li>
+            <li><a href="../sichtschutz.html" class="hover:text-accent transition-colors">Sichtschutz</a></li>
+          </ul>
+        </div>
+
+        <!-- Städte -->
+        <div>
+          <h3 class="font-semibold text-accent mb-4 text-sm uppercase tracking-wider">Regionen</h3>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li><a href="../index.html" class="hover:text-accent transition-colors">Aachen</a></li>
+            <li><span class="text-white/50">Geilenkirchen</span></li>
+            <li><a href="../ueber.html" class="hover:text-accent transition-colors">Über uns</a></li>
+            <li><a href="../kontakt.html" class="hover:text-accent transition-colors">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <!-- Kontakt -->
+        <div>
+          <h3 class="font-semibold text-accent mb-4 text-sm uppercase tracking-wider">Kontakt</h3>
+          <ul class="space-y-3 text-sm text-white/70">
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-accent" style="font-size:16px;">call</span>
+              <a href="tel:015754722165" class="hover:text-accent transition-colors">01575 4722165</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-accent" style="font-size:16px;">mail</span>
+              <a href="mailto:info@aachenerzauncenter.de" class="hover:text-accent transition-colors">info@aachenerzauncenter.de</a>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-accent flex-shrink-0" style="font-size:16px;">schedule</span>
+              <span>Mo–Fr 08–18 Uhr<br />Sa 09–14 Uhr</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-white/40">
+        <p>&copy; 2025 Aachener Zaun Center. Alle Rechte vorbehalten.</p>
+        <div class="flex gap-4">
+          <a href="../index.html#impressum" class="hover:text-accent transition-colors">Impressum</a>
+          <a href="../index.html#datenschutz" class="hover:text-accent transition-colors">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Floating nav scroll effect
+    const floatingNav = document.getElementById('floatingNav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        floatingNav.classList.add('scrolled');
+      } else {
+        floatingNav.classList.remove('scrolled');
+      }
     });
-  });
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      document.body.classList.remove('menu-open');
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.setAttribute('aria-label', 'Menü öffnen');
-    }
-  });
-  document.querySelectorAll('.faq-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item');
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-q').setAttribute('aria-expanded','false'); });
-      if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen.toString());
     });
-  });
-</script>
+    // Close menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const isActive = item.classList.contains('active');
+
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('active');
+          i.querySelector('.faq-answer').classList.remove('open');
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          i.querySelector('.faq-answer').setAttribute('aria-hidden', 'true');
+        });
+
+        // Open clicked if it wasn't active
+        if (!isActive) {
+          item.classList.add('active');
+          answer.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+          answer.setAttribute('aria-hidden', 'false');
+        }
+      });
+    });
+
+    // Scroll to top
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    });
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
 </body>
 </html>

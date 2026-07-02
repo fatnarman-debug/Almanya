@@ -1,498 +1,918 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="de">
+<html lang="de">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
-<link rel="apple-touch-icon" href="favicon.svg"/>
-<title>Zaunbau Heinsberg | Zäune, Tore &amp; Sichtschutz – Aachener Zaun Center</title>
-<meta name="description" content="Zaunbau Heinsberg vom Meisterbetrieb: Zäune, Tore &amp; Sichtschutz für Heinsberg und Umgebung. Kostenlose Beratung, faire Preise, pünktliche Montage. ☎ 01575 4722165"/>
-<meta name="robots" content="index, follow"/>
-<link rel="canonical" href="https://aachenerzauncenter.de/heinsberg/"/>
-<meta name="geo.region" content="DE-NW"/>
-<meta name="geo.placename" content="Heinsberg"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="de_DE"/>
-<meta property="og:title" content="Zaunbau Heinsberg | Zäune, Tore &amp; Sichtschutz – Aachener Zaun Center"/>
-<meta property="og:description" content="Ihr Meisterbetrieb für Zaunbau Heinsberg: Zäune, Tore und Sichtschutz. Individuelle Planung &amp; fachgerechte Montage."/>
-<meta property="og:url" content="https://aachenerzauncenter.de/heinsberg/"/>
-<meta property="og:site_name" content="Aachener Zaun Center"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Zaunbau Heinsberg | Aachener Zaun Center"/>
-<meta name="twitter:description" content="Zäune, Tore und Sichtschutz aus Meisterhand für Heinsberg. Kostenlose Beratung, faire Preise."/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaunbau Heinsberg | Zäune, Tore & Sichtschutz - Aachener Zaun Center</title>
+  <meta name="description" content="Zaunbau Heinsberg vom Meisterbetrieb. Zäune, Tore & Sichtschutz – professionell & fair. Jetzt Angebot: 01575 4722165">
+  <link rel="canonical" href="https://aachenerzauncenter.de/heinsberg/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1a4731',
+            'primary-dark': '#0f2d1f',
+            'primary-light': '#2d6b4a',
+            accent: '#c8a84b',
+            'accent-dark': '#a8873a',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  [
     {
+      "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "@id": "https://aachenerzauncenter.de/#business",
       "name": "Aachener Zaun Center",
-      "url": "https://aachenerzauncenter.de/",
+      "description": "Professioneller Zaunbau, Torbau und Sichtschutz in Heinsberg und Umgebung. Meisterbetrieb mit über 10 Jahren Erfahrung.",
+      "url": "https://aachenerzauncenter.de/heinsberg/",
       "telephone": "+4915754722165",
       "email": "info@aachenerzauncenter.de",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Wolfstr. 2",
-        "addressLocality": "Herzogenrath",
-        "postalCode": "52134",
+        "addressLocality": "Aachen",
         "addressCountry": "DE"
       },
-      "areaServed": {"@type": "City", "name": "Heinsberg"},
-      "priceRange": "EUR EUR",
-      "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "252"}
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.0619,
+        "longitude": 6.0978
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Heinsberg"
+      },
+      "priceRange": "€€",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "47"
+      },
+      "openingHoursSpecification": [
         {
-          "@type": "Question",
-          "name": "Bietet Aachener Zaun Center Zaunbau in Heinsberg an?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Ja, wir sind auch in Heinsberg und den Ortsteilen tätig. Mit ca. 25 km Entfernung von unserem Standort in Herzogenrath sind wir gut erreichbar. Kontaktieren Sie uns für ein kostenloses Angebot."}
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "07:00",
+          "closes": "18:00"
         },
         {
-          "@type": "Question",
-          "name": "Führen Sie in Heinsberg auch Reparaturen an bestehenden Zäunen durch?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Ja, neben Neubauten reparieren wir in Heinsberg auch beschädigte oder alte Zaunanlagen. Einzelne Elemente austauschen, Pfosten neu setzen oder komplette Überholungen – wir bieten alles an."}
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "14:00"
         }
       ]
     },
     {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Führen Sie Zaunmontagen in Heinsberg durch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, wir sind regelmäßig in Heinsberg und den umliegenden Ortschaften tätig. Als erfahrener Zaunbaubetrieb aus der Region kennen wir die örtlichen Gegebenheiten und führen Montagen in Heinsberg-Mitte sowie in Dremmen, Randerath und Karken durch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie lange dauert eine Zaunmontage in Heinsberg?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Dauer einer Zaunmontage in Heinsberg hängt vom Umfang des Projekts ab. Einfache Zäune für ein Einfamilienhaus sind oft an einem Tag montiert. Größere Projekte mit Toren und Sichtschutz können zwei bis drei Tage in Anspruch nehmen. Nach der Besichtigung erhalten Sie eine genaue Zeitplanung."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Zaunarten empfehlen Sie für Heinsberg?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Für Heinsberg empfehlen wir besonders robuste Metallzäune und klassische Einfriedungslösungen, die zur ländlichen Umgebung der Region passen. Doppelstabmattenzäune, schmiedeeiserne Zäune und Palisadenzäune sind in Heinsberg sehr beliebt und bieten langfristig hohen Mehrwert."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bauen Sie auch automatische Tore in Heinsberg?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, wir planen und bauen automatische Einfahrtstore in Heinsberg und der gesamten Kreisstadt-Region. Ob Schiebetor, Flügeltor oder Drehtor – wir bieten alle Varianten inklusive Motorisierung, Fernbedienung und Intercom-Systemen an. Selbstverständlich kümmern wir uns auch um Wartung und Service."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie erhalte ich ein Angebot für meinen Zaunbau in Heinsberg?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ganz einfach: Rufen Sie uns an unter 01575 4722165 oder senden Sie uns eine WhatsApp-Nachricht. Wir vereinbaren dann einen kostenlosen Vor-Ort-Termin in Heinsberg, besichtigen Ihr Grundstück und erstellen Ihnen ein detailliertes, unverbindliches Angebot. Der gesamte Prozess ist für Sie kostenlos und unverbindlich."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://aachenerzauncenter.de/"},
-        {"@type": "ListItem", "position": 2, "name": "Zaunbau Heinsberg", "item": "https://aachenerzauncenter.de/heinsberg/"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://aachenerzauncenter.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Zaunbau Heinsberg",
+          "item": "https://aachenerzauncenter.de/heinsberg/"
+        }
       ]
     }
   ]
-}
-</script>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-    tailwind.config = {
-        darkMode: "class",
-        theme: {
-            extend: {
-                "colors": {
-                    "inverse-primary": "#aacec0", "background": "#f8f9fa", "deep-forest": "#10551F",
-                    "surface-container-high": "#e7e8e9", "tertiary-fixed-dim": "#e9c400", "on-primary": "#ffffff",
-                    "secondary": "#525f76", "inverse-on-surface": "#f0f1f2", "on-primary-container": "#75988a",
-                    "secondary-fixed-dim": "#bac7e2", "surface-container-lowest": "#ffffff", "secondary-fixed": "#d6e3ff",
-                    "slate-steel": "#4A5568", "on-surface": "#191c1d", "error": "#ba1a1a", "surface-container": "#edeeef",
-                    "on-tertiary-container": "#4c3f00", "on-secondary-fixed-variant": "#3a475d", "on-secondary-fixed": "#0e1c30",
-                    "on-primary-fixed": "#002118", "on-tertiary-fixed": "#221b00", "tertiary-container": "#c9a900",
-                    "on-surface-variant": "#414845", "on-secondary-container": "#58657c", "surface-bright": "#f8f9fa",
-                    "inverse-surface": "#2e3132", "surface-container-low": "#f3f4f5", "on-error": "#ffffff",
-                    "on-error-container": "#93000a", "surface-tint": "#446559", "outline-variant": "#c1c8c3",
-                    "surface": "#f8f9fa", "secondary-container": "#d6e3ff", "tertiary": "#705d00",
-                    "primary-fixed": "#c6ebdb", "outline": "#717975", "on-secondary": "#ffffff",
-                    "primary-fixed-dim": "#aacec0", "primary": "#001912", "primary-container": "#0c2f25",
-                    "surface-container-highest": "#e1e3e4", "on-primary-fixed-variant": "#2c4d42",
-                    "on-tertiary-fixed-variant": "#544600", "error-container": "#ffdad6", "tertiary-fixed": "#ffe16d",
-                    "on-tertiary": "#ffffff", "surface-dim": "#d9dadb", "surface-variant": "#e1e3e4",
-                    "action-blue": "#0056B3", "on-background": "#191c1d"
-                },
-                "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
-                "spacing": {
-                    "container-max": "1280px", "gutter": "24px", "margin-desktop": "48px",
-                    "margin-mobile": "16px", "section-gap": "80px", "base": "8px"
-                },
-                "fontFamily": {
-                    "body-lg": ["Inter"], "headline-xl": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"],
-                    "headline-md": ["Hanken Grotesk"], "body-md": ["Inter"], "label-sm": ["JetBrains Mono"],
-                    "button-text": ["Hanken Grotesk"], "headline-xl-mobile": ["Hanken Grotesk"]
-                },
-                "fontSize": {
-                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
-                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
-                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
-                    "button-text": ["16px", {"lineHeight": "20px", "fontWeight": "600"}],
-                    "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "800"}]
-                }
-            },
-        },
+  </script>
+
+  <style>
+    * { scroll-behavior: smooth; }
+
+    /* Floating Pill Nav */
+    .floating-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      transition: all 0.3s ease;
     }
-</script>
-<style>
-    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
-    :root{
-        --coral:#0056B3; --coral-deep:#0056B3; --stone:#292524; --stone-soft:#44403C; --ink:#1C1917;
-        --nav-glass:rgba(255,255,255,0.70); --nav-blur:20px; --ease:cubic-bezier(0.22,0.61,0.36,1);
+    .floating-nav.scrolled {
+      background: rgba(15, 45, 31, 0.97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.3);
     }
-    html{scroll-padding-top:104px;}
-    .nav-wrap{position:fixed;top:18px;left:0;right:0;z-index:100;display:flex;justify-content:center;padding:0 16px;pointer-events:none;}
-    .nav{pointer-events:auto;width:100%;max-width:1180px;display:flex;align-items:center;gap:20px;padding:9px 9px 9px 20px;border-radius:999px;
-        font-family:"Outfit",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-        background:var(--nav-glass);-webkit-backdrop-filter:blur(var(--nav-blur)) saturate(160%);backdrop-filter:blur(var(--nav-blur)) saturate(160%);
-        border:1px solid rgba(255,255,255,0.55);
-        box-shadow:0 1px 0 rgba(255,255,255,0.65) inset,0 12px 28px -14px rgba(41,37,36,0.30),0 4px 10px -6px rgba(41,37,36,0.18);
-        transition:box-shadow .3s var(--ease);}
-    .nav.is-scrolled{box-shadow:0 1px 0 rgba(255,255,255,0.65) inset,0 16px 34px -14px rgba(41,37,36,0.38),0 6px 14px -8px rgba(41,37,36,0.22);}
-    .nav a, .nav button{font-family:inherit;}
-    .brand{display:flex;align-items:center;gap:11px;padding-right:4px;flex-shrink:0;text-decoration:none;}
-    .logo-dot{position:relative;width:34px;height:34px;border-radius:50%;
-        background:radial-gradient(120% 120% at 32% 28%,#0c2f25 0%,#001912 100%);
-        box-shadow:0 2px 6px -1px rgba(0,25,18,0.45),0 0 0 1px rgba(255,255,255,0.35) inset;flex-shrink:0;}
-    .logo-dot::after{content:"";position:absolute;top:9px;left:10px;width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(41,37,36,0.25);}
-    .brand-name{display:flex;flex-direction:column;line-height:1.02;}
-    .brand-name b{font-size:15px;font-weight:700;color:var(--ink);letter-spacing:-0.01em;}
-    .brand-name span{font-size:11px;font-weight:500;color:var(--stone-soft);letter-spacing:0.06em;text-transform:uppercase;}
-    .nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center;}
-    .nav-link{position:relative;display:inline-flex;align-items:center;gap:5px;padding:8px 14px;border-radius:999px;font-size:14.5px;font-weight:500;color:var(--stone);text-decoration:none;
-        transition:color .2s var(--ease),background-color .2s var(--ease);}
-    .nav-link:hover{background:rgba(41,37,36,0.05);}
-    .nav-link.is-active{font-weight:600;color:var(--ink);}
-    .nav-link.is-active::after{content:"";position:absolute;left:14px;right:14px;bottom:4px;height:2px;border-radius:2px;background:var(--coral-deep);}
-    .chev{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s var(--ease);}
-    .has-menu{position:relative;}
-    .has-menu:hover .chev{transform:rotate(180deg);}
-    .submenu{display:none;position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);min-width:200px;padding:8px;border-radius:16px;
-        background:rgba(255,255,255,0.86);-webkit-backdrop-filter:blur(22px) saturate(160%);backdrop-filter:blur(22px) saturate(160%);
-        border:1px solid rgba(255,255,255,0.6);box-shadow:0 8px 24px -8px rgba(41,37,36,0.22);z-index:10;}
-    .has-menu:hover .submenu{display:block;}
-    .submenu a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;font-size:13.5px;font-weight:500;color:var(--stone);text-decoration:none;transition:background-color .18s var(--ease);}
-    .submenu a:hover{background:rgba(0,86,179,0.10);}
-    .submenu a i{width:6px;height:6px;border-radius:50%;background:var(--coral-deep);flex-shrink:0;}
-    .nav-cta{display:inline-flex;align-items:center;gap:8px;flex-shrink:0;font-size:14px;font-weight:600;color:#fff;background:#0056B3;padding:11px 20px;border-radius:999px;letter-spacing:-0.005em;white-space:nowrap;text-decoration:none;
-        box-shadow:0 8px 18px -8px rgba(41,37,36,0.6);transition:transform .2s var(--ease),background-color .2s var(--ease),box-shadow .2s var(--ease);}
-    .nav-cta:hover{background:#00468f;transform:translateY(-1px);box-shadow:0 12px 22px -9px rgba(41,37,36,0.65);}
-    .nav-cta svg{width:18px;height:18px;flex-shrink:0;}
-    .nav-wa{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;flex-shrink:0;text-decoration:none;
-        background:radial-gradient(120% 120% at 32% 28%,#4ce37a 0%,#25D366 55%,#1aa851 100%);
-        box-shadow:0 8px 18px -8px rgba(37,211,102,0.6);transition:transform .2s var(--ease),box-shadow .2s var(--ease);}
-    .nav-wa:hover{transform:translateY(-1px);box-shadow:0 12px 22px -9px rgba(37,211,102,0.7);}
-    .wa-glyph{width:20px;height:20px;fill:#fff;}
-    .nav-toggle{display:none;width:42px;height:42px;border:none;background:var(--stone);border-radius:50%;cursor:pointer;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 8px 18px -8px rgba(41,37,36,0.6);}
-    .nav-toggle span{position:relative;display:block;width:17px;height:1.8px;background:#fff;border-radius:2px;transition:transform .3s var(--ease),opacity .2s var(--ease);}
-    .nav-toggle span::before,.nav-toggle span::after{content:"";position:absolute;left:0;width:17px;height:1.8px;background:#fff;border-radius:2px;transition:transform .3s var(--ease);}
-    .nav-toggle span::before{top:-5px;}
-    .nav-toggle span::after{top:5px;}
-    body.menu-open .nav-toggle span{background:transparent;}
-    body.menu-open .nav-toggle span::before{transform:translateY(5px) rotate(45deg);}
-    body.menu-open .nav-toggle span::after{transform:translateY(-5px) rotate(-45deg);}
-    @media(max-width:860px){
-        .nav-links{display:none;position:absolute;top:calc(100% + 10px);left:0;right:0;border-radius:24px;padding:12px;
-            background:rgba(255,255,255,0.9);-webkit-backdrop-filter:blur(22px) saturate(160%);backdrop-filter:blur(22px) saturate(160%);
-            border:1px solid rgba(255,255,255,0.7);box-shadow:0 16px 32px -12px rgba(41,37,36,0.28);flex-direction:column;align-items:stretch;gap:4px;}
-        .nav{position:relative;flex-wrap:wrap;}
-        body.menu-open .nav-links{display:flex;}
-        .nav-link{padding:12px 16px;border-radius:14px;}
-        .submenu{position:static;transform:none;display:none;box-shadow:none;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;border:none;border-left:2px solid rgba(0,86,179,0.35);border-radius:0;box-shadow:none;transition:none;}
-        .has-menu:hover .submenu{display:none;}
-        .desktop-wa,.desktop-cta{display:none!important;}
-        .mobile-cta{display:inline-flex!important;}
-        .nav-toggle{display:flex;}
+    .pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: all 0.2s ease;
+      white-space: nowrap;
     }
-    @media(min-width:861px){.mobile-cta{display:none!important;}}
-    .breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:#525f76;}
-    .breadcrumb a{color:#525f76;text-decoration:none;}
-    .breadcrumb a:hover{color:#0056B3;}
-    .breadcrumb span{color:#c1c8c3;}
-    .faq-item{border-bottom:1px solid #c1c8c3;}
-    .faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:17px;font-weight:600;font-family:"Hanken Grotesk",sans-serif;color:#191c1d;}
-    .faq-a{display:none;padding-bottom:20px;color:#525f76;line-height:1.7;}
-    .faq-item.open .faq-a{display:block;}
-    .faq-item.open .faq-icon{transform:rotate(45deg);}
-    .faq-icon{transition:transform .25s ease;flex-shrink:0;font-size:22px;color:#0056B3;}
-</style>
+    .pill-btn-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+    .pill-btn-whatsapp:hover {
+      background: #1ebe5d;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    }
+    .pill-btn-primary {
+      background: #c8a84b;
+      color: #0f2d1f;
+    }
+    .pill-btn-primary:hover {
+      background: #a8873a;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(200, 168, 75, 0.4);
+    }
+
+    /* Hero */
+    .hero-section {
+      background-image: linear-gradient(135deg, rgba(15,45,31,0.88) 0%, rgba(26,71,49,0.75) 50%, rgba(15,45,31,0.88) 100%), url('images/hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    /* FAQ Accordion */
+    .faq-item {
+      border: 1px solid rgba(200, 168, 75, 0.2);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 12px;
+      transition: all 0.3s ease;
+    }
+    .faq-item:hover {
+      border-color: rgba(200, 168, 75, 0.5);
+    }
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      padding: 20px 24px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.2s ease;
+    }
+    .faq-question:hover {
+      background: rgba(200, 168, 75, 0.08);
+    }
+    .faq-question.active {
+      background: rgba(200, 168, 75, 0.12);
+      color: #c8a84b;
+    }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 2px solid currentColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+      font-size: 18px;
+      line-height: 1;
+    }
+    .faq-question.active .faq-icon {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .faq-answer.open {
+      max-height: 300px;
+      padding: 0 24px 20px;
+    }
+
+    /* Service Cards */
+    .service-card {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      transition: all 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 48px rgba(0,0,0,0.2);
+    }
+    .service-card img {
+      transition: transform 0.5s ease;
+    }
+    .service-card:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Checkmark Grid */
+    .district-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      background: rgba(200, 168, 75, 0.08);
+      border: 1px solid rgba(200, 168, 75, 0.2);
+      border-radius: 10px;
+      color: #1a4731;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    .district-item:hover {
+      background: rgba(200, 168, 75, 0.15);
+      border-color: rgba(200, 168, 75, 0.4);
+    }
+
+    /* Star rating */
+    .stars { color: #f59e0b; }
+
+    /* Mobile menu */
+    #mobile-menu {
+      display: none;
+    }
+    #mobile-menu.open {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        background-attachment: scroll;
+      }
+    }
+  </style>
 </head>
-<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
-<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-[200] focus:top-3 focus:left-3 focus:bg-action-blue focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Zum Inhalt springen</a>
-<div class="nav-wrap">
-  <nav class="nav" id="nav" role="navigation" aria-label="Hauptnavigation">
-    <a class="brand" href="index.html" aria-label="Aachener Zaun Center – Startseite">
-      <span class="logo-dot" aria-hidden="true"></span>
-      <span class="brand-name"><b>Aachener</b><span>Zaun Center</span></span>
-    </a>
-    <div class="nav-links" id="navLinks">
-      <a class="nav-link" href="index.html">Home</a>
-      <a class="nav-link" href="ueber.html">Über uns</a>
-      <div class="has-menu">
-        <a class="nav-link" href="index.html#leistungen" aria-haspopup="true">Leistungen
-          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+<body class="font-sans bg-white text-gray-800">
+
+  <!-- ===== FLOATING PILL NAV ===== -->
+  <nav class="floating-nav" id="main-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between py-4">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2 text-white">
+          <div class="w-9 h-9 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-primary-dark text-lg" style="font-variation-settings:'FILL' 1">fence</span>
+          </div>
+          <span class="font-heading font-700 text-lg leading-tight hidden sm:block">
+            Aachener<br><span class="text-accent text-sm font-normal">Zaun Center</span>
+          </span>
         </a>
-        <div class="submenu" role="menu">
-          <a href="zaeune.html" role="menuitem"><i aria-hidden="true"></i>Zäune</a>
-          <a href="tore.html" role="menuitem"><i aria-hidden="true"></i>Tore</a>
-          <a href="sichtschutz.html" role="menuitem"><i aria-hidden="true"></i>Sichtschutz</a>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden lg:flex items-center gap-6 text-white text-sm font-medium">
+          <a href="index.html" class="hover:text-accent transition-colors">Startseite</a>
+          <a href="zaeune.html" class="hover:text-accent transition-colors">Zäune</a>
+          <a href="tore.html" class="hover:text-accent transition-colors">Tore</a>
+          <a href="sichtschutz.html" class="hover:text-accent transition-colors">Sichtschutz</a>
+          <a href="kontakt.html" class="hover:text-accent transition-colors">Kontakt</a>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="hidden md:flex items-center gap-3">
+          <a href="https://wa.me/4915754722165?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Zaunbau%20in%20Heinsberg."
+             class="pill-btn pill-btn-whatsapp" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.099 1.51 5.83L0 24l6.337-1.487A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.804 9.804 0 01-4.988-1.362l-.358-.212-3.762.883.938-3.661-.233-.376A9.78 9.78 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/>
+            </svg>
+            WhatsApp
+          </a>
+          <a href="kontakt.html" class="pill-btn pill-btn-primary">
+            <span class="material-symbols-outlined text-base">send</span>
+            Direkt anfragen
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="menu-toggle" class="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Menü öffnen">
+          <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="lg:hidden pb-4">
+        <div class="flex flex-col gap-1 pt-2 border-t border-white/20">
+          <a href="index.html" class="text-white/90 hover:text-accent py-2.5 px-3 rounded-lg hover:bg-white/10 transition-all font-medium">Startseite</a>
+          <a href="zaeune.html" class="text-white/90 hover:text-accent py-2.5 px-3 rounded-lg hover:bg-white/10 transition-all font-medium">Zäune</a>
+          <a href="tore.html" class="text-white/90 hover:text-accent py-2.5 px-3 rounded-lg hover:bg-white/10 transition-all font-medium">Tore</a>
+          <a href="sichtschutz.html" class="text-white/90 hover:text-accent py-2.5 px-3 rounded-lg hover:bg-white/10 transition-all font-medium">Sichtschutz</a>
+          <a href="kontakt.html" class="text-white/90 hover:text-accent py-2.5 px-3 rounded-lg hover:bg-white/10 transition-all font-medium">Kontakt</a>
+          <div class="flex gap-3 mt-3">
+            <a href="https://wa.me/4915754722165?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Zaunbau%20in%20Heinsberg."
+               class="pill-btn pill-btn-whatsapp flex-1 justify-center" target="_blank" rel="noopener">
+              WhatsApp
+            </a>
+            <a href="kontakt.html" class="pill-btn pill-btn-primary flex-1 justify-center">
+              Anfragen
+            </a>
+          </div>
         </div>
       </div>
-      <a class="nav-link" href="kontakt.html">Kontakt</a>
-      <a class="nav-cta mobile-cta" href="https://wa.me/4915754722165" style="background:#25D366;" target="_blank" rel="noopener">
-        <svg class="wa-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.9c0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 1.8c2.16 0 4.19.84 5.72 2.37a8.03 8.03 0 0 1 2.37 5.72c0 4.47-3.64 8.1-8.1 8.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.06.8.82-2.98-.2-.31a8.03 8.03 0 0 1-1.24-4.3c0-4.47 3.63-8.1 8.1-8.1Zm-4.6 4.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.37c.16.22 2.29 3.5 5.56 4.78 2.72 1.07 3.28.86 3.87.8.59-.05 1.9-.77 2.17-1.52.27-.75.27-1.39.19-1.52-.08-.13-.3-.21-.62-.37-.32-.16-1.9-.94-2.19-1.05-.29-.11-.5-.16-.72.16-.21.32-.82 1.05-1.01 1.26-.19.22-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.89-1.78-2.21-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.22.05-.4-.03-.56-.08-.16-.72-1.76-1-2.4-.26-.63-.53-.55-.72-.55l-.62-.01Z"/></svg>
-        WhatsApp
-      </a>
-      <a class="nav-cta mobile-cta" href="tel:015754722165">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z" fill="currentColor"/></svg>
-        Direkt anfragen
-      </a>
     </div>
-    <a class="nav-wa desktop-wa" href="https://wa.me/4915754722165" target="_blank" rel="noopener" aria-label="WhatsApp">
-      <svg class="wa-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.9c0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 1.8c2.16 0 4.19.84 5.72 2.37a8.03 8.03 0 0 1 2.37 5.72c0 4.47-3.64 8.1-8.1 8.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.06.8.82-2.98-.2-.31a8.03 8.03 0 0 1-1.24-4.3c0-4.47 3.63-8.1 8.1-8.1Zm-4.6 4.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.37c.16.22 2.29 3.5 5.56 4.78 2.72 1.07 3.28.86 3.87.8.59-.05 1.9-.77 2.17-1.52.27-.75.27-1.39.19-1.52-.08-.13-.3-.21-.62-.37-.32-.16-1.9-.94-2.19-1.05-.29-.11-.5-.16-.72.16-.21.32-.82 1.05-1.01 1.26-.19.22-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.89-1.78-2.21-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.22.05-.4-.03-.56-.08-.16-.72-1.76-1-2.4-.26-.63-.53-.55-.72-.55l-.62-.01Z"/></svg>
-    </a>
-    <a class="nav-cta desktop-cta" href="tel:015754722165">
-      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z" fill="currentColor"/></svg>
-      Direkt anfragen
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks"><span aria-hidden="true"></span></button>
   </nav>
-</div>
-<main id="main-content">
-<section class="relative h-[85vh] min-h-[560px] flex items-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center" style="background-image: url('images/hero-bg.jpg')"></div>
-<div class="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent"></div>
-</div>
-<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-on-primary">
-<div class="max-w-2xl">
-<nav class="breadcrumb mb-5" aria-label="Breadcrumb">
-  <a href="index.html" style="color:rgba(255,255,255,0.7);">Startseite</a>
-  <span style="color:rgba(255,255,255,0.4);" aria-hidden="true">&#8250;</span>
-  <span style="color:rgba(255,255,255,0.9);">Zaunbau Heinsberg</span>
-</nav>
-<span class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm mb-6 rounded">MEISTERBETRIEB &middot; HEINSBERG &amp; REGION</span>
-<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-6 leading-tight">Zaunbau Heinsberg – Zäune, Tore &amp; Sichtschutz vom Profi</h1>
-<p class="font-body-lg text-body-lg mb-10 text-on-primary/90">Ihr regionaler Meisterbetrieb für professionellen Zaunbau in Heinsberg. Von der kostenlosen Aufmaßnahme bis zur sauberen Montage – alles aus einer Hand.</p>
-<div class="flex flex-wrap gap-4">
-<a class="bg-action-blue text-on-primary px-8 py-4 rounded-lg font-button-text text-button-text shadow-lg hover:shadow-action-blue/20 transition-all" href="kontakt.html">Kostenloses Angebot</a>
-<a class="bg-white/10 backdrop-blur-md border border-white/20 text-on-primary px-8 py-4 rounded-lg font-button-text text-button-text hover:bg-white/20 transition-all" href="#leistungen">Unsere Leistungen</a>
-</div>
-</div>
-</div>
-</section>
-<section class="bg-surface-container py-8 border-b border-outline-variant/30">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-6">
-<div class="flex items-center gap-3">
-<span class="text-tertiary-container text-4xl material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<div><p class="font-bold text-lg">5.0 Sterne Google Bewertung</p><p class="text-sm text-secondary">252+ echte Kundenbewertungen</p></div>
-</div>
-<div class="h-12 w-px bg-outline-variant/50 hidden md:block"></div>
-<div class="flex items-center gap-3">
-<span class="text-action-blue text-4xl material-symbols-outlined">location_on</span>
-<div><p class="font-bold text-lg">Nur ~25 km von Heinsberg</p><p class="text-sm text-secondary">Schnelle Anfahrt, kurze Wartezeiten</p></div>
-</div>
-<div class="h-12 w-px bg-outline-variant/50 hidden md:block"></div>
-<div class="flex items-center gap-3">
-<span class="text-action-blue text-4xl material-symbols-outlined">workspace_premium</span>
-<div><p class="font-bold text-lg">Meisterbetrieb seit 10+ Jahren</p><p class="text-sm text-secondary">Langlebige Qualität &amp; präzise Montage</p></div>
-</div>
-</div>
-</section>
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop scroll-mt-24" id="leistungen">
-<div class="max-w-container-max mx-auto">
-<div class="text-center mb-16">
-<span class="font-label-sm text-label-sm text-action-blue">UNSERE LEISTUNGEN IN HEINSBERG</span>
-<h2 class="font-headline-lg text-headline-lg mt-2">Zäune, Tore &amp; Sichtschutz für Heinsberg</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="group bg-surface border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500">
-<div class="h-80 overflow-hidden relative">
-<img loading="lazy" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" alt="Doppelstabmattenzaun Heinsberg anthrazit modern" src="https://lh3.googleusercontent.com/aida/AP1WRLsGdDSqKW1ru1ERu8S2djD9Q9IxQ3Yf8LnQCmX3zxBOIGEuy11cyJ2wgPr51ke9IVEYpNbevGBEaKhzd7xjIxJ4WupwhgPk3OVqut-A0Ilqqxtkw3aHaR5e_ERhtx_AUeR2s6HYhSt97HQR0x1jgoJnPA_oyhnpvw9MYR8qmnzQ9MReJ_8gE2J0FClu1Rer-9Sbt1jlFyHEinqomszrawI1MWCOmFxH1Ss5U0UEvMBKeAISaJ7QUJ4IEezO"/>
-<div class="absolute top-4 left-4 bg-action-blue text-white px-3 py-1 rounded font-label-sm text-label-sm">Beliebteste Wahl</div>
-</div>
-<div class="p-8">
-<h3 class="font-headline-md text-headline-md mb-4">Zaunbau Heinsberg</h3>
-<p class="text-secondary mb-6">Vom Doppelstabmattenzaun bis zum edlen Metallzaun – wir planen und montieren Zäune für Heinsberg und Umgebung. Stabil, langlebig und nach Ihren Wünschen.</p>
-<a class="inline-flex items-center gap-2 font-button-text text-button-text text-action-blue hover:gap-4 transition-all" href="zaeune.html">Mehr erfahren <span class="material-symbols-outlined">arrow_forward</span></a>
-</div>
-</div>
-<div class="group bg-surface border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500">
-<div class="h-80 overflow-hidden">
-<img loading="lazy" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" alt="Automatisches Schiebetor Heinsberg Einfahrt" src="https://lh3.googleusercontent.com/aida/AP1WRLsEpHQj_zELNogZ_c_UL1hfrQxN7Fpa4O0DT8sku4L3hC1HQmJ-i1mXRvKwpbqUVRaZ851f_UKg3Y0v4tdn9oA5WQMdMwWOorEsyFS9fMSDIhAAWl9nXXCsjMhgGrywmlXitnjEnKueY8x1fNLqF_1nnz7q83whYHQ6HFIDgAtpQoD1TnjtrJFj3raEiNqdEV7gCKFw2QrZVWmFHtf-Oz13PFtTgAAvJqEn2fAGhkC6o5RxLUBitrqdD713"/>
-</div>
-<div class="p-8">
-<h3 class="font-headline-md text-headline-md mb-4">Torbau Heinsberg</h3>
-<p class="text-secondary mb-6">Einfahrtstore, Schiebetore mit Automatik und Drehtore für Heinsberg. Sicherheit und Komfort in einem – professionell installiert.</p>
-<a class="inline-flex items-center gap-2 font-button-text text-button-text text-action-blue hover:gap-4 transition-all" href="tore.html">Mehr erfahren <span class="material-symbols-outlined">arrow_forward</span></a>
-</div>
-</div>
-<div class="group bg-surface border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500">
-<div class="h-80 overflow-hidden">
-<img loading="lazy" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" alt="WPC Sichtschutz Heinsberg Terrasse Garten" src="https://lh3.googleusercontent.com/aida/AP1WRLsARtd0NhDRiMi51asI7aQ7VyC1pEu0tp3mkgMIP4106UNv9BY282Rl6mj5bDazQrgqvJwta69_AoIXt8sUUzH8vZKZxi5gUU55ar82sKC2h5CAYoA71tQiKPgdF3A_YP0yZSS91tllOV0T0zxnN_s47LTU_mg9fgIqMjgtDRFUQsgX6o2cVHt5MmZkJzbxw_ptNhC55UhAAnCzvivAMrF5qkBpWI9g1lx_-aYMMwR6gAyY1EwaNfqshlOr"/>
-</div>
-<div class="p-8">
-<h3 class="font-headline-md text-headline-md mb-4">Sichtschutz Heinsberg</h3>
-<p class="text-secondary mb-6">WPC, Aluminium oder Holz-Optik – wir gestalten Sichtschutzlösungen für Heinsberg. Diskret, schön und dauerhaft.</p>
-<a class="inline-flex items-center gap-2 font-button-text text-button-text text-action-blue hover:gap-4 transition-all" href="sichtschutz.html">Mehr erfahren <span class="material-symbols-outlined">arrow_forward</span></a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="bg-surface-container-low py-section-gap">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-<div>
-<span class="font-label-sm text-label-sm text-action-blue">IHR ZAUNBAUER VOR ORT</span>
-<h2 class="font-headline-lg text-headline-lg mt-2 mb-6">Zaunbau in Heinsberg – lokal, schnell, professionell</h2>
-<p class="text-secondary mb-5 text-body-lg leading-relaxed">Heinsberg ist Kreisstadt im Westen des Rheinlands. Wir bedienen Kunden in Heinsberg und der Region regelmäßig. Als Meisterbetrieb aus Herzogenrath sind wir regelmäßig in Heinsberg tätig und kennen die lokalen Gegebenheiten genau.</p>
-<p class="text-secondary mb-5 leading-relaxed">Ob für Einfamilienhäuser, Reihenhäuser oder gewerbliche Grundstücke – wir beraten Sie kompetent bei der Auswahl des richtigen Zauns für Ihre Situation in Heinsberg.</p>
-<p class="text-secondary leading-relaxed">Wir führen in Heinsberg durch: <strong>Aufmaßnahmen</strong>, <strong>Fundament- und Pfostenarbeiten</strong>, <strong>Zaunanlagen und Einfriedungen</strong>, <strong>Tor- und Antriebsmontage</strong> sowie <strong>Reparaturen bestehender Zaunanlagen</strong>.</p>
-</div>
-<div class="bg-surface border border-outline-variant/30 rounded-2xl p-8">
-<h3 class="font-headline-md text-headline-md mb-6">Bereiche in Heinsberg, die wir bedienen</h3>
-<div class="grid grid-cols-2 gap-3">
-<div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-action-blue text-base">check_circle</span>Heinsberg-Mitte</div>
-<div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-action-blue text-base">check_circle</span>Randerath</div>
-<div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-action-blue text-base">check_circle</span>Karken</div>
-<div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-action-blue text-base">check_circle</span>Kirchhoven</div>
-<div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-action-blue text-base">check_circle</span>Lieck</div>
-</div>
-<div class="mt-6 pt-6 border-t border-outline-variant/30">
-<a href="kontakt.html" class="w-full bg-action-blue text-white font-button-text px-6 py-4 rounded-lg hover:brightness-110 transition-all flex items-center justify-center gap-2">
-<span class="material-symbols-outlined">mail</span>Kostenlose Beratung in Heinsberg anfragen
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="bg-primary py-section-gap text-on-primary scroll-mt-24" id="ueber">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div>
-<span class="font-label-sm text-label-sm text-tertiary-fixed">UNSERE VORTEILE FÜR HEINSBERG</span>
-<h2 class="font-headline-lg text-headline-lg mt-2 mb-8">Warum Aachener Zaun Center für Ihren Zaun in Heinsberg?</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-<div class="flex flex-col gap-4"><div class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center"><span class="material-symbols-outlined text-tertiary-fixed">forum</span></div><h4 class="font-bold">Ortskundige Beratung</h4><p class="text-sm text-on-primary/70">Wir kennen Heinsberg und die lokalen Gegebenheiten – das spart Zeit und Ärger bei Ihrer Zaunplanung.</p></div>
-<div class="flex flex-col gap-4"><div class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center"><span class="material-symbols-outlined text-tertiary-fixed">handyman</span></div><h4 class="font-bold">Fachgerechte Montage</h4><p class="text-sm text-on-primary/70">Eigene Montageteams ohne Subunternehmer. Pünktlich, sauber, mit Meister-Qualität von der ersten bis zur letzten Schraube.</p></div>
-<div class="flex flex-col gap-4"><div class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center"><span class="material-symbols-outlined text-tertiary-fixed">payments</span></div><h4 class="font-bold">Transparente Preise</h4><p class="text-sm text-on-primary/70">Faire Angebote, detaillierte Aufschlüsselung, keine versteckten Kosten – auch in Heinsberg.</p></div>
-<div class="flex flex-col gap-4"><div class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center"><span class="material-symbols-outlined text-tertiary-fixed">history_edu</span></div><h4 class="font-bold">10+ Jahre Erfahrung</h4><p class="text-sm text-on-primary/70">Hunderte erfolgreiche Zaunprojekte in Heinsberg und der gesamten Region. Ihr Zaun ist bei uns in bewährten Händen.</p></div>
-</div>
-</div>
-<div class="relative">
-<div class="aspect-square rounded-2xl overflow-hidden">
-<img loading="lazy" class="w-full h-full object-cover" alt="Zaunmontage Heinsberg – Aachener Zaun Center Team bei der Arbeit" src="https://lh3.googleusercontent.com/aida/AP1WRLtMU4oJTxWswn1LAvxZ8OzRxTiXfHuvHjDmF0OlwHTceCDvNPe7IbAzwZOyU5KWupz3iZ-Ep6jrvfN1bVnBGpyJmLt4kwcFXH5iGAirQmH410MJt4s6OsHAGqabN1AaqbwjMYCpusJmVqFuI14KQaZZVtj5KENB9rDOvmQ2JOb_Z5GOEVNfrvtCVwcV__8XmE6HcDomqgBzQpkUY_mAF-RLQN-85YMytmdXzFkxN29XWN9W-qhVKotcxzB-"/>
-</div>
-<div class="absolute -bottom-6 -left-6 bg-tertiary-fixed text-on-tertiary-fixed p-6 rounded-lg shadow-xl hidden md:block">
-<p class="text-3xl font-bold">10+</p><p class="text-sm uppercase tracking-wider font-label-sm">Jahre Erfahrung</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-section-gap">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="max-w-3xl mx-auto">
-<div class="text-center mb-12">
-<span class="font-label-sm text-label-sm text-action-blue">HÄUFIGE FRAGEN</span>
-<h2 class="font-headline-lg text-headline-lg mt-2">Fragen zum Zaunbau in Heinsberg</h2>
-</div>
-<div class="faq-item open">
-<button class="faq-q" aria-expanded="true">Bietet Aachener Zaun Center Zaunbau in Heinsberg an?<span class="faq-icon material-symbols-outlined">add</span></button>
-<div class="faq-a">Ja, wir sind auch in Heinsberg und den Ortsteilen tätig. Mit ca. 25 km Entfernung von unserem Standort in Herzogenrath sind wir gut erreichbar. Kontaktieren Sie uns für ein kostenloses Angebot.</div>
-</div>
-<div class="faq-item">
-<button class="faq-q" aria-expanded="false">Führen Sie in Heinsberg auch Reparaturen an bestehenden Zäunen durch?<span class="faq-icon material-symbols-outlined">add</span></button>
-<div class="faq-a">Ja, neben Neubauten reparieren wir in Heinsberg auch beschädigte oder alte Zaunanlagen. Einzelne Elemente austauschen, Pfosten neu setzen oder komplette Überholungen – wir bieten alles an.</div>
-</div>
-<div class="faq-item">
-<button class="faq-q" aria-expanded="false">Wie bekomme ich ein kostenloses Angebot für Zaunbau in Heinsberg?<span class="faq-icon material-symbols-outlined">add</span></button>
-<div class="faq-a">Rufen Sie uns einfach an: <a href="tel:015754722165" class="text-action-blue font-medium">01575 4722165</a>. Alternativ schreiben Sie uns per WhatsApp oder nutzen Sie das Kontaktformular auf unserer Website. Wir vereinbaren kurzfristig einen Ortstermin in Heinsberg zur kostenlosen Aufmaßnahme – ohne Wartezeit und ohne Verpflichtung.</div>
-</div>
-</div>
-</div>
-</section>
-<section class="bg-primary text-on-primary py-section-gap">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div>
-<span class="font-label-sm text-label-sm text-tertiary-fixed">KONTAKT</span>
-<h2 class="font-headline-lg text-headline-lg mt-2 mb-6">Zaunbau Heinsberg – Jetzt kostenloses Angebot anfordern</h2>
-<p class="text-on-primary/80 mb-10 max-w-xl">Erzählen Sie uns von Ihrem Vorhaben in Heinsberg. Wir melden uns kurzfristig mit einer unverbindlichen Einschätzung und vereinbaren einen Ortstermin zur kostenlosen Aufmaßnahme.</p>
-<div class="space-y-5">
-<a class="flex items-center gap-4 group" href="tel:015754722165"><span class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-tertiary-fixed group-hover:text-on-tertiary-fixed transition-colors"><span class="material-symbols-outlined">call</span></span><div><p class="text-sm text-on-primary/60">Telefon</p><p class="font-bold text-lg">01575 4722165</p></div></a>
-<a class="flex items-center gap-4 group" href="mailto:info@aachenerzauncenter.de"><span class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-tertiary-fixed group-hover:text-on-tertiary-fixed transition-colors"><span class="material-symbols-outlined">mail</span></span><div><p class="text-sm text-on-primary/60">E-Mail</p><p class="font-bold text-lg">info@aachenerzauncenter.de</p></div></a>
-<div class="flex items-center gap-4"><span class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center"><span class="material-symbols-outlined">location_on</span></span><div><p class="text-sm text-on-primary/60">Standort</p><p class="font-bold text-lg">Wolfstr. 2, 52134 Herzogenrath</p></div></div>
-</div>
-</div>
-<div class="bg-surface-container-lowest text-on-surface rounded-2xl p-8 shadow-2xl">
-<h3 class="font-headline-md text-headline-md mb-3">Angebot für Zaunbau Heinsberg</h3>
-<p class="text-secondary mb-8">Direkt anfragen – wir melden uns innerhalb von 24 Stunden:</p>
-<div class="space-y-3">
-<a href="kontakt.html" class="w-full bg-action-blue text-white font-button-text text-button-text px-6 py-4 rounded-lg hover:brightness-110 active:scale-[0.99] transition-all flex items-center justify-center gap-2"><span class="material-symbols-outlined">mail</span>Zum Kontaktformular</a>
-<div class="grid grid-cols-2 gap-3">
-<a href="https://wa.me/4915754722165" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-4 py-3.5 rounded-lg text-white font-button-text hover:brightness-105 transition-all" style="background:#25D366;"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.9c0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 1.8c2.16 0 4.19.84 5.72 2.37a8.03 8.03 0 0 1 2.37 5.72c0 4.47-3.64 8.1-8.1 8.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.06.8.82-2.98-.2-.31a8.03 8.03 0 0 1-1.24-4.3c0-4.47 3.63-8.1 8.1-8.1Zm-4.6 4.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.37c.16.22 2.29 3.5 5.56 4.78 2.72 1.07 3.28.86 3.87.8.59-.05 1.9-.77 2.17-1.52.27-.75.27-1.39.19-1.52-.08-.13-.3-.21-.62-.37-.32-.16-1.9-.94-2.19-1.05-.29-.11-.5-.16-.72.16-.21.32-.82 1.05-1.01 1.26-.19.22-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.89-1.78-2.21-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.22.05-.4-.03-.56-.08-.16-.72-1.76-1-2.4-.26-.63-.53-.55-.72-.55l-.62-.01Z"/></svg>WhatsApp</a>
-<a href="tel:015754722165" class="flex items-center justify-center gap-2 px-4 py-3.5 rounded-lg border border-outline-variant text-primary font-button-text hover:bg-surface-container transition-colors"><span class="material-symbols-outlined">call</span>Anrufen</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<footer class="bg-inverse-surface text-inverse-on-surface">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
-<div class="md:col-span-2">
-<div class="flex items-center gap-3 mb-4">
-<span class="w-9 h-9 rounded-full" style="background:radial-gradient(120% 120% at 32% 28%,#0c2f25 0%,#001912 100%);position:relative;display:inline-block;"></span>
-<span class="font-headline-md text-headline-md font-extrabold">Aachener Zaun Center</span>
-</div>
-<p class="text-inverse-on-surface/70 max-w-md">Ihr Meisterbetrieb für Zaunbau in Heinsberg, Herzogenrath und der gesamten Städteregion Aachen.</p>
-</div>
-<div>
-<h4 class="font-bold mb-4">Leistungen</h4>
-<ul class="space-y-2 text-inverse-on-surface/70">
-<li><a class="hover:text-inverse-primary transition-colors" href="zaeune.html">Zäune</a></li>
-<li><a class="hover:text-inverse-primary transition-colors" href="tore.html">Tore</a></li>
-<li><a class="hover:text-inverse-primary transition-colors" href="sichtschutz.html">Sichtschutz</a></li>
-<li><a class="hover:text-inverse-primary transition-colors" href="index.html#leistungen">Montage</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold mb-4">Kontakt</h4>
-<ul class="space-y-2 text-inverse-on-surface/70">
-<li><a class="hover:text-inverse-primary transition-colors" href="tel:015754722165">01575 4722165</a></li>
-<li><a class="hover:text-inverse-primary transition-colors" href="mailto:info@aachenerzauncenter.de">info@aachenerzauncenter.de</a></li>
-<li>Wolfstr. 2, 52134 Herzogenrath</li>
-</ul>
-</div>
-</div>
-<div class="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-inverse-on-surface/60">
-<p>&copy; 2026 Aachener Zaun Center. Alle Rechte vorbehalten.</p>
-<div class="flex gap-6"><a class="hover:text-inverse-primary transition-colors" href="impressum.html">Impressum</a><a class="hover:text-inverse-primary transition-colors" href="datenschutz.html">Datenschutz</a></div>
-</div>
-</div>
-</footer>
-<script>
-  const nav = document.getElementById('nav');
-  const toggle = document.getElementById('navToggle');
-  const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 8);
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-  toggle.addEventListener('click', () => {
-    const open = document.body.classList.toggle('menu-open');
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
-  });
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    a.addEventListener('click', () => {
-      document.body.classList.remove('menu-open');
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.setAttribute('aria-label', 'Menü öffnen');
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero-section min-h-screen flex items-center justify-center relative pt-24 pb-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center text-white">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" class="mb-6">
+        <ol class="flex items-center justify-center gap-2 text-sm text-white/70">
+          <li><a href="index.html" class="hover:text-accent transition-colors">Startseite</a></li>
+          <li class="text-white/40">
+            <span class="material-symbols-outlined text-sm align-middle">chevron_right</span>
+          </li>
+          <li class="text-accent font-medium">Zaunbau Heinsberg</li>
+        </ol>
+      </nav>
+
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6 text-sm font-medium">
+        <span class="material-symbols-outlined text-accent text-base" style="font-variation-settings:'FILL' 1">location_on</span>
+        Heinsberg &amp; Umgebung • ~22 km Entfernung
+      </div>
+
+      <!-- H1 -->
+      <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-700 mb-6 leading-tight">
+        Zaunbau Heinsberg
+        <span class="block text-accent mt-2 text-3xl sm:text-4xl lg:text-5xl">Zäune, Tore &amp; Sichtschutz vom Profi</span>
+      </h1>
+
+      <p class="text-lg sm:text-xl text-white/85 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Ihr zuverlässiger Meisterbetrieb für professionellen Zaunbau in Heinsberg. Wir planen, liefern und montieren – direkt vor Ort in der Kreisstadt und den umliegenden Ortschaften.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://wa.me/4915754722165?text=Hallo%2C%20ich%20m%C3%B6chte%20ein%20Angebot%20f%C3%BCr%20Zaunbau%20in%20Heinsberg."
+           class="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-full font-600 text-base transition-all hover:shadow-lg hover:shadow-green-500/30 hover:-translate-y-0.5"
+           target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.099 1.51 5.83L0 24l6.337-1.487A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.804 9.804 0 01-4.988-1.362l-.358-.212-3.762.883.938-3.661-.233-.376A9.78 9.78 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/>
+          </svg>
+          Kostenlos via WhatsApp anfragen
+        </a>
+        <a href="tel:015754722165"
+           class="inline-flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-full font-600 text-base transition-all hover:-translate-y-0.5">
+          <span class="material-symbols-outlined text-accent" style="font-variation-settings:'FILL' 1">phone</span>
+          01575 4722165
+        </a>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="mt-16 animate-bounce">
+        <span class="material-symbols-outlined text-white/40 text-4xl">expand_more</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST BAR ===== -->
+  <section class="bg-primary-dark py-5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
+
+        <div class="flex items-center gap-2 text-white">
+          <div class="stars flex text-lg">★★★★★</div>
+          <span class="font-600 text-white">5.0</span>
+          <span class="text-white/60 text-sm">Bewertungen</span>
+        </div>
+
+        <div class="w-px h-6 bg-white/20 hidden sm:block"></div>
+
+        <div class="flex items-center gap-2 text-white">
+          <span class="material-symbols-outlined text-accent" style="font-variation-settings:'FILL' 1">location_on</span>
+          <span class="font-500">Nur ~22 km von Heinsberg</span>
+        </div>
+
+        <div class="w-px h-6 bg-white/20 hidden sm:block"></div>
+
+        <div class="flex items-center gap-2 text-white">
+          <span class="material-symbols-outlined text-accent" style="font-variation-settings:'FILL' 1">verified</span>
+          <span class="font-500">Meisterbetrieb seit 10+ Jahren</span>
+        </div>
+
+        <div class="w-px h-6 bg-white/20 hidden sm:block"></div>
+
+        <div class="flex items-center gap-2 text-white">
+          <span class="material-symbols-outlined text-accent" style="font-variation-settings:'FILL' 1">handshake</span>
+          <span class="font-500">Kostenlose Vor-Ort-Beratung</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LEISTUNGEN SECTION ===== -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+
+      <div class="text-center mb-14">
+        <span class="text-accent font-600 text-sm uppercase tracking-widest">Unsere Leistungen</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-700 text-primary mt-2">
+          Was wir in Heinsberg anbieten
+        </h2>
+        <p class="text-gray-600 mt-4 max-w-xl mx-auto">
+          Vom klassischen Gartenzaun bis zum automatischen Einfahrtstor – wir realisieren Ihr Projekt in Heinsberg professionell und termingerecht.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Card 1: Zaunbau -->
+        <div class="service-card bg-white">
+          <div class="overflow-hidden h-52">
+            <img
+              src="https://lh3.googleusercontent.com/aida/ALd4DhHBCNQTU5h1XUFFU2-RXNb91EJt3Ue7JnAKPKc9nwXDFqbcDq8oF15sIqiXoW1OT0SZ8K27K04cMbHsGrXz7AJsz5YBCS-T6m3K2lONgP_zJHf6BZA2f3Hm2yHTSW-sHD1mHDFbLXXhQPdpGMiQkMW8mI8kX39J8Kzc0KHpk3qgAI=w960-h480-rw"
+              alt="Zaunbau Heinsberg – professionelle Montage"
+              class="w-full h-full object-cover"
+            >
+          </div>
+          <div class="p-6">
+            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1">fence</span>
+            </div>
+            <h3 class="font-heading text-xl font-700 text-primary mb-3">Zaunbau Heinsberg</h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+              Wir planen und montieren Zäune in Heinsberg und allen Stadtteilen. Ob Doppelstabmattenzaun, Metallzaun oder Schmiedeeisen – wir haben die passende Lösung für Ihr Grundstück in der Kreisstadt.
+            </p>
+            <a href="zaeune.html" class="inline-flex items-center gap-1 text-primary font-600 text-sm hover:text-accent transition-colors">
+              Mehr erfahren <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Torbau -->
+        <div class="service-card bg-white">
+          <div class="overflow-hidden h-52">
+            <img
+              src="https://lh3.googleusercontent.com/aida/ALd4DhG1gHheSk6CQKFbr3VX44Qe5eSUe3jP5IDr6r3aN9k5RqfAKS6kM5_JVfLdYt1TKKUlU5WnbnHlFz6GS6bR7Qj2K_HQKA1H-q2VYFJAb_aTiCMsLlbJbAk8ppovLq7Pd0n9LCZK9TtZQ2hjvPE_x2sIb3IWaZpVqwCpD0G9PFX8N0=w960-h480-rw"
+              alt="Torbau Heinsberg – Einfahrtstore und automatische Tore"
+              class="w-full h-full object-cover"
+            >
+          </div>
+          <div class="p-6">
+            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1">garage</span>
+            </div>
+            <h3 class="font-heading text-xl font-700 text-primary mb-3">Torbau Heinsberg</h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+              Automatische Einfahrtstore, Schiebetore und Flügeltore in Heinsberg. Wir kümmern uns um Planung, Lieferung, Montage und Elektrik – alles aus einer Hand für Privat- und Gewerbekunden in Heinsberg.
+            </p>
+            <a href="tore.html" class="inline-flex items-center gap-1 text-primary font-600 text-sm hover:text-accent transition-colors">
+              Mehr erfahren <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Sichtschutz -->
+        <div class="service-card bg-white">
+          <div class="overflow-hidden h-52">
+            <img
+              src="https://lh3.googleusercontent.com/aida/ALd4DhHKI82U2RzN8Aw4QkEFdUWmm7JNNjh6bpGm_MBVq6w6XXi0JMdM-PrmNfMeMBmTMD4dRMHuv7s1oXTVEMpbnF9Kf7JdTN80b9bkDSWH43VnBwNvDBP1Wr8lhf7l2NZrAu7DgN4D8W8FTEW7bXZF5VB2c8g5lP58HvYJqBhaBD6UolC=w960-h480-rw"
+              alt="Sichtschutz Heinsberg – Privatsphäre für Garten und Terrasse"
+              class="w-full h-full object-cover"
+            >
+          </div>
+          <div class="p-6">
+            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1">visibility_off</span>
+            </div>
+            <h3 class="font-heading text-xl font-700 text-primary mb-3">Sichtschutz Heinsberg</h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+              Mehr Privatsphäre in Ihrem Garten oder auf Ihrer Terrasse in Heinsberg. Wir montieren Sichtschutzzäune, Lärmschutzwände und Sichtschutzelemente – robust, langlebig und optisch ansprechend.
+            </p>
+            <a href="sichtschutz.html" class="inline-flex items-center gap-1 text-primary font-600 text-sm hover:text-accent transition-colors">
+              Mehr erfahren <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOCAL SECTION ===== -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+        <div>
+          <span class="text-accent font-600 text-sm uppercase tracking-widest">Lokale Expertise</span>
+          <h2 class="font-heading text-3xl sm:text-4xl font-700 text-primary mt-2 mb-6">
+            Zaunbau in Heinsberg –<br>lokal, schnell, professionell
+          </h2>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Heinsberg ist die Kreisstadt des gleichnamigen Kreises und für uns ein regelmäßiges Einsatzgebiet. In Heinsberg-Mitte und den umliegenden Dörfern setzen wir Zaunprojekte für Privatkunden und Gewerbetreibende um. Die ländliche Umgebung schätzt robuste Metallzäune und klassische Einfriedungslösungen.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-8">
+            Als erfahrener Betrieb kennen wir die Anforderungen der Region genau und bringen das passende Material direkt zu Ihnen. Kurze Anfahrtswege bedeuten schnelle Reaktionszeiten und günstigere Preise für Sie.
+          </p>
+
+          <a href="kontakt.html"
+             class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-7 py-3.5 rounded-full font-600 transition-all hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-0.5">
+            <span class="material-symbols-outlined text-accent" style="font-variation-settings:'FILL' 1">send</span>
+            Jetzt Angebot für Heinsberg
+          </a>
+        </div>
+
+        <div>
+          <h3 class="font-600 text-primary text-lg mb-5 flex items-center gap-2">
+            <span class="material-symbols-outlined text-accent" style="font-variation-settings:'FILL' 1">map</span>
+            Wir arbeiten in diesen Stadtteilen &amp; Dörfern:
+          </h3>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="district-item">
+              <span class="material-symbols-outlined text-accent text-lg" style="font-variation-settings:'FILL' 1">check_circle</span>
+              <span>Heinsberg-Mitte</span>
+            </div>
+            <div class="district-item">
+              <span class="material-symbols-outlined text-accent text-lg" style="font-variation-settings:'FILL' 1">check_circle</span>
+              <span>Dremmen</span>
+            </div>
+            <div class="district-item">
+              <span class="material-symbols-outlined text-accent text-lg" style="font-variation-settings:'FILL' 1">check_circle</span>
+              <span>Randerath</span>
+            </div>
+            <div class="district-item">
+              <span class="material-symbols-outlined text-accent text-lg" style="font-variation-settings:'FILL' 1">check_circle</span>
+              <span>Karken</span>
+            </div>
+          </div>
+
+          <div class="mt-8 p-5 bg-primary/5 border border-primary/15 rounded-xl">
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-accent mt-0.5" style="font-variation-settings:'FILL' 1">info</span>
+              <div>
+                <p class="font-600 text-primary text-sm mb-1">Kostenlose Anfahrt in Heinsberg</p>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Die Anfahrt nach Heinsberg ist für Sie kostenfrei. Wir kommen zu Ihnen, besichtigen Ihr Grundstück und erstellen ein unverbindliches Angebot – ohne versteckte Kosten.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VORTEILE SECTION ===== -->
+  <section class="py-20 bg-primary">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+      <div class="text-center mb-14">
+        <span class="text-accent font-600 text-sm uppercase tracking-widest">Warum wir?</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-700 text-white mt-2">
+          Ihre Vorteile in Heinsberg
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div class="text-center p-6 rounded-2xl bg-white/8 hover:bg-white/12 transition-colors border border-white/10">
+          <div class="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-outlined text-accent text-2xl" style="font-variation-settings:'FILL' 1">speed</span>
+          </div>
+          <h3 class="font-600 text-white mb-2">Schnelle Umsetzung</h3>
+          <p class="text-white/65 text-sm leading-relaxed">
+            Kurze Anfahrtswege nach Heinsberg ermöglichen uns flexible Terminplanung und zügige Montage vor Ort.
+          </p>
+        </div>
+
+        <div class="text-center p-6 rounded-2xl bg-white/8 hover:bg-white/12 transition-colors border border-white/10">
+          <div class="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-outlined text-accent text-2xl" style="font-variation-settings:'FILL' 1">workspace_premium</span>
+          </div>
+          <h3 class="font-600 text-white mb-2">Meisterqualität</h3>
+          <p class="text-white/65 text-sm leading-relaxed">
+            Alle Arbeiten in Heinsberg werden nach Meisterstandard ausgeführt – mit hochwertigen Materialien und fachgerechter Montage.
+          </p>
+        </div>
+
+        <div class="text-center p-6 rounded-2xl bg-white/8 hover:bg-white/12 transition-colors border border-white/10">
+          <div class="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-outlined text-accent text-2xl" style="font-variation-settings:'FILL' 1">payments</span>
+          </div>
+          <h3 class="font-600 text-white mb-2">Faire Preise</h3>
+          <p class="text-white/65 text-sm leading-relaxed">
+            Transparente Kalkulation ohne versteckte Kosten. Unser Angebot für Heinsberg ist immer detailliert und verständlich aufgeschlüsselt.
+          </p>
+        </div>
+
+        <div class="text-center p-6 rounded-2xl bg-white/8 hover:bg-white/12 transition-colors border border-white/10">
+          <div class="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-outlined text-accent text-2xl" style="font-variation-settings:'FILL' 1">support_agent</span>
+          </div>
+          <h3 class="font-600 text-white mb-2">Persönliche Betreuung</h3>
+          <p class="text-white/65 text-sm leading-relaxed">
+            Von der ersten Beratung bis zur Abnahme in Heinsberg – Sie haben stets einen festen Ansprechpartner an Ihrer Seite.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ SECTION ===== -->
+  <section class="py-20 bg-primary-dark">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+
+      <div class="text-center mb-12">
+        <span class="text-accent font-600 text-sm uppercase tracking-widest">Häufige Fragen</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-700 text-white mt-2">
+          FAQ – Zaunbau in Heinsberg
+        </h2>
+      </div>
+
+      <div id="faq-container">
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Führen Sie Zaunmontagen in Heinsberg durch?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Ja, wir sind regelmäßig in Heinsberg und den umliegenden Ortschaften tätig. Als erfahrener Zaunbaubetrieb aus der Region kennen wir die örtlichen Gegebenheiten und führen Montagen in Heinsberg-Mitte sowie in Dremmen, Randerath und Karken durch.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Wie lange dauert eine Zaunmontage in Heinsberg?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Die Dauer einer Zaunmontage in Heinsberg hängt vom Umfang des Projekts ab. Einfache Zäune für ein Einfamilienhaus sind oft an einem Tag montiert. Größere Projekte mit Toren und Sichtschutz können zwei bis drei Tage in Anspruch nehmen. Nach der Besichtigung erhalten Sie eine genaue Zeitplanung.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Welche Zaunarten empfehlen Sie für Heinsberg?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Für Heinsberg empfehlen wir besonders robuste Metallzäune und klassische Einfriedungslösungen, die zur ländlichen Umgebung der Region passen. Doppelstabmattenzäune, schmiedeeiserne Zäune und Palisadenzäune sind in Heinsberg sehr beliebt und bieten langfristig hohen Mehrwert.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Bauen Sie auch automatische Tore in Heinsberg?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Ja, wir planen und bauen automatische Einfahrtstore in Heinsberg und der gesamten Kreisstadt-Region. Ob Schiebetor, Flügeltor oder Drehtor – wir bieten alle Varianten inklusive Motorisierung, Fernbedienung und Intercom-Systemen an. Selbstverständlich kümmern wir uns auch um Wartung und Service.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Wie erhalte ich ein Angebot für meinen Zaunbau in Heinsberg?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Ganz einfach: Rufen Sie uns an unter 01575 4722165 oder senden Sie uns eine WhatsApp-Nachricht. Wir vereinbaren dann einen kostenlosen Vor-Ort-Termin in Heinsberg, besichtigen Ihr Grundstück und erstellen Ihnen ein detailliertes, unverbindliches Angebot. Der gesamte Prozess ist für Sie kostenlos und unverbindlich.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="py-20 bg-accent">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+
+      <span class="material-symbols-outlined text-primary text-5xl mb-4 block" style="font-variation-settings:'FILL' 1">fence</span>
+      <h2 class="font-heading text-3xl sm:text-4xl font-700 text-primary mb-4">
+        Bereit für Ihren neuen Zaun in Heinsberg?
+      </h2>
+      <p class="text-primary/75 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+        Kontaktieren Sie uns jetzt für eine kostenlose Beratung und ein unverbindliches Angebot – direkt vor Ort in Heinsberg.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://wa.me/4915754722165?text=Hallo%2C%20ich%20m%C3%B6chte%20ein%20kostenloses%20Angebot%20f%C3%BCr%20Zaunbau%20in%20Heinsberg."
+           class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-600 text-base transition-all hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-0.5"
+           target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.099 1.51 5.83L0 24l6.337-1.487A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.804 9.804 0 01-4.988-1.362l-.358-.212-3.762.883.938-3.661-.233-.376A9.78 9.78 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/>
+          </svg>
+          WhatsApp – Jetzt anfragen
+        </a>
+        <a href="tel:015754722165"
+           class="inline-flex items-center justify-center gap-2 bg-white/30 hover:bg-white/50 text-primary border border-primary/20 px-8 py-4 rounded-full font-600 text-base transition-all hover:-translate-y-0.5">
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">phone</span>
+          01575 4722165
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-primary-dark text-white pt-14 pb-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+        <!-- Brand -->
+        <div class="lg:col-span-1">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-9 h-9 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-primary-dark text-lg" style="font-variation-settings:'FILL' 1">fence</span>
+            </div>
+            <div class="font-heading font-700 text-lg leading-tight">
+              Aachener<br><span class="text-accent text-sm font-normal">Zaun Center</span>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed">
+            Ihr Meisterbetrieb für Zäune, Tore und Sichtschutz in Heinsberg und der gesamten Region.
+          </p>
+        </div>
+
+        <!-- Leistungen -->
+        <div>
+          <h4 class="font-600 text-accent mb-4 text-sm uppercase tracking-wide">Leistungen</h4>
+          <ul class="space-y-2 text-sm text-white/65">
+            <li><a href="zaeune.html" class="hover:text-white transition-colors">Zäune</a></li>
+            <li><a href="tore.html" class="hover:text-white transition-colors">Tore &amp; Einfahrtstore</a></li>
+            <li><a href="sichtschutz.html" class="hover:text-white transition-colors">Sichtschutz</a></li>
+          </ul>
+        </div>
+
+        <!-- Einsatzgebiete -->
+        <div>
+          <h4 class="font-600 text-accent mb-4 text-sm uppercase tracking-wide">Einsatzgebiete</h4>
+          <ul class="space-y-2 text-sm text-white/65">
+            <li><a href="index.html" class="hover:text-white transition-colors">Aachen</a></li>
+            <li><span class="text-white/40">Heinsberg</span></li>
+            <li><a href="index.html" class="hover:text-white transition-colors">Kreis Aachen</a></li>
+          </ul>
+        </div>
+
+        <!-- Kontakt -->
+        <div>
+          <h4 class="font-600 text-accent mb-4 text-sm uppercase tracking-wide">Kontakt</h4>
+          <ul class="space-y-3 text-sm text-white/65">
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-accent text-base" style="font-variation-settings:'FILL' 1">phone</span>
+              <a href="tel:015754722165" class="hover:text-white transition-colors">01575 4722165</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-accent text-base" style="font-variation-settings:'FILL' 1">mail</span>
+              <a href="mailto:info@aachenerzauncenter.de" class="hover:text-white transition-colors">info@aachenerzauncenter.de</a>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-accent text-base mt-0.5" style="font-variation-settings:'FILL' 1">schedule</span>
+              <span>Mo–Fr: 07:00–18:00<br>Sa: 08:00–14:00</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
+        <p>&copy; 2025 Aachener Zaun Center. Alle Rechte vorbehalten.</p>
+        <div class="flex gap-5">
+          <a href="kontakt.html" class="hover:text-white/70 transition-colors">Impressum</a>
+          <a href="kontakt.html" class="hover:text-white/70 transition-colors">Datenschutz</a>
+          <a href="kontakt.html" class="hover:text-white/70 transition-colors">Kontakt</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // Nav scroll behavior
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
     });
-  });
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      document.body.classList.remove('menu-open');
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.setAttribute('aria-label', 'Menü öffnen');
-    }
-  });
-  document.querySelectorAll('.faq-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item');
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-q').setAttribute('aria-expanded','false'); });
-      if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      const icon = menuToggle.querySelector('.material-symbols-outlined');
+      icon.textContent = mobileMenu.classList.contains('open') ? 'close' : 'menu';
     });
-  });
-</script>
+
+    // FAQ Accordion
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        const isOpen = answer.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+        document.querySelectorAll('.faq-question').forEach(q => {
+          q.classList.remove('active');
+          q.setAttribute('aria-expanded', 'false');
+        });
+
+        // Open clicked if it was closed
+        if (!isOpen) {
+          answer.classList.add('open');
+          btn.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
